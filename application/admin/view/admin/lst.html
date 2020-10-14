@@ -1,0 +1,124 @@
+{extend name="base" /}
+{block name="title"}管理员列表{/block}
+
+{block name="right"}
+    <div class="row J_mainContent" id="content-main" style="overflow-y:scroll">
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-sm-4">
+                <h2>管理员管理</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <strong>管理员管理</strong>
+                    </li>
+                    <li>
+                        管理员列表
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="row ibox-content">
+            <div class="col-sm-2">
+                <button class="btn btn-success" type="button" id="addAdmin">
+                    <i class="fa fa-plus-square"></i>&nbsp;&nbsp;
+                    <span class="bold">添加管理员</span>
+                </button>
+            </div>
+            <div class="col-sm-10">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>级别名称</th>
+                                    <th>状态</th>
+                                    <th>上次登录时间</th>
+                                    <th>上次登录ip</th>
+                                    <th>所属组</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {volist name="admin" id="vo"}
+                                <tr>
+                                    <td>{$vo.id}</td>
+                                    <td>{$vo.name}</td>
+                                    <td>
+                                        {if $vo.status==1}
+                                        <button class="btn btn-success status">启用</button>
+                                        {else/}
+                                        <button class="btn btn-danger status">禁用</button>
+                                        {/if}
+                                    </td>
+                                    <td>{$vo.last_login_time|date='Y-m-d H:i:s'}</td>
+                                    <td>{$vo.last_login_ip}</td>
+                                    <td>
+                                        {volist name="$vo.group" id="vo1"}
+                                        {$vo1.title}<br/>
+                                        {/volist}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group open">
+                                            <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="true">操作 <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{:url('admin/admin/changePassword',array('id'=>$vo.id))}">修改密码</a>
+                                                </li>
+                                                <li><a href="{:url('admin/admin/changeAuth',array('id'=>$vo.id))}">修改权限</a>
+                                                </li>
+                                                <li><a href="javascript:if(confirm('确认删除管理员{$vo.name}？')) location='{:url('admin/admin/del',array('id'=>$vo.id))}'">删除</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {/volist}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{/block}
+{block name="js"}
+{__block__}
+<script src="__ADMIN__/js/hAdmin.js?v=4.1.0"></script>
+<script src="__ADMIN__/js/plugins/pace/pace.min.js"></script>
+<script type="text/javascript">
+    $("#addAdmin").click(function(event) {
+        window.location="{:url('admin/admin/add')}"
+    });
+
+    $(document).on('click', '.status', function(event) {
+        var _this = $(this);
+        id = $(this).parents("tr").find("td:eq(0)").html();
+        $.ajax({
+            url: '{:url("admin/admin/changeStatus")}',
+            type: 'post',
+            data: {id: id}
+        })
+        .done(function(data) {
+            if (data==1) {
+                _this.parent('td').html('<button class="btn btn-success status">启用</button>');
+            } else if(data==0) {
+                _this.parent('td').html('<button class="btn btn-danger status">禁用</button>');
+            } else {
+                alert("操作失败");
+            }
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+    });
+</script>
+{/block}

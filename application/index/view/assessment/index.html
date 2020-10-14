@@ -1,0 +1,119 @@
+{extend name="base"/}
+{block name="title"}车源评估{/block}
+{block name="header"}
+{__block__}
+<link href="__INDEX__/default/css/page.css" rel="stylesheet" type="text/css"/>
+<script src="__ADMIN__/js/jquery.cxselect.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#brands").cxSelect({
+            url:"{:url('index/assessment/brandJsonGet')}",
+            selects:['brand1','brand2','brand3','brand4'],
+            jsonName:'name',
+            jsonValue:'id',
+            jsonSub:'children',
+        })
+
+    })
+</script>
+{/block}
+{block name="main"}
+<div class="assess_banner">
+    <div class="assessbox">
+		<div class="form_title"><span>免费评估车源</span></div>
+		<form name="carform" class="carform" method="post" action="{:url('index/assessment/assesshanddle')}">
+			<table cellspacing="0" cellpadding="0" width="100%"  class="sell_table">
+
+                <tr id="brands">
+					<th> 品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</th>
+					<td colspan="3">
+                        <select name="brand_level1" class="select01 brand1">
+							<option value=''>请选择母品牌</option>
+						</select>
+                        <select name="brand_level2" class="select01 brand2">
+							<option value="" selected>请选择子车系</option>
+						</select>
+
+                        <select name="brand_level3" class="select01 brand3">
+							<option value="" selected>请选择车品牌</option>
+						</select>
+                        <select name="carmodel" class="select01 brand4">
+							<option value="" selected>请选择款式</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<th>上牌日期：</th>
+					<td>
+                        <select name="year" datatype="n" nullmsg="请选择年份！" class="select02">
+						    <option value=''>请选择年份</option>
+                            {volist name="years" id="vo"}
+                            <option value='{$vo}'>{$vo}年</option>
+                            {/volist}
+						</select>
+						<select name="month" datatype="n" nullmsg="请选择月份！" class="select02">
+							<option value=''>请选择月份</option>
+							<option value='1'>1月份</option>
+							<option value='2'>2月份</option>
+							<option value='3'>3月份</option>
+							<option value='4'>4月份</option>
+							<option value='5'>5月份</option>
+							<option value='6'>6月份</option>
+							<option value='7'>7月份</option>
+							<option value='8'>8月份</option>
+							<option value='9'>9月份</option>
+							<option value='10'>10月份</option>
+							<option value='11'>11月份</option>
+							<option value='12'>12月份</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<th>行驶里程：</th>
+					<td>
+                        <input name="kilometre" type="text" size="15" />
+						<span class="gray">(万公里)</span>
+                    </td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+                        <input type="submit" value="立刻发布" class="sell_but02">
+
+                    </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<div class="main clearfix">
+	<div>
+		<div class="commonbox05">
+			<h3 class="clearfix"><span>最新评估案例</span></h3>
+			<div>
+				<table cellspacing="0" cellpadding="0" width="100%"  class="listtable01">
+					<tr>
+                        <th>品牌型号</th>
+                        <th>上牌日期</th>
+                        <th>行驶里程</th>
+                        <th>评估价</th>
+                    </tr>
+                    {volist name="assessment_list" id="vo"}
+					<tr>
+					    <td align="center">{$vo.full_name}</td>
+					    <td align="center">{$vo.year}年{$vo.month}月</td>
+
+					    <td align="center">{$vo.kilometre|format="%.2f"}万公里</td>
+					    <td align="center" class="red">{$vo.assessment_price|format="%.2f"}万元</td>
+					</tr>
+                    {/volist}
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+{/block}

@@ -1,0 +1,249 @@
+{extend name="member/memberbase"/}
+{block name="title"}用户中心-添加二手车{/block}
+{block name="header"}
+{__block__}
+<script src="__ADMIN__/js/jquery.cxselect.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="__INDEX__/webuploader/css/webuploader.css" />
+<link rel="stylesheet" type="text/css" href="__INDEX__/webuploader/examples/imageupload/style.css" />
+<script type="text/javascript" src="__INDEX__/webuploader/dist/webuploader.js"></script>
+<script type="text/javascript" src="__INDEX__/webuploader/examples/imageupload/upload0.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#area").cxSelect({
+            url:"__INDEX__/static/area.json",
+            selects:['province','city','county'],
+            jsonName:"name",
+            jsonValue:"code",
+            jsonSub:"children"
+        });
+
+        $("#brands").cxSelect({
+            url:"{:url('index/member/brandJsonGet')}",
+            selects:['brand1','brand2','brand3','brand4'],
+            jsonName:'name',
+            jsonValue:'id',
+            jsonSub:'children',
+        })
+
+    })
+</script>
+<script type="text/javascript">
+    function tijiao(){
+        if (confirm("车辆发布以后将无法进行修改，只能进行删除，是否确认？")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+{/block}
+{block name="userright"}
+<div class="userright">
+    <h2 class="usernav">添加车源</h2>
+    <div class="box">
+        <script type="text/javascript" src="/simcms/static/js/laydate/laydate.js"></script>
+        <form name="form1" class="carform" enctype="multipart/form-data" method="post" action="{:url('index/member/ershoucheaddhaddle')}"
+        onsubmit="return tijiao()">
+            <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+                <tr>
+                    <th>所在城市：</th>
+                    <td colspan="3">
+                        <div id="area">
+                            <select name="province_id" class="province"></select>
+                            <select name="city_id" class="city"></select>
+                            <select name="county_id" class="county"></select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>品牌型号：</th>
+                    <td colspan="3">
+                        <div id="brands">
+                            <select name="brand_level1" class="brand1">
+
+                            </select>
+                            <select class="brand2" name="brand_level2">
+
+                            </select>
+                            <select class="brand3" name="brand_level3">
+
+                            </select>
+                            <select class="brand4" name="carmodel">
+
+                            </select>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>车型选择：</th>
+                    <td>
+                        <select name="level">
+                            {volist name="level" id="vo"}
+                            <option value='{$vo.id}' >{$vo.name}</option>
+                            {/volist}
+                        </select>
+                    </td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>预售价格：</th>
+                    <td><input type="text" name="price"  size="5" value="0" datatype="s" nullmsg="请填写价格！">
+                        <span class="gray">(万元)</span>
+                    </td>
+                    <th>出厂报价：</th>
+                    <td><input type="text" name="new_price"  size="5" value="0">
+                        <span class="gray">(万元)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>购置税：</th>
+                    <td><input type="text" name="tax"  size="5" value="0">
+                        <span class="gray">(万元)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>车体颜色：</th>
+                    <td width="180"><select name="color">
+                        <option value='白色' >白色</option>
+                        <option value='黑色' >黑色</option>
+                        <option value='银灰' >银灰</option>
+                        <option value='蓝色' >蓝色</option>
+                        <option value='红色' >红色</option>
+                        <option value='黄色' >黄色</option>
+                        <option value='绿色' >绿色</option>
+                        <option value='玫红' >玫红</option>
+                        <option value='玫紫' >玫紫</option>
+                        <option value='棕色' >棕色</option>
+                    </select></td>
+                    <th width="50">排量：</th>
+                    <td><select name="gas">
+                        <option value='1.0L' >1.0L</option>
+                        <option value='1.2L' >1.2L</option>
+                        <option value='1.2T' >1.2T</option>
+                        <option value='1.3L' >1.3L</option>
+                        <option value='1.4L' >1.4L</option>
+                        <option value='1.5L' >1.5L</option>
+                        <option value='1.6L' >1.6L</option>
+                        <option value='1.8 L' >1.8 L</option>
+                        <option value='2.0L' >2.0L</option>
+                        <option value='2.4T' >2.4T</option>
+                        <option value='2.8L' >2.8L</option>
+                        <option value='3.0L' >3.0L</option>
+                        <option value='3.5L' >3.5L</option>
+                        <option value='4.0L' >4.0L</option>
+
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>变速箱：</th>
+                    <td><select name="transmission">
+                        <option value='手动' >手动</option>
+                        <option value='自动' >自动</option>
+                        <option value='手自一体' >手自一体</option>
+
+                    </select></td>
+                    <th>上牌时间：</th>
+                    <td>
+
+                        <input name="plate" type="text" size="20" class="laydate-icon" value="2018-06-01" onclick="laydate()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>行驶里程：</th>
+                    <td ><input name="kilometer" type="text" id="p_kilometre" size="5" value="0"  />
+                        <span class="gray">(万公里)</span></td>
+                    </td>
+                    <th>国产进口：</th>
+                    <td><select name="country">
+                        <option value='国产' >国产</option>
+                        <option value='进口' >进口</option>
+
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>排放标准：</th>
+                    <td colspan="3">
+                        <select name="emission">
+                            <option value="国一" >国一</option>
+                            <option value="国二" >国二</option>
+                            <option value="国三" >国三</option>
+                            <option value="国四" >国四</option>
+                            <option value="国五" >国五</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>交强险到期时间：</th>
+                    <td>
+
+                        <option value="">请选择</option>
+                        <input name="insurance" type="text" size="20" class="laydate-icon" value="2018-06-01" onclick="laydate()"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>年检有效期至：</th>
+                    <td>
+                        <option value="">请选择</option>
+                        <input name="inspect" type="text" size="20" class="laydate-icon" value="2018-06-01" onclick="laydate()"/>
+                    </td>
+                </tr>
+                {volist name='self' id='vo'}
+                <tr>
+                    <th>{$vo.name}：</th>
+                    <td>
+                        <select name="{$vo.id}">
+                            {volist name='$vo.value|explode2' id="vo1"}
+                            <option value='{$vo1}' >{$vo1}</option>
+                            {/volist}
+                        </select>
+                    </td>
+                </tr>
+                {/volist}
+                <tr>
+                    <th>图片：</th>
+                    <td colspan="3">
+
+                        <div id="wrapper">
+                            <div id="container">
+                                <!--头部，相册选择和格式选择-->
+                                <div id="uploader">
+                                    <div class="queueList">
+                                        <div id="dndArea" class="placeholder">
+                                            <div id="filePicker"></div>
+                                            <p>或将照片拖到这里，单次最多可选300张</p>
+                                        </div>
+                                    </div>
+                                    <div class="statusBar" style="display:none;">
+                                        <div class="progress">
+                                            <span class="text">0%</span>
+                                            <span class="percentage"></span>
+                                        </div><div class="info"></div>
+                                        <div class="btns">
+                                            <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                <tr>
+                    <th>车辆补充描述：</th>
+                    <td colspan="5">
+                        <textarea  name="details" rows="2" cols="90" class="textarea01"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td colspan="5">
+                        <div class="buttons">
+                            <input type="submit" value="提 交" class="submit">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+{/block}
