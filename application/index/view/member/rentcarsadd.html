@@ -1,0 +1,102 @@
+{extend name="member/memberbase"/}
+{block name="title"}会员中心-添加租车{/block}
+{block name="userright"}
+<script src="__ADMIN__/js/jquery.cxselect.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#area").cxSelect({
+            url:"__INDEX__/static/area.json",
+            selects:['province','city','county'],
+            jsonName:"name",
+            jsonValue:"code",
+            jsonSub:"children"
+        });
+
+        $("#brands").cxSelect({
+            url:"{:url('index/member/brandJsonGet')}",
+            selects:['brand1','brand2','brand3','brand4'],
+            jsonName:'name',
+            jsonValue:'id',
+            jsonSub:'children',
+        })
+
+    })
+</script>
+<div class="userright">
+    <h2 class="usernav">添加租车信息</h2>
+    <div class="box">
+        <form class="carform" enctype="multipart/form-data" method="post" action="{:url('index/member/rentcarsAddHanddle')}">
+            <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+                <tr>
+                    <th>所在城市：</th>
+                    <td colspan="3">
+                        <div id="area">
+                            <select name="province_id" class="province"></select>
+                            <select name="city_id" class="city"></select>
+                            <select name="county_id" class="county"></select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th> 标题：</th>
+                    <td><input type="text" name="title"  size="60" value="" datatype="*1-50" nullmsg="请填写标题！">
+                    </td>
+                </tr>
+                <tr>
+                    <th> 品牌型号：</th>
+                    <td colspan="3">
+                        <div id="brands">
+                            <select name="brand_level1" class="brand1">
+
+                            </select>
+                            <select class="brand2" name="brand_level2">
+
+                            </select>
+                            <select class="brand3" name="brand_level3">
+
+                            </select>
+                            <select class="brand4" name="carmodel">
+
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th> 日租金：</th>
+                    <td>
+                        <input type="text" name="dayprice"  size="5" value="">
+                        <span class="gray">元/天</span>
+                    </td>
+                    </tr>
+                    <tr>
+                        <th> 月租金：</th>
+                        <td><input type="text" name="monthprice"  size="5" value="">
+                            <span class="gray">元/月</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片：</th>
+                        <td colspan="3">
+                            <input type="file" name="img" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>补充描述：</th>
+                        <td colspan="5">
+                            <textarea  name="details" rows="2" cols="90" class="textarea01"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="5">
+                            <div class="buttons">
+                                <input type="submit" value="提 交" class="submit">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+{/block}

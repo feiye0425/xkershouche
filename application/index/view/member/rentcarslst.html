@@ -1,0 +1,46 @@
+{extend name="member/memberbase"/}
+{block name="title"}会员中心-租车列表{/block}
+{block name="userright"}
+<div class="userright">
+    <h2 class="usernav">租车信息列表</h2>
+    <div class="box">
+        <div class="userrightmenu">
+            <a href="{:url('index/member/rentcarsadd')}">+发布租车</a>
+        </div>
+        <table cellspacing="0" cellpadding="0" width="100%"  class="listtable">
+            <tr>
+                <th width="100">图</th>
+                <th>车型信息</th>
+                <th>报价</th>
+                <th>状态</th>
+                <th width="100">操作</th>
+            </tr>
+            {volist name="rentcars" id="vo"}
+            <tr bgcolor="#ffffff" onmouseover="style.backgroundColor='#f5f5f5'"  onmouseout="style.backgroundColor='#ffffff'">
+                <td align="center" width="100">
+                    <img src="__UPLOADS__/{$vo.img}" alt="" width="100">
+                </td>
+                <td align="left">
+                    <p><a href="{:url('index/rentcars/rentcarsdetails',array('id'=>$vo.id))}" target="_blank" class="f14 fb">{$vo.title}</a></p>
+                    <p class="gray">{$vo.full_name}</p>
+                    <p class="gray">刷新时间：{$vo.listtime|date="Y年m月d日"}</p>
+                </td>
+                <td align="center" class="orange01 f14">{$vo.dayprice}元/天|{$vo.monthprice}元/月</td>
+                <td align="center" class="orange01 f14">
+                    {switch $vo.status}
+                        {case value1 }已出租{/case}
+                        {case value0}未出租{/case}
+                        {default /}未审核
+                    {/switch}
+                </td>
+                <td align="center" class="acmenu">
+                    <a href="javascript:if(confirm('确实要删除吗?'))location='{:url('index/member/rentcarsdel',array('id'=>$vo.id))}'">
+                        删除</a>
+                </td>
+            </tr>
+            {/volist}
+        </table>
+    </div>
+    <!-- </div> -->
+</div>
+{/block}

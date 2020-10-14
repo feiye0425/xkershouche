@@ -1,0 +1,1255 @@
+{extend name="base"/}
+{block name="header"}
+
+{__block__}
+<link href="__INDEX__/default/css/page.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__INDEX__/static/js/jquery.inputtext.js"></script>
+
+{/block}
+
+{block name="main"}
+
+<div class="index-banner" style="background:url(__INDEX__/static/xyw/images/index_bg.jpg) no-repeat top center" id="scrollTop1">
+  
+  <div class="main-tabs z-grid J-main-tabs icheruby-tabs">
+    <ul class="tab-header clearfix J-tab-header ">
+      <li class="tab-header-item tab-header-item-search icheruby-tabs-trigger">
+        <p class="tab-header-tit">好孕在相因<span>助孕宝典安心孕</span></p>
+      </li>
+      <li class="tab-header-item icheruby-tabs-trigger">
+        <p class="tab-header-tit">服务与支持<span>出国孕育百事通</span></p>
+      </li>
+      <li class="tab-header-item icheruby-tabs-trigger icheruby-tabs-active">
+        <p class="tab-header-tit">聚全球资源<span>让怀孕变得简单</span></p>
+      </li>
+    </ul>
+    <div class="tab-panel clearfix ">
+      <div class="tab-panel-item J-tab-panel icheruby-tabs-panel" style="display: none;">
+        <div class="navigation-advertisement"><a href="javascript:void(0)" onclick="oPen();return false;" class="buyers" rel="nofollow">咨询预约</a><a href="javascript:void(0)" onclick="oPen();return false;" class="seller" rel="nofollow">上传资料</a></div>
+        <div class="navigation" id="utopia_widget_4">
+          <div class="self-box">
+            <p class="nav-tit">试管婴儿</p>
+            <ul class="clearfix">
+              <li class="ml0">
+                <h3> <a href="#/baike/1079.html" target="_blank"> <i class="categoryicon1"></i> <span>费用多少</span> </a> </h3>
+                <p> <a href="#/baike/4922.html" target="_blank">美国</a> / <a href="#/baike/4910.html" target="_blank">俄罗斯</a> / <a href="#/baike/4906.html" target="_blank">泰国</a></p>
+              </li>
+              <li class="">
+                <h3> <a href="#/home/service/" target="_blank"> <i class="categoryicon2"></i> <span>具体流程</span> </a> </h3>
+                <p> <a href="#/news/1931.html" target="_blank">条件</a> / <a href="#/news/3788.html" target="_blank">注意事项</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/news/1791.html" target="_blank"> <i class="categoryicon3"></i> <span>技术如何</span> </a> </h3>
+                <p> <a href="#/news/4355.html" target="_blank">第三代</a> / <a href="#/news/4073.html" target="_blank">成功率</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/news/2001.html" target="_blank"> <i class="categoryicon4"></i> <span>有何限制</span> </a> </h3>
+                <p> <a href="#/overseas/938.html" target="_blank">法律顾问</a> / <a href="#/news/law/" target="_blank">相关政策</a> </p>
+              </li>
+            </ul>
+          </div>
+          <div class="category-box">
+            <p class="nav-tit">便捷导航</p>
+            <ul class="clearfix">
+              <li class="ml0">
+                <h3> <a href="#/yyk.html" target="_blank"> <i class="categoryicon5"></i> <span>医院医生</span> </a> </h3>
+                <p> <a href="#/hospital/" target="_blank">医院名录</a> / <a href="#/doctor/" target="_blank">医生大全</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/baike/997.html" target="_blank"> <i class="categoryicon6"></i> <span>人工授精</span> </a> </h3>
+                <p> <a href="#/baike/1083.html" target="_blank" title="人工授精和试管婴儿区别">区别</a> / <a href="#/news/4925.html" target="_blank">过程</a> / <a href="#/news/5010.html" target="_blank">成功率</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/ask/sterilitas/" target="_blank"> <i class="categoryicon7"></i> <span>男性不育</span> </a> </h3>
+                <p> <a href="#/news/5060.html" target="_blank">弱精</a> / <a href="#/news/4865.html" target="_blank">无精</a> / <a href="#/news/4306.html" target="_blank">少精</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/ask/feminis/" target="_blank"> <i class="categoryicon8"></i> <span>女性不孕</span> </a> </h3>
+                <p> <a href="#/news/5652.html" target="_blank">没月经</a> / <a href="#/news/5651.html" target="_blank">卵巢早衰</a>  </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/news/1132.html" target="_blank"> <i class="categoryicon9"></i> <span>生男生女</span> </a> </h3>
+                <p> <a href="#/baike/3061.html" target="_blank">Y精子分离</a> / <a href="#/news/1177.html" target="_blank">龙凤胎</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/baike/1082.html" target="_blank"> <i class="categoryicon10"></i> <span>试管婴儿移植</span> </a> </h3>
+                <p> <a href="#/news/5502.html" target="_blank">PGS</a> / <a href="#/news/5499.html" target="_blank">PGD</a> / <a href="#/news/4693.html" target="_blank">ICSI</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/ask/5604.html" target="_blank"> <i class="categoryicon11"></i> <span>高龄备孕</span> </a> </h3>
+                <p> <a href="#/news/5615.html" target="_blank">绝经</a> / <a href="#/news/5641.html" target="_blank">卵泡少</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/ask/1084.html" target="_blank"> <i class="categoryicon12"></i> <span>辅助生殖</span> </a> </h3>
+                <p> <a href="#/news/5650.html" target="_blank">单身生育</a> / <a href="#/baike/1062.html" target="_blank">卵子冷冻</a> </p>
+              </li>
+            </ul>
+          </div>
+          <div class="industry-box">
+            <p class="nav-tit">关于相因</p>
+            <ul class="clearfix">
+              <li class="ml0">
+                <h3> <a href="#/home/world/" target="_blank"> <i class="categoryicon13"></i> <span>品牌地图</span> </a> </h3>
+                <p> <a href="#/home/global.html" target="_blank">世界版图</a> / <a href="#/home/china.html" target="_blank">中国布局</a> </p>
+              </li>
+              <li class="">
+                <h3> <a target="_blank"> <i class="categoryicon14"></i> <span>相因服务</span> </a> </h3>
+                <p> <a href="#/home/butler_service.html" target="_blank">孕管家</a> / <a href="#/home/scheme.html" target="_blank">定制医旅</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/home/consultant.html" target="_blank"> <i class="categoryicon15"></i> <span>咨询顾问</span> </a> </h3>
+                <p> <a href="#/ask/1085.html" target="_blank">成功经验</a> / <a href="#/news/1311.html" target="_blank">技术</a> </p>
+              </li>
+              <li class="">
+                <h3> <a href="#/home/kf/" target="_blank"> <i class="categoryicon16"></i> <span>联系我们</span> </a> </h3>
+                <p> <a href="#/news/1357.html" target="_blank">咨询</a> / <a href="#/news/1889.html" target="_blank">投诉</a> / <a href="#/news/1425.html" target="_blank">建议</a> </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel-item hide J-tab-panel J-insert-adviser  icheruby-tabs-panel" style="display: none;">
+        <div class="section-box-content">
+          <div class="fn-clear" style=" height:354px; padding:0 10px;">
+            <ul class="service-pledge-list">
+              <li class="list-item">
+                <h5 class="title"><i class="icon icon_service_pledge_1"></i></h5>
+                <p class="desc"><strong>海外医旅沉淀</strong><br>
+                  服务超过10万+家庭</p>
+              </li>
+              <li class="list-item">
+                <h5 class="title"><i class="icon icon_service_pledge_2"></i></h5>
+                <p class="desc"><strong>知名医院任选</strong><br>
+                  覆盖全球39国及地区</p>
+              </li>
+              <li class="list-item fn-clear">
+                <h5 class="title"><i class="icon icon_service_pledge_3"></i></h5>
+                <p class="desc"><strong>优秀IVF医生</strong><br>
+                  至少700+周期的丰富经验</p>
+                  </li>
+              <li class="list-item fn-clear">
+                <h5 class="title"><i class="icon icon_service_pledge_4"></i></h5>
+                <p class="desc"><strong>真实圆梦案例</strong><br>
+                  每年至少1400例孕育周期</p>
+                 </li>
+            </ul>
+            <div class="service-features-list fn-clear">
+              <div class="service-features-item">
+                <div class="service-features-item-head" style="background-image: url(__INDEX__/static/xyw/images/support_01.jpg);"> <a href="#/overseas/922.html" target="_blank">
+                  <h5 class="service-features-item-head-title">直通医院<br>
+                    优化全球孕育资源</h5>
+                  <p class="service-features-item-head-text">精选美国，泰国，英国，马来西亚，俄罗斯等最富经验的IVF中心。</p>
+                  </a> </div>
+                <ul class="service-features-body fn-clear">
+                  <li> <a href="#/overseas/923.html" target="_blank"> <i class="icon icon_service_features_1"></i> 
+                    <h6><strong>医疗服务</strong></h6>
+                    <p><span>精准匹配医院医生</span></p>
+                    </a>
+                    <div class="left-triangle"></div>
+                  </li>
+                  <li> <a href="#/overseas/924.html" target="_blank"> <i class="icon icon_service_features_2"></i>
+                    <h6><strong>医学翻译</strong></h6>
+                    <p><span>保障医患有效沟通</span></p>
+                    </a>
+                    <div class="right-triangle"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-features-item">
+                <div class="service-features-item-head" style="background-image: url(__INDEX__/static/xyw/images/support_02.jpg);"> <a href="#/overseas/925.html" target="_blank">
+                  <h5 class="service-features-item-head-title">孕在旅途<br>
+                    个性化的解决方案</h5>
+                  <p class="service-features-item-head-text">目的地有专人等候，翻译、接送、住宿、陪诊，全程全险保障。</p>
+                  </a> </div>
+                <ul class="service-features-body fn-clear">
+                  <li> <a href="#/overseas/926.html" target="_blank"> <i class="icon icon_service_features_3"></i>
+                    <h6><strong>中文随诊向导</strong></h6>
+                    <p><span>全程服务陪同</span></p>
+                    </a>
+                    <div class="left-triangle"></div>
+                  </li>
+                  <li> <a href="#/overseas/927.html" target="_blank"> <i class="icon icon_service_features_4"></i>
+                    <h6><strong>法务支持</strong></h6>
+                    <p><span>保障海外合法权益</span></p>
+                    </a>
+                    <div class="right-triangle"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-features-item">
+                <div class="service-features-item-head" style="background-image: url(__INDEX__/static/xyw/images/support_03.jpg);"> <a href="#/overseas/928.html" target="_blank">
+                  <h5 class="service-features-item-head-title">中英客服<br>
+                    安心好孕出行无忧</h5>
+                  <p class="service-features-item-head-text">24小时服务中心，不管你在国内还是国外，线上还是线下，都能及时响应。</p>
+                  </a> </div>
+                <ul class="service-features-body fn-clear">
+                  <li> <a href="#/overseas/929.html" target="_blank"> <i class="icon icon_service_features_5"></i>
+                    <h6><strong>海外之家</strong></h6>
+                    <p><span>海外医旅中文服务</span></p>
+                    </a>
+                    <div class="left-triangle"></div>
+                  </li>
+                  <li> <a href="#/overseas/930.html" target="_blank"> <i class="icon icon_service_features_6"></i>
+                    <h6><strong>7x24小时客服</strong></h6>
+                    <p><span>任何问题 轻松解决</span></p>
+                    </a>
+                    <div class="right-triangle"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="supplier-list">
+            <dl class="fn-clear">
+              <dt> <a class="supplier-trigger" href="#/baike/1102.html" target="_blank" alt="美国联盟医疗体系"><i class="icon icon_sup"></i></a> </dt>
+              <dd>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/729.html" target="_blank" alt="泰国杰特宁医院"><i class="icon icon_sup_avis"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/1047.html" target="_blank" alt="嗣道遗传与不育诊疗中心"><i class="icon icon_sup_hertz"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/728.html" target="_blank" alt="威塔尼医院"><i class="icon icon_sup_alamo"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/744.html" target="_blank" alt="梦美HRC"><i class="icon icon_sup_budget"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/730.html" target="_blank" alt="BIC"><i class="icon icon_sup_bangkok"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/771.html" target="_blank" alt="CCRM"><i class="icon icon_sup_ccrm"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/772.html" target="_blank" alt="NGC"><i class="icon icon_sup_next"></i></a></div>
+                <div class="supplier-item"><a class="supplier-trigger" href="#/hospital/743.html" target="_blank" alt="爱宝贝"><i class="icon icon_sup_iboby"></i></a></div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel-item hide J-tab-panel container icheruby-tabs-panel" style="display: block;">
+        <div class="container_map fn-clear">
+          <h3>此刻，有 <strong>1,772</strong> 位客户正在全球39个国家及地区安心医旅 </h3>
+          <div class="com_02 fn-left map-rel">
+            <ul class="map_bg show_us">
+                <li class="us_canada">
+                    <div class="map_point">
+                        <p>美加地区<br><span class="fn-h6">406 人</span></p>
+                        <i class="fp-iconfont"></i>
+                    </div>
+                </li>
+                <li class="europe">
+                    <div class="map_point">
+                        <p>欧洲地区<br><span class="fn-h6">238 人</span></p>
+                        <i class="fp-iconfont"></i>
+                    </div>
+                </li>
+                <li class="south_east">
+                    <div class="map_point">
+                        <p>东南亚地区<br><span class="fn-h6">1054 人</span></p>
+                        <i class="fp-iconfont"></i>
+                    </div>
+                </li>
+                <li class="au_new">
+                    <div class="map_point">
+                        <p>澳新地区<br><span class="fn-h6">74 人</span></p>
+                        <i class="fp-iconfont"></i>
+                    </div>
+                </li>
+            </ul>
+          </div>
+          <div class="com_02 fn-right">
+            <div class="ui-switchable">
+              <ul class="ui-switchable-nav continents fn-clear">
+                <li class="ui-switchable-trigger ui-switchable-active"> <a href="javascript:;">热门</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">中国</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">泰国</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">马来西亚</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">柬埔寨</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">美国</a> </li>
+                <li class="ui-switchable-trigger"> <a href="javascript:;">俄罗斯</a> </li>
+              </ul>
+              <div class="ui-switchable-content countries">
+                <ul class="fn-clear ui-switchable-panel" style="display: block;">
+                  <li> <a target="_blank" href="#/baike/4897.html">美国</a><span>(54)</span> </li>
+                  <li> <a target="_blank" href="#/baike/4907.html">俄罗斯</a><span>(13)</span> </li>
+                  <li> <a href="#/baike/4919.html" target="_blank">柬埔寨</a><span>(3)</span> </li>
+                  <li> <a target="_blank">越南</a><span>(1)</span> </li>
+                  <li> <a target="_blank" href="#/baike/4903.html">泰国</a><span>(21)</span> </li>
+                  <li> <a target="_blank" href="#/baike/4915.html">马来西亚</a><span>(2)</span> </li>
+                  <li> <a target="_blank" href="#/news/1737.html">香港</a><span>(17)</span> </li>
+                  <li> <a target="_blank" href="#/news/1294.html">日本</a><span>(3)</span> </li>
+                  <li> <a target="_blank">韩国</a> </li>
+                  <li> <a target="_blank">以色列</a><span>(3)</span> </li>
+                  <li> <a target="_blank">英国</a><span>(9)</span> </li>
+                  <li> <a href="#/baike/4911.html" target="_blank">乌克兰</a><span>(1)</span> </li>
+                  <li> <a target="_blank">新西兰</a><span>(5)</span> </li>
+                  <li> <a target="_blank">澳大利亚</a><span>(8)</span> </li>
+                  <li> <a target="_blank">菲律宾</a><span>(2)</span> </li>
+                  <li> <a target="_blank">缅甸</a> </li>
+                  <li> <a target="_blank">芬兰</a><span>(1)</span> </li>
+                  <li> <a target="_blank">加拿大</a><span>(4)</span> </li>
+                  <li> <a target="_blank">荷兰</a><span>(2)</span> </li>
+                  <li> <a target="_blank">西班牙</a><span>(7)</span> </li>
+                  <li> <a target="_blank">挪威</a><span>(4)</span> </li>
+                  <li> <a target="_blank">德国</a><span>(16)</span> </li>
+                  <li> <a target="_blank">法国</a><span>(23)</span> </li>
+                  <li> <a href="#/yyk.html" rel="nofollow" class="all-country">查看全部试管婴儿医院<span class="simsun-arrow">&gt;</span></a> </li>
+                </ul>
+                <ul class="fn-clear ui-switchable-panel" style="display: none;">
+                  <li> <a href="#/baike/6923.html" target="_blank">澳门</a><span>(223)</span> </li>
+                  <li> <a href="#/baike/6922.html" target="_blank">台湾</a><span>(117)</span> </li>
+                  <li> <a href="#/baike/6903.html" target="_blank">上海</a><span>(516)</span> </li>
+                  <li> <a href="#/baike/6902.html" target="_blank">北京</a><span>(121)</span> </li>
+                  <li> <a href="#/baike/6901.html" target="_blank">浙江</a><span>(134)</span> </li>
+                  <li> <a href="#/baike/6900.html" target="_blank">云南</a><span>(112)</span> </li>
+                  <li> <a href="#/baike/6899.html" target="_blank">四川</a><span>(128)</span> </li>
+                  <li> <a href="#/baike/6898.html" target="_blank">陕西</a><span>(134)</span> </li>
+                  <li> <a href="#/baike/6897.html" target="_blank">山西</a><span>(50)</span> </li>
+                  <li> <a href="#/baike/6896.html" target="_blank">山东</a><span>(61)</span> </li>
+                  <li> <a href="#/baike/6895.html" target="_blank">青海</a><span>(42)</span> </li>
+                  <li> <a href="#/baike/6894.html" target="_blank">辽宁</a><span>(198)</span> </li>
+                  <li> <a href="#/baike/6893.html" target="_blank">江西</a><span>(52)</span> </li>
+                  <li> <a href="#/baike/6892.html" target="_blank">江苏</a><span>(19)</span> </li>
+                  <li> <a href="#/baike/6891.html" target="_blank">吉林</a><span>(125)</span> </li>
+                  <li> <a href="#/baike/6890.html" target="_blank">湖南</a><span>(132)</span> </li>
+                  <li> <a href="#/baike/6889.html" target="_blank">广西</a><span>(254)</span> </li>
+                  <li> <a href="#/baike/6888.html" target="_blank">湖北</a><span>(122)</span> </li>
+                  <li> <a href="#/baike/6887.html" target="_blank">广东</a><span>(365)</span> </li>
+                  <li> <a href="#/baike/6886.html" target="_blank">黑龙江</a><span>(117)</span> </li>
+                  <li> <a href="#/baike/6885.html" target="_blank">河北</a><span>(226)</span> </li>
+                  <li> <a href="#/baike/6884.html" target="_blank">海南</a><span>(334)</span> </li>
+                  <li> <a href="#/baike/6883.html" target="_blank">贵州</a><span>(118)</span> </li>
+                  <li> <a href="#/baike/6882.html" target="_blank">甘肃</a><span>(128)</span> </li>
+                  <li> <a href="#/baike/6881.html" target="_blank">福建</a><span>(404)</span> </li>
+                  <li> <a href="#/baike/6880.html" target="_blank">安徽</a><span>(65)</span> </li>
+                  <li> <a href="#/baike/1744.html" target="_blank">香港</a><span>(62)</span> </li>
+                  <li> <a href="#/hospital/" rel="nofollow" class="all-country">查看全部城市<span class="simsun-arrow">&gt;</span></a> </li>
+                </ul>
+                <ul class="ui-switchable-panel panel-li" style="display: none;">
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/727.html" target="_blank">Superior A.R.T.（苏珮儿A.R.T.）</a> </li>
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/733.html" target="_blank">worldwide fertility center（曼谷全球生殖中心）</a> </li>
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/5465.html" target="_blank">泰国LRC生殖中心(legend fertility center)</a> </li>
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/5464.html" target="_blank">千禧(Millennium)生殖中心</a> </li>
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/731.html" target="_blank">Samitivej Hospitals（三美泰医院）</a> </li>
+                  <li><span>泰国<i class="iocn-spot"></i>曼谷</span> <a href="#/hospital/5462.html" target="_blank">RFG曼谷医院</a> </li>
+                </ul>
+                <ul class="ui-switchable-panel panel-li" style="display: none;">
+                  <li><span>马来西亚<i class="iocn-spot"></i>吉隆坡</span> <a href="#/hospital/780.html" target="_blank">TMC Fertility Centre（丽阳）</a> </li>
+                  <li><span>马来西亚<i class="iocn-spot"></i>吉隆坡</span> <a href="#/hospital/3121.html" target="_blank">双峰塔医疗中心（TTMC）</a> </li>
+                  <li><span>马来西亚<i class="iocn-spot"></i>槟城</span> <a target="_blank" href="#/hospital/3120.html">槟城港安医院(PAH)</a> </li>
+                  <li><span>马来西亚<i class="iocn-spot"></i>吉隆坡</span> <a target="_blank" href="#/hospital/3119.html">Prince Court Medical Centre（太子阁医疗中心）</a> </li>
+                  <li><span>马来西亚<i class="iocn-spot"></i>吉隆坡</span> <a target="_blank" href="#/hospital/3104.html">Alpha Fertility Centre（阿儿法助孕中心）</a> </li>
+                  <li><span>马来西亚<i class="iocn-spot"></i>吉隆坡</span> <a target="_blank" href="#/hospital/3101.html">Fertility Associates（联合生育医院）</a> </li>
+                </ul>
+                <ul class="ui-switchable-panel panel-li" style="display: none;">
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/1045.html" target="_blank">柬埔寨皇家生殖遗传医院(RFG)</a> </li>
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/1054.html" target="_blank">金边第一试管婴儿诊所（FFPP）</a> </li>
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/3163.html" target="_blank">柬埔寨fcc生殖诊所</a> </li>
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/3167.html" target="_blank">丹若国际生殖医院</a> </li>
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/3169.html" target="_blank">柬中国际生殖医院</a> </li>
+                  <li><span>柬埔寨<i class="iocn-spot"></i>金边</span> <a href="#/hospital/5466.html" target="_blank">隆都花国际生殖中心</a> </li>
+                </ul>
+                <ul class="ui-switchable-panel panel-li" style="display: none;">
+                  <li><span>美国<i class="iocn-spot"></i>加州</span> <a target="_blank" href="#/hospital/5547.html">美国加州生殖医学中心(CCRH)</a> </li>
+                  <li><span>美国<i class="iocn-spot"></i>纽约</span> <a href="#/hospital/5463.html" target="_blank">Legacy ivf幸福宝孕助孕中心</a> </li>
+                  <li><span>美国<i class="iocn-spot"></i>南加州</span> <a href="#/news/3534.html" target="_blank">明明试管婴儿生育综合医院(Reproductive Fertility Center)</a> </li>
+                  <li><span>美国<i class="iocn-spot"></i>南加州</span> <a href="#/news/2759.html" target="_blank">南加州生育中心(Southern California Reproductive Center)</a> </li>
+                  <li><span>美国<i class="iocn-spot"></i>南加州</span> <a href="#/news/2742.html" target="_blank">圣地亚哥生育中心(San Diego Fertility Center)</a> </li>
+                  <li><span>美国<i class="iocn-spot"></i>帕萨迪纳</span> <a href="#/hospital/766.html" target="_blank">HRC Fertility: Pasadena Clinic（HRC·帕萨迪纳）</a> </li>
+                </ul>
+                <ul class="ui-switchable-panel panel-li" style="display: none;">
+                  <li><span>俄罗斯<i class="iocn-spot"></i>莫斯科</span> <a href="#/hospital/742.html" target="_blank">俄罗斯欧洲医疗中心(EMC)</a> </li>
+                  <li><span>俄罗斯<i class="iocn-spot"></i>莫斯科</span> <a href="#/hospital/738.html" target="_blank">俄罗斯阿里特拉-维达医院</a> </li>
+                  <li><span>俄罗斯<i class="iocn-spot"></i>圣彼得堡</span> <a href="#/hospital/760.html" target="_blank">生殖科学中心：圣拉蒙诊所</a> </li>
+                  <li><span>俄罗斯<i class="iocn-spot"></i>莫斯科</span> <a href="#/hospital/741.html" target="_blank">俄罗斯诺娃科里尼克医院</a> </li>
+        <li><span>俄罗斯<i class="iocn-spot"></i>莫斯科</span> <a href="#/news/3526.html" target="_blank">莫斯科GMS生育诊所</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pendant"><a target="_blank"><img src="__INDEX__/static/xyw/images/pendant.png" alt="试管婴儿问卷调查"></a></div>
+  </div>
+</div>
+<!--流程-->
+<div class="part1 section trans-color clearfix" id="scrollTop2">
+  <div class="zxProcess">
+    <ul>
+      <li class="fir"> <i class="i i-1"></i> <span class="t">服务流程</span> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/936.html" class="a"><i class="i i-2"></i><span class="t">前期咨询</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/937.html" class="a"><i class="i i-3"></i><span class="t">检查会诊</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/938.html" class="a"><i class="i i-4"></i><span class="t">签署协议</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/939.html" class="a"><i class="i i-5"></i><span class="t">制定方案</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/940.html" class="a"><i class="i i-6"></i><span class="t">整理材料</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/941.html" class="a"><i class="i i-7"></i><span class="t">行程安排</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/942.html" class="a"><i class="i i-8"></i><span class="t">医学流程</span></a> </li>
+      <li class="item"> <a target="_blank" href="#/overseas/943.html" class="a"><i class="i i-9"></i><span class="t">验孕回国</span></a> </li>
+    </ul>
+  </div>
+  <div class="scroll-a" id="scroll-a-1">
+    <div class="scroll-a-con">
+      <ul class="inner" style="position: relative; overflow: hidden;">
+        <li style="position: absolute; display: none;">
+          <div class="pic-txt-a">
+            <div class="img"> <a target="_blank" href="#/news/874.html"><img src="__INDEX__/static/xyw/images/xy_fwcn.jpg" alt="相因13年，海外医旅服务敢承诺" width="120" height="120"></a> </div>
+            <div class="logo"><img src="__INDEX__/static/xyw/images/xy_xiaotianshi.jpg" alt="相因小天使公益活动" width="52" height="28"></div>
+            <span class="bTit"><a target="_blank" href="#/case/870.html">相因<i class="iocn-spot"></i>小天使公益起航！</a></span>
+            <p class="sum">不成功不收费！相因伴您好孕！</p>
+          </div>
+        </li>
+        <li style="position: absolute; display: list-item;">
+          <div class="pic-txt-a">
+            <div class="img"><a href="#/news/7052.html" target="_blank"><img src="__INDEX__/static/xyw/images/huodong_rfg.jpg" alt="RFG年度活动" width="120" height="120"></a>
+            <!--原始样式
+            <a target="_blank"><img src="#/skin/images/index/xy_yuntu.jpg" alt="国外试管婴儿真实视频记录" width="120" height="120"></a> 
+            -->
+            </div>
+            <div class="logo"><img src="__INDEX__/static/xyw/images/xy_shipin.jpg" alt="相因孕途 - 宝宝子宫内发育全过程" width="52" height="28"></div>
+            <span class="bTit"><a href="#/news/6412.html" target="_blank">宝宝子宫内发育全过程 ！</a></span>
+            <p class="sum">孕在旅途，这个体验与众不同。</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a href="javascript:;" class="btn btnL "><i class="i"></i><i class="bg trans-all"></i></a> <a href="javascript:;" class="btn btnR "><i class="i"></i><i class="bg trans-all"></i></a> </div>
+  <ul class="list-a clearfix">
+    <li class="item"><a href="#/news/10964.html" target="_blank">都知道尖肚子，却不知道胎儿不宜入盆的“悬垂腹”？</a></li>
+    <li class="item"><a href="#/news/10935.html" target="_blank">做四维彩超注意事项5大点，提前准备好，检查更顺利</a></li>
+    <li class="item"><a href="#/news/10961.html" target="_blank">乳母乐、妈乐哺下乳不一定好，产后缺乳妈妈们要这样做</a></li>
+    <li class="item"><a href="#/news/10924.html" target="_blank">房间熏艾草小心滑胎，过度使用这些危害后悔没早知道</a></li>
+    
+  </ul>
+  <ul class="list-b gray-a">
+    <li class="item"><a href="#/news/10937.html" target="_blank"><font color="red" class="red">产后坐月子像“坐牢”，不能洗头的禁忌别信了</font></a></li>
+    <li class="item"><a href="#/news/10963.html" target="_blank"><font color="red" class="red">胎儿头位、横位、臀位区别大，5个方面教你分辨</font></a></li>
+  </ul>
+</div>
+<!--找人才-->
+<div class="J_floor" id="scrollTop3">
+  <div class="b-new-category">
+    <div class="g-floor">
+      <p class="floor-title">好孕百科</p>
+      <p class="floor-desc" style="color:#818181">找医院医生、查孕育知识，不孕不育与试管婴儿百事通 </p>
+    </div>
+    <div class="inoculation-body">
+        <div class="inoculation-fr fr">
+            <div class="inoculation-more">
+                <a href="#/baike/ivf/" title="试管婴儿" style="display:block;">更多试管婴儿资讯 <span>&gt;</span></a>
+                <a href="#/baike/infertility/" title="不孕不育">更多不孕不育知识 <span>&gt;</span></a>
+                <a href="#/doctor/" title="医院医生">更多医院医生名录 <span>&gt;</span></a>
+            </div>
+            <ul class="inoculation-nav">
+                <li class="con">试管婴儿</li>
+                <li>不孕不育</li>
+                <li>医院医生</li>
+            </ul>
+            <div class="inoculation-list clearfix tube-baby" style="display:block;">
+                <div class="fl">
+                    <div class="title">基础知识</div>
+                   <div class="encyclopedias">
+                        <a href="#/baike/3055.html" target="_blank">A卵B怀</a>
+                        <a href="#/news/5611.html" target="_blank">大龄单身</a>
+                        <a href="#/baike/9096.html" target="_blank">麻风疫苗</a>
+                        <a href="#/news/5602.html" title="绝经还能做试管婴儿吗" target="_blank">绝经试管</a>
+                        <a href="#/baike/4692.html" title="乙烯雌酚是什么药" target="_blank">乙烯雌酚</a>
+                        <a href="#/news/5614.html" title="自卵试管婴儿" target="_blank">高龄自卵</a>
+                        <a href="#/news/5582.html" title="高龄供卵试管" target="_blank">供卵</a>
+                        <a href="#/baike/1298.html" target="_blank">移植后症状</a>
+                        <a href="#/baike/9529.html" title="弓形子宫是什么意思" target="_blank">弓形子宫</a>
+                        <a href="#/baike/9615.html" title="什么是单角子宫" target="_blank">单角子宫</a>
+                        <a href="#/baike/1335.html" title="试管婴儿移植后反应" target="_blank">移植后反应</a>
+                        <a href="#/news/5644.html" target="_blank" title="始基子宫能做试管婴儿吗">始基子宫</a>
+                        <a href="#/baike/3066.html" target="_blank">洗精术</a>
+                        <a href="#/baike/3068.html" target="_blank">试管婴儿对女性的伤害</a>
+                    </div>
+                    <div class="title">互助问答</div>
+                    <ul class="questions clearfix">
+                    
+                        <li><a href="#/ask/10856.html" target="_blank">胎盘成熟度2级是什么？</a></li>
+                        
+                        <li><a href="#/ask/797.html" target="_blank">泰国试管婴儿费用多少？</a></li>
+                        
+                        <li><a href="#/ask/10913.html" target="_blank">绒毛穿刺多久拿报告?</a></li>
+                        
+                        <li><a href="#/ask/10211.html" target="_blank">建大卡之前一定要建小卡吗？</a></li>
+                        
+                        <li><a href="#/ask/2356.html" target="_blank">双胞胎吃0.4的叶酸够吗？</a></li>
+                        
+                        <li><a href="#/ask/6047.html" target="_blank">输卵管堵了、上举了、积水了怎么办？</a></li>
+                        
+                        <li><a href="#/ask/2373.html" target="_blank">榴莲炖鸡可以下奶吗?</a></li>
+                        
+                        <li><a href="#/ask/878.html" target="_blank">海外试管婴儿实用指南</a></li>
+                        
+                        <li><a href="#/ask/10276.html" target="_blank">囟门闭合晚是什么原因?</a></li>
+                        
+                        <li><a href="#/ask/10356.html" target="_blank">胎儿打嗝算胎动吗？</a></li>
+                        
+                        <li><a href="#/ask/9770.html" target="_blank">宝宝长牙晚民间说法有哪些？</a></li>
+                        
+                        <li><a href="#/ask/10756.html" target="_blank">30周小排畸是四维吗？</a></li>
+                                            </ul>
+                </div>
+                <div class="fr">
+                    <div class="title">自助查询</div>
+                    <div class="testTube-service">
+                        <img src="__INDEX__/static/xyw/images/xy_sgfw.jpg" alt="一站式试管婴儿服务平台">
+                        <ul>
+                            <li class="icon1"><a href="#/baike/1077.html" title="做试管婴儿的条件" target="_blank">医学条件</a></li>
+                            <li class="icon2"><a href="#/baike/1078.html" title="试管婴儿流程" target="_blank">试管流程</a></li>
+                            <li class="icon3"><a href="#/baike/1079.html" title="试管婴儿多少钱" target="_blank">费用明细</a></li>
+                            <li class="icon4"><a href="#/baike/1080.html" title="试管婴儿成功率" target="_blank">成功率</a></li>
+                            <li class="icon5"><a href="#/case/" title="试管婴儿案例" target="_blank">孕育实例</a></li>
+                            <li class="icon6"><a href="#/baike/1081.html" title="海外试管婴儿医院排名" target="_blank">直通医院</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="inoculation-list infertility">
+                <div class="title">男性不育</div>
+                <div class="infertility-list">
+                    <a href="#/baike/1012.html" title="得弱精症的原因是什么" target="_blank">弱精</a>
+                    <a href="#/news/1016.html" title="治疗精子畸形的偏方" target="_blank">精子畸形</a>
+                    <a href="#/ask/1019.html" title="精子不液化是什么原因" target="_blank">精子不液化</a>
+                    <a href="#/ask/1020.html" title="如何预防死精症" target="_blank">死精</a>
+                    <a href="#/baike/1022.html" target="_blank">精索静脉曲张</a>
+                    <a href="#/baike/1010.html" title="无精症能治好吗" target="_blank">无精</a>
+                    <a href="#/news/6429.html" title="北医三院成功日记" target="_blank">成功日记</a>
+                    <a href="#/news/4401.html" target="_blank">勃锐精</a>
+                    <a href="#/baike/1027.html" target="_blank">输精管堵塞</a>
+                    <a href="#/baike/1032.html" target="_blank">Rh阴性血</a>
+                    <a href="#/baike/1036.html" target="_blank">生男生女特征</a>
+                    <a href="#/news/1018.html" target="_blank">怎样生龙凤胎</a>
+                    <a href="#/baike/1038.html" target="_blank">最佳生育年龄</a>
+                    <a href="#/baike/905.html" title="受精卵着床有什么感觉" target="_blank">受精卵着床</a>
+                    <a href="#/news/6336.html" title="试管婴儿双胞胎" target="_blank">试管双胞胎</a>
+                    <a href="#/baike/4697.html" target="_blank">普丽康</a>
+                    <a href="#/baike/4694.html" target="_blank">曲普瑞林</a>
+                    <a href="#/baike/1048.html" target="_blank">睾丸异常</a>
+                    <a href="#/baike/1050.html" target="_blank">精囊炎</a>
+                    <a href="#/baike/1055.html" target="_blank">血精症</a>
+                    <a href="#/baike/1029.html" target="_blank">死精症</a>
+                    <a href="#/baike/1014.html" title="睾丸扭转怎么办" target="_blank">睾丸扭转</a>
+                    <a href="#/baike/3382.html" target="_blank">达必佳</a>
+                    <a href="#/baike/2028.html" target="_blank">林卡尔</a>
+                </div>
+                <div class="title">女性不孕</div>
+                <div class="infertility-list">
+                    <a href="#/baike/3082.html" target="_blank">巨细胞病毒</a>
+                    <a href="#/baike/3380.html" target="_blank">内膜厚度</a>
+                    <a href="#/baike/1127.html" target="_blank">雌二醇低</a>
+                    <a href="#/baike/3312.html" target="_blank">排卵监测</a>
+                    <a href="#/baike/3180.html" target="_blank">促卵泡激素</a>
+                    <a href="#/news/6149.html" target="_blank">胎停育</a>
+                    <a href="#/baike/1417.html" target="_blank">不排卵</a>
+                    <a href="#/news/6302.html" target="_blank">高龄二胎</a>
+                    <a href="#/news/1041.html" target="_blank">不孕不育21步排查法</a>
+                    <a href="#/baike/3319.html" target="_blank">宫腔环境</a>
+                    <a href="#/baike/3564.html" target="_blank">贝依</a>
+                    <a href="#/baike/5061.html" target="_blank">清宫图</a>
+                    <a href="#/news/1060.html" target="_blank" title="治疗宫腔粘连的费用">宫腔粘连</a>
+                    <a href="#/news/1546.html" target="_blank">切口妊娠</a>
+                    <a href="#/news/1058.html" target="_blank" title="节育环图片">节育环</a>
+                    <a href="#/baike/990.html" target="_blank">排卵针</a>
+                    <a href="#/news/1051.html" target="_blank">慢性附件炎</a>
+                    <a href="#/baike/932.html" target="_blank" title="克罗米芬是什么药">克罗米芬</a>
+                    <a href="#/news/6452.html" target="_blank">染色体检查</a>
+                    <a href="#/baike/3173.html" target="_blank" title="辅酶Q10怎么样">辅酶Q10</a>
+                    <a href="#/baike/1123.html" target="_blank">甲状腺素</a>
+                    <a href="#/news/4060.html" target="_blank">黄体破裂</a>
+                    <a href="#/news/4085.html" target="_blank">血友病</a>
+                    <a href="#/news/4276.html" target="_blank">蚕豆病</a>
+                </div>
+            </div>
+            <div class="inoculation-list clearfix doctor">
+                <div class="fl">
+                    <div class="title">找医院</div>
+                    <div class="doctor-hospital">
+                        <a href="#/hospital/779.html" title="大阪产妇人科" target="_blank">产妇人科<span>(日本)</span></a>
+                        <a href="#/hospital/732.html" title="泰国帕雅泰第三国际医院" target="_blank">帕雅泰<span>(泰国)</span></a>
+                        <a href="#/hospital/767.html" title="加州芳泉谷医院" target="_blank">芳泉谷<span>(美国)</span></a>
+                        <a href="#/hospital/782.html" title="加拿大白求恩生殖医院" target="_blank">白求恩生殖院<span>(加拿大)</span></a>
+                        <a href="#/hospital/777.html" title="英医院生殖中心" target="_blank">英医院<span>(日本)</span></a>
+                        <a href="#/hospital/769.html" title="太平洋(IVF)生殖医学中心" target="_blank">IVF研究所<span>(美国)</span></a>
+                        <a href="#/hospital/765.html" title="长老教会医院" target="_blank">PIH<span>(美国)</span></a>
+                        <a href="#/hospital/1046.html" title="台湾宏孕生殖医学中心" target="_blank">宏孕<span>(台湾)</span></a>
+                        <a href="#/hospital/735.html" title="俄罗斯国际生殖医学中心" target="_blank">ICRM<span>(俄罗斯)</span></a>
+                        <a href="#/hospital/752.html" title="加州大学旧金山分校医疗中心：妇女生殖健康中心" target="_blank">旧金山分校医疗中心<span>(美国)</span></a>
+                        
+                    </div>
+                    <ul class="doctor-region clearfix">
+                        <li><span>华北</span>
+                        
+                        <a href="#/hebei.html" target="_blank">河北</a>
+                        <a href="#/shanxi.html" target="_blank">山西</a>
+                        <a href="#/neimenggu.html" target="_blank">内蒙古</a>
+                        </li>      
+                        <li><span>中南</span>
+                        <a href="#/guangdong.html" target="_blank">广东</a>
+                        <a href="#/guangxi.html" target="_blank">广西</a>
+                        <a href="#/hainan.html" target="_blank">海南</a>
+                        <a href="#/hubei.html" target="_blank">湖北</a>
+                        <a href="#/hunan.html" target="_blank">湖南</a>
+                        <a href="#/henan.html" target="_blank">河南</a>
+                        </li>   
+                        <li><span>东北</span>
+                        <a href="#/liaoning.html" target="_blank">辽宁</a>
+                        <a href="#/jining.html" target="_blank">吉林</a>
+                        <a href="#/heilongjiang.html" target="_blank">黑龙江</a>
+                        </li>
+                        <li><span>西南</span>
+                        <a href="#/sichuan.html" target="_blank">四川</a>
+                        
+                        <a href="#/yunnan.html" target="_blank">云南</a>
+                        <a href="#/guizhou.html" target="_blank">贵州</a>
+                        </li>                
+                        <li><span>华东</span>
+                        
+                        <a href="#/jiangsu.html" target="_blank">江苏</a>
+                        <a href="#/zhejiang.html" target="_blank">浙江</a>
+                        <a href="#/shandong.html" target="_blank">山东</a>
+                        <a href="#/anhui.html" target="_blank">安徽</a>
+                        <a href="#/fujian.html" target="_blank">福建</a>
+                        <a href="#/jiangxi.html" target="_blank">江西</a>
+                        </li>
+                        <li><span>西北</span>
+                        <a href="#/shanxi.html" target="_blank">陕西</a>
+                        <a href="#/qinghai.html" target="_blank">青海</a>
+                        <a href="#/nignxia.html" target="_blank">宁夏</a>
+                        <a href="#/xinjiang.html" target="_blank">新疆</a>
+                        <a href="#/xizang.html" target="_blank">西藏</a>
+                        </li>
+                    </ul>
+                    <div class="title">找医生</div>
+                    <ul class="doctor-doctor">
+                      <li> <a href="#/doctor/827.html" target="_blank"> <img src="__INDEX__/static/xyw/images/533d5611284a2f0d26e7ad27bca9eaf6.jpg" width="74" alt="Dr.I.B Putra Adnyana,Sp.OG">
+  <p class="name">I.B Putra Adnyana,Sp.OG</p>
+  <p>巴厘岛皇家医院</p>
+  </a> </li>
+  <li> <a href="#/doctor/170.html" target="_blank"> <img src="__INDEX__/static/xyw/images/a08d9f94580414cf47790f25314936d8.jpg" width="74" alt="Linda Anderson">
+  <p class="name">Linda Anderson</p>
+  <p>RSMC生育科学医学中心</p>
+  </a> </li>
+  <li> <a href="#/doctor/254.html" target="_blank"> <img src="__INDEX__/static/xyw/images/95cba37bbde794dd03acc307123232b7.jpg" width="74" alt="林嘉盈">
+  <p class="name">林嘉盈</p>
+  <p>上海交通大学医学院附属第九人民医院</p>
+  </a> </li>
+  <li> <a href="#/doctor/68.html" target="_blank"> <img src="__INDEX__/static/xyw/images/2f856d1f408aefecd0e990c6c262df1c.jpg" width="74" alt="易艳红">
+  <p class="name">易艳红</p>
+  <p>广东省妇幼保健院</p>
+  </a> </li>
+  <li> <a href="#/doctor/63.html" target="_blank"> <img src="__INDEX__/static/xyw/images/3f3aee91cea275033b742261cd33606f.png" width="74" alt="王涛">
+  <p class="name">王涛</p>
+  <p>华中科技大学同济医学院附属同济医院</p>
+  </a> </li>
+                      </ul>
+                </div>
+                <div class="fr">
+                    <div class="title">按区域</div>
+                    <div class="address">
+                        <a href="#/beijing.html" target="_blank">北京</a>
+                        <a href="#/shanghai.html" target="_blank">上海</a>
+                        <a href="#/shenzhen.html" target="_blank">深圳</a>
+                        <a href="#/chongqing.html" target="_blank">重庆</a>
+                        <a href="#/tianjin.html" target="_blank">天津</a>
+                        <a href="#/guangzhou.html" target="_blank">广州</a>
+                        <a href="#/nanning.html" target="_blank">南宁</a>
+                        <a href="#/fuzhou.html" target="_blank">福州</a>
+                        <a href="#/xiamen.html" target="_blank">厦门</a>
+                        <a href="#/chengdu.html" target="_blank">成都</a>
+                        <a href="#/shenyang.html" target="_blank">沈阳</a>
+                        <a href="#/hanghzou.html" target="_blank">杭州</a>
+                        <a href="#/jinan.html" target="_blank">济南</a>
+                        <a href="#/wuhan.html" target="_blank">武汉</a>
+                        <a href="#/kunming.html" target="_blank">昆明</a>
+                        <a href="#/yinchuan.html" target="_blank">银川</a>
+                        <a href="#/taiyuan.html" target="_blank">太原</a>
+                        <a href="#/changchun.html" target="_blank">长春</a>
+                        <a href="#/nanjing.html" target="_blank">南京</a>
+                        <a href="#/hefei.html" target="_blank">合肥</a>
+                        <a href="#/nanchang.html" target="_blank">南昌</a>
+                        <a href="#/zhengzhou.html" target="_blank">郑州</a>
+
+                        <a href="#/changsha.html" target="_blank">长沙</a>
+                        <a href="#/haikou.html" target="_blank">海口</a>
+                        <a href="#/guiyang.html" target="_blank">贵阳</a>
+                        <a href="#/xining.html" target="_blank">西安</a>
+                        <a href="#/xining.html" target="_blank">西宁</a>
+                        <a href="#/lasa.html" target="_blank">拉萨</a>
+                        <a href="#/zhuhai.html" target="_blank">珠海</a>
+                        <a href="#/shantou.html" target="_blank">汕头</a>
+                        <a href="#/foshan.html" target="_blank">佛山</a>
+                        <a href="#/meizhou.html" target="_blank">梅州</a>
+                        <a href="#/dongguan.html" target="_blank">东莞</a>
+                        <a href="#/chaozhou.html" target="_blank">潮州</a>
+                        <a href="#/liuzhou.html" target="_blank">柳州</a>
+                        <a href="#/ningbo.html" target="_blank">宁波</a>
+                        <a href="#/wuxi.html" target="_blank">无锡</a>
+                        <a href="#/xuzhou.html" target="_blank">徐州</a>
+                        <a href="#/changzhou.html" target="_blank">常州</a>
+                        <a href="#/suzhou.html" target="_blank">苏州</a>
+                        <a href="#/wenzhou.html" target="_blank">温州</a>
+                        <a href="#/guilin.html" target="_blank">桂林</a>
+                        <a href="#/shijiazhuang.html" target="_blank">石家庄</a>
+                        <a href="#/haerbing.html" target="_blank">哈尔滨</a>
+                        <a href="#/quanzhou.html" target="_blank">泉州</a>
+                        <a href="#/wulumuqi.html" target="_blank">乌鲁木齐</a>
+                        <a href="#/huhehaote.html" target="_blank">呼和浩特</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--分享-->
+<div class="container_trust" id="scrollTop4">
+  <div class="g-floor" style=" background:#f1f1f1;">
+    <p class="floor-title">海外医旅实例</p>
+    <p class="floor-desc" style="color:#818181">1000+授权真实家庭案例 向世界分享你的好孕 </p>
+  </div>
+  <div class="fn-clear">
+    <div class="com_02 review-list-container">
+      <div class="reviews-list-content" style="display: block;">
+        <div class="reviews-item">
+            <div class="tags-list"> 
+                <a href="#/case/9411.html" target="_blank" class="country_sur country_1 position_1" style="z-index:11">
+              <div class="country_sur_p">
+                <p class="is_country">泰国</p>
+                <p class="sur_num">694752</p>
+              </div>
+              <i class="fp-iconfont"></i> 
+              </a> 
+              <a href="#/news/9634.html" target="_blank" class="country_sur country_1 position_2" style="z-index:11">
+              <div class="country_sur_p">
+                <p class="is_country">俄罗斯</p>
+                <p class="sur_num">170899</p>
+              </div>
+              <i class="fp-iconfont"></i> 
+              </a> 
+              <a href="#/case/9612.html" target="_blank" class="country_sur country_1 position_3" style="z-index:10">
+              <div class="country_sur_p">
+                <p class="is_country">美国</p>
+                <p class="sur_num">151140</p>
+              </div>
+              <i class="fp-iconfont"></i>
+              </a> 
+              <a href="#/news/8896.html" target="_blank" class="country_sur country_2 position_4" style="z-index:1">
+              <div class="country_sur_p">
+                <p class="is_country">马来西亚</p>
+                <p class="sur_num">108403</p>
+              </div>
+              <i class="fp-iconfont"></i> 
+              </a> 
+              <a href="#/news/5551.html" target="_blank" class="country_sur country_2 position_5" style="z-index:5">
+              <div class="country_sur_p">
+                <p class="is_country">德国</p>
+                <p class="sur_num">107776</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/8891.html" target="_blank" class="country_sur country_2 position_6" style="z-index:3">
+              <div class="country_sur_p">
+                <p class="is_country">加拿大</p>
+                <p class="sur_num">101787</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/3963.html" target="_blank" class="country_sur country_2 position_7" style="z-index:8">
+              <div class="country_sur_p">
+                <p class="is_country">英国</p>
+                <p class="sur_num">61696</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1092.html" target="_blank" class="country_sur country_2 position_8" style="z-index:2">
+              <div class="country_sur_p">
+                <p class="is_country">法国</p>
+                <p class="sur_num">55481</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/8851.html" target="_blank" class="country_sur country_2 position_9" style="z-index:8">
+              <div class="country_sur_p">
+                <p class="is_country">柬埔寨</p>
+                <p class="sur_num">50694</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/3959.html" target="_blank" class="country_sur country_2 position_10" style="z-index:6">
+              <div class="country_sur_p">
+                <p class="is_country">西班牙</p>
+                <p class="sur_num">38717</p>
+              </div>
+              <i class="fp-iconfont"></i> </a>
+              <a href="#/ask/1094.html" target="_blank" class="country_sur country_3 position_11" style="z-index:7">
+              <div class="country_sur_p">
+                <p class="is_country">土耳其</p>
+                <p class="sur_num">28655</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1095.html" target="_blank" class="country_sur country_3 position_12" style="z-index:2">
+              <div class="country_sur_p">
+                <p class="is_country">意大利</p>
+                <p class="sur_num">25673</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1096.html" target="_blank" class="country_sur country_3 position_13" style="z-index:1">
+              <div class="country_sur_p">
+                <p class="is_country">冰岛</p>
+                <p class="sur_num">19110</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1073.html" target="_blank" class="country_sur country_3 position_14" style="z-index:2">
+              <div class="country_sur_p">
+                <p class="is_country">以色列</p>
+                <p class="sur_num">11817</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1097.html" target="_blank" class="country_sur country_3 position_15" style="z-index:1">
+              <div class="country_sur_p">
+                <p class="is_country">希腊</p>
+                <p class="sur_num">12295</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1098.html" target="_blank" class="country_sur country_3 position_16" style="z-index:3">
+              <div class="country_sur_p">
+                <p class="is_country">捷克</p>
+                <p class="sur_num">12894</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1099.html" target="_blank" class="country_sur country_3 position_17" style="z-index:2">
+              <div class="country_sur_p">
+                <p class="is_country">奥地利</p>
+                <p class="sur_num">11780</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/ask/1100.html" target="_blank" class="country_sur country_3 position_18" style="z-index:6">
+              <div class="country_sur_p">
+                <p class="is_country">挪威</p>
+                <p class="sur_num">11196</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/3949.html" target="_blank" class="country_sur country_3 position_19" style="z-index:1">
+              <div class="country_sur_p">
+                <p class="is_country">荷兰</p>
+                <p class="sur_num">11950</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a href="#/news/8147.html" target="_blank" class="country_sur country_3 position_20" style="z-index:10">
+              <div class="country_sur_p">
+                <p class="is_country">乌克兰</p>
+                <p class="sur_num">11132</p>
+              </div>
+              <i class="fp-iconfont"></i> </a> 
+              <a class="country_sur country_4 position_21"> <i class="fp-iconfont"></i> </a> <a class="country_sur country_5 position_22"> <i class="fp-iconfont"></i> </a> </div>
+        </div>
+        <a href="#/news/5666.html" target="_blank">
+<div class="reviews-item"> 
+  <div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/98975d9755a6150310c5700c089429ec.jpg);">
+    <div class="content-pic" style="background-image: url(#/skin/images/america_icon.jpg);"></div>
+  </div>
+  <div class="reviews-item-content">
+    <div class="content-tit">赴美试管<i class="iocn-spot"></i>高龄造娃记</div>
+    <div class="content-score best">国内促排移植多次失败，45岁高龄赴美做试管婴儿成功怀孕</div>
+    <div class="content-text">45岁已经到了女性生育的极限年龄，国内大多数生殖中心也不再为其提供做试管婴儿，而来自广州的刘女士一家在国内多次促排失败后，有了去美国做试管婴儿的打算，也是这一次想法的改变让她终于成功怀孕。</div>
+    <div class="content-address">中国<i class="iocn-spot"></i>广东<i class="iocn-spot"></i>广州</div>
+  </div>
+  </div>
+</a> 
+        
+        <a href="#/case/2768.html" target="_blank">
+<div class="reviews-item"> 
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/90801a7576bb2387cfa12281118089d0.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/america_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+  <div class="content-tit">拉拉情侣<i class="iocn-spot"></i>美国造娃经历分享</div>
+  <div class="content-score best">美国PFC造娃记：IUI，3天，5万，1次中</div>
+  <div class="content-text">看了相因公众号这么多文章，是不是很多人觉得要娃很难，缘分来了的时候，也许就像我这次IUI的经历一样，开销不过5万，去了诊所两天。我们打电话去过香港、日本、台湾，考虑到太多我们拿不出的证明。</div>
+  <div class="content-address">美国<i class="iocn-spot"></i>旧金山<i class="iocn-spot"></i>PFC</div>
+</div>
+ </div>
+</a> 
+        <a href="#/case/5781.html" target="_blank">
+        <div class="reviews-item bor"> 
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/c517e33e2d4c9c759da45ae25beb4480.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/thailand_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+  <div class="content-tit">来自广州<i class="iocn-spot"></i>泰国造娃经历分享
+</div>
+  <div class="content-score best">多囊卵巢备孕失败，31岁赴泰试管婴儿圆宝宝梦</div>
+  <div class="content-text">来自广州的罗女士有一个幸福的家庭，结婚几年来两夫妻非常的恩爱但唯一的遗憾就是没有小宝宝，31岁的她内心也非常着急，于是在朋友的建议下赴泰做试管婴儿终于顺便圆了自己的宝宝梦。</div>
+  <div class="content-address">泰国<i class="iocn-spot"></i>曼谷<i class="iocn-spot"></i>RFG</div>
+</div>
+ </div>
+        </a>
+         </div>
+      <div class="reviews-list-content" style="display: none; "> 
+       <a href="#/case/2770.html" target="_blank">
+        <div class="reviews-item"> 
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/98975d9755a6150310c5700c089429ec.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/spain_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+  <div class="content-tit">新西兰结婚<i class="iocn-spot"></i>西班牙造娃</div>
+  <div class="content-score best">西班牙eugin造娃记:新西兰结婚，西班牙试管婴儿</div>
+  <div class="content-text">从2014年开始，突然很想要一个人孩。然后开始准备。最开始考虑的是泰国。后来我们联系了几家医院后。就跑过去了。但是令人失望的是，有一家医院愿意接我们这样的情况，但必须通过中介做各种手续。</div>
+  <div class="content-address">西班牙<i class="iocn-spot"></i>马德里<i class="iocn-spot"></i>eugin</div>
+</div>
+ </div>
+        </a> 
+        <a href="#/case/2761.html" target="_blank">
+        <div class="reviews-item"> 
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/95631f4c7f320cc69d4da0afada5a7c6.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/cambodia_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+  <div class="content-tit">拉拉情侣<i class="iocn-spot"></i>柬埔寨造娃经历分享</div>
+  <div class="content-score best">柬埔寨FCC造娃记：我的IUI之行</div>
+  <div class="content-text">很多人羡慕我一次就中了IUI，其实我觉得自己并不算容易，之前这两年里我一直被病痛折磨着，因为有比较严重的子宫内膜异位症。关于心态，我想说至关重要！一定一定要保持对自己有信心并且乐观..</div>
+  <div class="content-address">柬埔寨<i class="iocn-spot"></i>金边<i class="iocn-spot"></i>FCC</div>
+</div>
+ </div>
+        </a>
+         <a href="#/case/2812.html" target="_blank">
+        <div class="reviews-item"> 
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/90801a7576bb2387cfa12281118089d0.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/america_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+  <div class="content-tit">拉拉情侣<i class="iocn-spot"></i>美国造娃记</div>
+  <div class="content-score best">拉拉美国试管婴儿攻略：AB卵龙凤胎</div>
+  <div class="content-text">一对伴侣能有双方共同的宝宝，是很多人的梦想。很多couple用“A卵B怀”的方式实现了梦想。有人问，如果能A和B的卵由其中一人怀，岂不是更棒，但是技术上可能吗？毛毛和爱人实现了！！！</div>
+  <div class="content-address">美国<i class="iocn-spot"></i>Beverly Hills<i class="iocn-spot"></i>SCRC</div>
+</div>
+ </div>
+        </a> 
+        
+        <a href="#/case/10486.html" target="_blank">
+        <div class="reviews-item bor">
+<div class="reviews-item-pic" style="background-image: url(#/d/file/case/2018-06-23/98975d9755a6150310c5700c089429ec.jpg);">
+  <div class="content-pic" style="background-image: url(#/skin/images/denmark_icon.jpg);"></div>
+</div>
+<div class="reviews-item-content">
+            <div class="content-tit">来自武汉<i class="iocn-spot"></i>赵女生的好孕分享</div>
+            <div class="content-score best">备孕五年两次试管，顺利好孕</div>
+            <div class="content-text">卵巢功能差做试管成功率不高是众所周知的一件事，在大多数选择做试管婴儿的姐妹中，他们或高龄、或卵巢早衰，但无一例外都在数次尝试后终收获“好孕”！</div>
+            <div class="content-address">中国<i class="iocn-spot"></i>武汉<i class="iocn-spot"></i>某生殖中心</div>
+          </div>
+        </div>
+        </a> 
+        
+        </div>
+      <div class="reviews-list-content" style="display: none;"> <a href="#/case/889.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital8.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/index_08.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自北京<i class="iocn-spot"></i>Dana的好孕分享</div>
+            <div class="content-score best">为了一个宝宝，10年遍访全国</div>
+            <div class="content-text">23岁结婚，25岁离婚...其中心酸无人能懂，原本以为这辈子就这么一个人过了。但，30岁碰到现任老公愿意陪我孤老，几经波折，在33岁那年，总算得偿所愿，告别10年寻医血泪路...</div>
+            <div class="content-address">柬埔寨<i class="iocn-spot"></i>金边<i class="iocn-spot"></i>RFG</div>
+          </div>
+        </div>
+        </a> <a href="#/case/890.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital9.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/america_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自上海<i class="iocn-spot"></i>陈佩遥的好孕分享</div>
+            <div class="content-score best">选择大于努力，我的相因圆梦之旅</div>
+            <div class="content-text">2015年的夏天是美好的，我迎来生命中最重要的人。原以为此生与“妈妈”无缘，即使前往美国，也是抱着试试的心态。非常感谢相因顾问长达2个月的入微照顾，让全程胜似旅游。</div>
+            <div class="content-address">美国<i class="iocn-spot"></i>内华达州<i class="iocn-spot"></i>FCLV</div>
+          </div>
+        </div>
+        </a> <a href="#/case/891.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital10.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/thailand_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自福州<i class="iocn-spot"></i>周茂林的好孕分享</div>
+            <div class="content-score best">高龄妈妈必看！我的试管婴儿心路历程</div>
+            <div class="content-text">都说80后是错过时代机遇的一代，我是77年人，也没逃过时代浪潮，老大都高中了，老二还在腹中。在多次妊娠失败后，我选择了相因海外医旅。过程是艰辛的，结果是幸福的。
+</div>
+            <div class="content-address">泰国<i class="iocn-spot"></i>曼谷<i class="iocn-spot"></i>BNH医院</div>
+          </div>
+        </div>
+        </a> <a href="#/case/892.html" target="_blank">
+        <div class="reviews-item bor">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital11.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/russia_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自武汉<i class="iocn-spot"></i>欧凯露的好孕分享</div>
+            <div class="content-score best">我不惧世俗！在相因，让爱结晶</div>
+            <div class="content-text">“我就是我，不一样的烟火”很喜欢哥哥的这句歌词，它是我们真实的内心写照。我们的爱不惧世俗，活出了别人羡慕的模样。转眼间，宝贝都会上学了，我很坚定当初的选择。</div>
+            <div class="content-address">俄罗斯<i class="iocn-spot"></i>莫斯科<i class="iocn-spot"></i>NGC</div>
+          </div>
+        </div>
+        </a> </div>
+      <div class="reviews-list-content" style="display: none; "> <a href="#/case/893.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital12.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/thailand_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自中山<i class="iocn-spot"></i>文兰兰的好孕分享</div>
+            <div class="content-score best">一次选择，让濒临破碎的家庭重塑希望</div>
+            <div class="content-text">5年前，我通过相因提供的支持与服务，在泰国帕雅泰医院进行了试管婴儿移植，我选择分享我的好孕故事，有太多家庭正在经历同样的煎熬，希望每个不孕不育家庭都有好孕。</div>
+            <div class="content-address">泰国<i class="iocn-spot"></i>曼谷<i class="iocn-spot"></i>帕雅泰第三医院</div>
+          </div>
+        </div>
+        </a> <a href="#/case/894.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital13.jpg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/thailand_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+  <div class="content-tit">离异单身<i class="iocn-spot"></i>丹麦造娃记</div>
+  <div class="content-score best">4天3夜，2万3人民币，去丹麦体验一次IUI</div>
+  <div class="content-text">今天的推送标题搞得很像旅游攻略。我是觉得出国做IUI是给自己一个休假的机会。而以放松无压力的心态怀宝宝，是再好不过的状态了。直女Grace同学说，很庆幸自己走出了第一步。</div>
+  <div class="content-address">丹麦<i class="iocn-spot"></i>哥本哈根<i class="iocn-spot"></i>FCC</div>
+</div>
+        </div>
+        </a> <a href="#/case/895.html" target="_blank">
+        <div class="reviews-item">
+          <div class="reviews-item-pic" style="background-image: url(#/skin/images/index/xy_case_hospital14.jpg);">
+
+            <div class="content-pic" style="background-image: url(#/skin/images/russia_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自南京<i class="iocn-spot"></i>杜欣芸的好孕分享</div>
+            <div class="content-score best">等了那么多年，试了那么多次...</div>
+            <div class="content-text">坐标江苏南京，受家庭观念的影响，老一辈的都希望男丁兴旺，无奈几年下来，各种方式都尝试了均以失败告终。通过这次俄罗斯试管婴儿之旅，才知道科学离生活是那么的近。</div>
+            <div class="content-address">俄罗斯<i class="iocn-spot"></i>莫斯科<i class="iocn-spot"></i>EMC</div>
+          </div>
+        </div>
+        </a> <a href="#/case/896.html" target="_blank">
+        <div class="reviews-item bor">
+          <div class="reviews-item-pic" style="background-image: url(#/d/file/case/2020-08-13/05648e74b517502ee0684b21d62467e9.jpeg);">
+            <div class="content-pic" style="background-image: url(#/skin/images/thailand_icon.jpg);"></div>
+          </div>
+          <div class="reviews-item-content">
+            <div class="content-tit">来自武汉<i class="iocn-spot"></i>周女士的好孕分享</div>
+            <div class="content-score best">单身女性赴泰试管案例分享</div>
+            <div class="content-text">单身女性要想解决剩余需求，试管婴儿是个不错的选择，但国内政策不允许单身人士做试管，所以很多姐妹会考虑搭到国外进行，泰国便是单身合法试管的国家之一。</div>
+            <div class="content-address">泰国<i class="iocn-spot"></i>曼谷<i class="iocn-spot"></i>BNH医院</div>
+          </div>
+        </div>
+        </a> </div>
+    </div>
+  </div>
+  <div class="pioneer-dot">
+    <ul class="ui-switchable-nav ui-switchable-trigger-nav">
+      <li class="ui-switchable-trigger ui-switchable-active"></li>
+      <li class="ui-switchable-trigger"></li>
+      <li class="ui-switchable-trigger"></li>
+      <li class="ui-switchable-trigger"></li>
+    </ul>
+  </div>
+  <span class="ui-switchable-prev-btn ui-switchable-btn"><i class="btn-left icon"></i></span> <span class="ui-switchable-next-btn ui-switchable-btn"><i class="btn-right icon"></i></span> </div>
+<!--热点-->
+<div class="g-floor bor" id="scrollTop5">
+  <p class="floor-title">相因智汇</p>
+  <p class="floor-desc" style="color:#818181">4000万不孕不育家庭的信息中心 </p>
+</div>
+<div class="tbA-list">
+  <div class="clearfix" style="display:block;">
+    <div class="col-a">
+      <div class="slide-pic slide-btn1">
+        <div class="slide-wrap slide-wrap1"> <a href="javascript:" class="prev prev1"></a> <a href="javascript:" class="next next1"></a>
+          <div class="contentWrap contentWrap1" style="overflow:hidden; position: relative; zoom:1; width:100%; height:100%;">
+            <ul class="pics" style="position: absolute; top: 0px; left: 0px; width: 1775px;">
+              <li style="float: left;"> <a href="#/news/6477.html" target="_blank" class="aniTit noHover"> <img src="__INDEX__/static/xyw/images/xy_news_1.jpg" width="355" height="534" alt="海外试管婴儿支持与服务">  </a> </li>
+              <li style="float: left;"> <a href="#/case/5775.html" target="_blank" class="aniTit noHover"> <img src="__INDEX__/static/xyw/images/xy_news_2.jpg" width="355" height="534" alt="1000+试管婴儿案例">  </a> </li>
+              <li style="float: left;"> <a href="#/news/6451.html" target="_blank" class="aniTit noHover"> <img src="__INDEX__/static/xyw/images/xy_news_3.jpg" width="355" height="534" alt="试管婴儿成功率预估">  </a> </li>
+              <li style="float: left;"> <a href="#/news/6065.html" target="_blank" class="aniTit noHover"> <img src="__INDEX__/static/xyw/images/xy_news_4.jpg" width="355" height="534" alt="泰国试管婴儿评测">  </a> </li>
+              <li style="float: left;"> <a href="#/news/6478.html" target="_blank" class="aniTit noHover"> <img src="__INDEX__/static/xyw/images/xy_news_5.jpg" width="355" height="534" alt="相因试管婴儿服务调查与反馈">  </a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="circle-ctrl">
+          <ul class="circle-wrap circle-wrap1">
+            <li class="item current"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+            <li class="item"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-bc">
+      <div class="col-b"> <a href="#/news/8643.html" target="_blank" class="aniTit little mb-5"> <img src="__INDEX__/static/xyw/images/xy_news_6.jpg" width="355" height="250" alt="试管婴儿包成功"> <span class="title-alpha">定制生育方案，出生才是硬道理</span> </a>
+        <ul class="pics">
+          <li> <a href="#/baike/4901.html" target="_blank" class="aniTit little" rel="nofollow"> <img src="__INDEX__/static/xyw/images/xy_news_8.jpg" width="175" height="175" alt="美国试管婴儿医院"> <span class="title-alpha" style="">推荐10家美国试管婴儿医院</span> </a> </li>
+          <li> <a href="#/baike/4904.html" target="_blank" class="aniTit little" rel="nofollow"> <img src="__INDEX__/static/xyw/images/xy_news_9.jpg" width="175" height="175" alt="泰国试管婴儿攻略"> <span class="title-alpha" style="">必读：一份泰国试管婴儿攻略</span> </a> </li>
+        </ul>
+        <div class="lo-hot">
+          <p class="hot-th">相因热点</p>
+          <div class="hot-tb">
+            <div class="hot-wrap clearfix"> 
+<a href="#/baike/9219.html" target="_blank">hpv疫苗</a> 
+<a href="#/news/8712.html" target="_blank">绝经怀孕</a>
+<a href="#/news/8662.html" target="_blank">石女试管</a> 
+<a href="#/news/8643.html" target="_blank">包成功</a>  
+<a href="#/news/8596.html" target="_blank">卵泡萎缩</a>  
+<a href="#/news/8538.html" target="_blank">卵泡破裂</a> 
+<a href="#/news/7609.html" target="_blank">人工授精</a>
+<a href="#/news/8432.html" target="_blank">刮宫手术</a> 
+<a href="#/news/7627.html" target="_blank">怀孕征兆</a> 
+<a href="#/news/8873.html" target="_blank">离婚证</a>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-c"> <a href="#/baike/4900.html" target="_blank" class="aniTit little mb-30" rel="nofollow"> <img src="__INDEX__/static/xyw/images/xy_news_7.jpg" width="355" height="250" alt="美国试管婴儿"> <span class="title-alpha">涨见识！美国试管婴儿“高阶”指南，赴美生子必备攻略</span> </a>
+        <div class="topList">
+          <ul class="txts">
+                      <li class="t1"><a href="#/news/11015.html" target="_blank">宝宝胎记有好有坏，这4种治疗不好轻则毁容、重则致癌</a></li>
+                        <li class="t2"><a href="#/news/11014.html" target="_blank">羊水过少有危险，6个快速补充羊水的方法请收好</a></li>
+                        <li class="t3"><a href="#/news/11012.html" target="_blank">专家谈婴儿辅食添加顺序表，老一套的都已经过时了</a></li>
+                        <li class="t4"><a href="#/news/11013.html" target="_blank">生产不疼产后疼？剖腹产最痛的其实是这些事情</a></li>
+                        <li class="t5"><a href="#/news/11011.html" target="_blank">6个月宝宝开荤仪式顺口溜，八大吉祥话一句都不能少</a></li>
+                        <li class="t6"><a href="#/news/11010.html" target="_blank">奶水不足不要慌，教你6招快速下奶！</a></li>
+                        <li class="t7"><a href="#/news/11008.html" target="_blank">家长最容易忽略的hib疫苗，要不要打有说法</a></li>
+                      </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clear mb-50"></div>
+  </div>
+</div>
+<!--服务-->
+<div class="g-floor bor" id="scrollTop6">
+  <p class="floor-title">了解相因</p>
+  <p class="floor-desc" style="color:#818181">13年沉淀 找专业人做专业事</p>
+</div>
+<div class="cards-wrap">
+  <div class="good-service-card card">
+    <div class="card-title-wrap bg1">
+      <div class="card-title">诚信服务</div>
+      <div class="link-wrap"> <span class="card-friend-link">全球服务</span> <span class="card-friend-link">全程陪同</span> <span class="card-friend-link">全险保障</span> </div>
+    </div>
+    <div class="card-content-wrap">
+      <div class="border-bottom gs-card-img-wrap"> <span class="gs-card-img"> <i class="gs-card-img-icon1"></i> <i class="gs-card-img-icon2"></i> <i class="gs-card-img-icon3"></i> <i class="gs-card-img-icon4"></i> </span> <span class="gs-card-img-txt"> <a class="text-left">医学翻译</a> <a>诚信服务</a> <a>费用透明</a> <a>专属顾问</a> </span> </div>
+      <div> 
+      <a class="normal-link text-overflow" href="#/news/10972.html" target="_blank"> <span class="tag">[ 最新 ]</span>男性备孕不能靠感觉，精子碎片率是否正常有个范围值</a> 
+      <a class="normal-link text-overflow" href="#/news/10827.html" target="_blank"> <span class="tag">[ 话题 ]</span>膝胸卧位早晚各一次最佳，别再弄不清什么时间做了</a> 
+      <a class="normal-link text-overflow" href="#/news/10973.html" target="_blank"> <span class="tag">[ 热议 ]</span>备孕可别忘了吃叶酸，为你推荐口碑较好的6个品牌</a> 
+      </div>
+    </div>
+  </div>
+  <div class="about-card card">
+    <div class="card-title-wrap bg2">
+      <div class="card-title">关于相因</div>
+      <div class="link-wrap"> <span class="card-friend-link">高端品质</span> <span class="card-friend-link">安心医旅</span> <span class="card-friend-link">无忧好孕</span> </div>
+
+    </div>
+    <div class="card-content-wrap j-card-wrap"> <a class="first-link border-bottom" target="_blank" href="#/news/10970.html">
+
+      <div class="card-img-wrap"><img src="__INDEX__/static/xyw/images/index_10.png" class="card-img" alt="试管婴儿热点资讯"> </div>
+      <div class="card-other-warp">
+        <div class="text-overflow-two">辣妈正传孙俪同款婴儿车真不错，品牌和价格大揭秘</div>
+        <div class="origin">相因优选 2020-10-09</div>
+      </div>
+      </a> <a class="normal-link before-point text-overflow" href="#/news/10965.html" target="_blank">孕期胎心位置与宝宝体位有关，出现这种情况可能是臀位</a> <a class="normal-link before-point text-overflow" target="_blank" href="#/news/10891.html">不一定3个月内才有效，通过“好孕棉”喜获好孕的经历分享</a> <a class="normal-link before-point text-overflow" target="_blank" href="#/news/10960.html">催产针的作用和副作用，准妈妈最好了解一下</a> </div>
+  </div>
+  <div class="sharing-card card">
+    <div class="card-title-wrap bg3">
+      <div class="card-title">交流分享</div>
+      <div class="link-wrap"> <span class="card-friend-link">备孕知识</span> <span class="card-friend-link">好孕故事</span> <span class="card-friend-link">海外攻略</span> </div>
+    </div>
+    <div class="card-content-wrap"> <a class="first-link border-bottom" target="_blank" href="#/news/10971.html">
+      <div class="card-img-wrap"><img src="__INDEX__/static/xyw/images/index_09.png" class="card-img" alt="试管婴儿经验分享"> </div>
+      <div class="card-other-warp">
+        <div class="text-overflow-two">这类症状根本不是胎毒，所谓偏方去除法真的可靠？</div>
+        <div class="origin">相因网<i class="iocn-spot"></i>热点资讯 2020-10-09</div>
+      </div>
+      </a> <a class="normal-link before-point text-overflow" target="_blank" href="#/news/10893.html">孕期四维彩超排畸检查，6大项目筛选大部分疾病</a> <a class="normal-link before-point text-overflow" target="_blank" href="#/news/10887.html">羊水穿刺出结果时间很漫长，拿到报告单你得这样看</a> <a class="normal-link before-point text-overflow" target="_blank" href="#/news/10880.html">羊水穿刺亲子鉴定并非谣言，准确性还不低！</a> </div>
+  </div>
+</div>
+
+<!--底部-->
+
+
+<div class="right-help-entry" style="width: auto;">
+    <div class="right-panel" style="display: none;">
+      <div class="panel-close">
+        <img src="__INDEX__/static/xyw/images/right-close.png" alt="">
+      </div>
+      <ul class="panel-content">
+
+      <li>
+          <div class="content-icon">
+            <img src="__INDEX__/static/xyw/images/right-icon.png" alt="">
+          </div>
+          <div class="content-main">
+              <div>
+                <div class="content-title">
+                  全国免费电话
+                </div>
+                <div class="content-desc">
+                  <span style="color: #EF2F3A; font-size: 20px; font-weight: 700;">400-900-5751</span>
+                </div>
+              </div>
+          </div>
+        </li><li>
+          <div class="content-icon">
+            <img src="__INDEX__/static/xyw/images/right-icon-01.png" alt="">
+          </div>
+          <div class="content-main">
+            <a href="javascript:void(0)" onclick="oPen();return false;">
+              <div>
+                <div class="content-title">
+                  顾问<i class="iocn-spot"></i>免费咨询
+                </div>
+                <div class="content-desc">
+                  服务，因为用心而更温暖
+                </div>
+              </div>
+            </a>
+          </div>
+        </li><li>
+          <div class="content-icon">
+            <img src="__INDEX__/static/xyw/images/right-icon-02.png" alt="">
+          </div>
+          <div class="content-main">
+            <a href="javascript:void(0)" onclick="oPen();return false;">
+              <div>
+                <div class="content-title">
+                  聆听<i class="iocn-spot"></i>建议反馈
+                </div>
+                <div class="content-desc">
+                  相因不是完美的，我们渴望您的建议
+                </div>
+              </div>
+            </a>
+          </div>
+        </li></ul>
+    </div>
+    <div class="right-button">
+      <img class="right-background" src="__INDEX__/static/xyw/images/right-botton.png" alt="">
+      <span>
+        咨询&amp;建议
+      </span>
+    </div>
+</div>
+<div id="J_gotoTop" style="cursor: pointer; display: block;">
+    <img style="width: 44px;" src="__INDEX__/static/xyw/images/J_gotoTop.png">
+</div>
+
+
+
+<!--<div class="friendshipLink"><span>友情链接：</span></div>-->
+<!--右侧漂浮-->
+<div class="floatbar floatbar-fixed" id="g-floatbar">
+  <div> <a target="_blank"> <img src="__INDEX__/static/xyw/images/ion_19.png" alt="试管婴儿公开课"> </a> </div>
+  <ul class="vertical-nav">
+    <li class=""> <a href="javascript:;"> 相因导航 </a> </li>
+    <li class=""> <a href="javascript:;"> 今日头条 </a> </li>
+    <li class=""> <a href="javascript:;"> 孕育百科 </a> </li>
+    <li class=""> <a href="javascript:;"> 案例分享 </a> </li>
+    <li class="nav"> <a href="javascript:;"> 相因智汇 </a> </li>
+    <li class=""> <a href="javascript:;"> 了解相因 </a> </li>
+  </ul>
+  <div class="qrcode" style="background-color:#27b5c3;"> <img src="__INDEX__/static/xyw/images/weixin_kf.png" alt="试管婴儿顾问在线">
+    <p>生育顾问<br>
+      微信在线</p>
+  </div>
+</div>
+
+{/block}

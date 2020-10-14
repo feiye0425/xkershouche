@@ -1,0 +1,57 @@
+{extend name="member/memberbase"/}
+{block name="title"}会员中心二手车列表{/block}
+{block name="userright"}
+<div class="userright">
+    <h2 class="usernav">车源列表</h2>
+    <div class="box">
+        <div class="userrightmenu">
+            <span class="fr">您已发布二手车
+                <span class="orange01">{$carslist.status.total}</span> 条，上架
+                <span class="orange01">{$carslist.status.shelf}</span> 条，下架
+                <span class="orange01">{$carslist.status.unshelf}</span> 条，已售
+                <span class="orange01">{$carslist.status.sold}</span> 条，未审核
+                <span class="orange01">{$carslist.status.unaudited}</span> 条。
+            </span>
+            <a href="{:url('index/member/erchoucheadd')}">+发布二手车</a>
+        </div>
+        <div class="userrightsearch clearfix">
+            <div class="fr">
+                <form method="get" action="/simcms/index.php">
+                    <input type="text" name="keywords" class="keyword" size="30"><input type="submit" class="but01" value="搜 索">
+                </form>
+            </div>
+        </div>
+        <table cellspacing="0" cellpadding="0" width="100%"  class="listtable">
+            <tr>
+                <th width="100">图片</th>
+                <th>车型信息</th>
+                <th>报价</th>
+                <th width="130">操作</th>
+            </tr>
+            {volist name="carslist.cars" id="vo"}
+            <tr bgcolor="#ffffff" onmouseover="style.backgroundColor='#f5f5f5'"  onmouseout="style.backgroundColor='#ffffff'">
+                <td align="center">
+                    {if isset($vo['carsimg'][0])}
+                    <img src="__UPLOADS__/{$vo['carsimg'][0]['url']}" alt="" width="80px" height="60px">
+                    {else/}
+                    <div class="noimg">未上传图片</div>
+                    {/if}
+                    </td>
+                <td align="left">
+                    <p><a href="{:url('index/cars/carsdetails',array('id'=>$vo.id))}" target="_blank" class="f14 fb">{$vo.full_name}</a>  </p>
+                    <p class="gray">排量： {$vo.gas} / 交强险时间：{$vo.insurance|date='Y年m月d日'} / 颜色：{$vo.color} / 行驶里程：{$vo.kilometer|format='%.2f'} 万公里 / 信息编号:{$vo.id}</p>
+                    <p class="gray">刷新时间：{$vo.listtime|date="Y-m-d H:i:s"}</p>
+                </td>
+                <td align="center" class="orange01 f14">{$vo.price|format='%.2f'}万</td>
+                <td align="center" class="acmenu">
+                    <p><a href="javascript:if(confirm('确实要删除吗?'))location='{:url('index/member/ershouchedel',array('id'=>$vo.id))}'">删除</a></p>
+                </td>
+            </tr>
+            {/volist}
+        </table>
+        <!-- <div class="page_list">
+            <span>共3条</span><span>第1/1页</span><a href='/simcms/index.php?m=user&a=carlist&page=1'>尾页</a>
+        </div> -->
+    </div>
+</div>
+{/block}

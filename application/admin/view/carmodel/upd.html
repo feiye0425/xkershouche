@@ -1,0 +1,143 @@
+{extend name="base" /}
+{block name="title"}修改车型{/block}
+    {block name="right"}
+        <div class="row J_mainContent" id="content-main">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>二手车管理</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <strong>车型管理</strong>
+                        </li>
+                        <li>
+                            修改车型
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+
+                            <form action="{:url('admin/carmodel/updHanddle')}"
+                            method="post" class="form-horizontal row"
+                            enctype="multipart/form-data" id="form1">
+                            <input type="hidden" name="id" value="{$carmodel_find.id}">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label"></label>
+                                        <div id="brand_select">
+                                            <div class="col-sm-2">
+                                                <select class="form-control brand1">
+                                                    <option value="{$carmodel_parents[0]['id']}">{$carmodel_parents[0]['name']}</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <select class="form-control brand2">
+                                                    <option value="{$carmodel_parents[1]['id']}">{$carmodel_parents[1]['name']}</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <select class="form-control brand3" name="carid">
+                                                    <option value="{$carmodel_parents[2]['id']}">{$carmodel_parents[2]['name']}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <select class="form-control" name="style">
+                                                {volist name="years" id="vo"}
+                                                <option value="{$vo}"
+                                                {if $vo==$carmodel_find.style}
+                                                 selected="selected"
+                                                {/if}
+                                                >{$vo}款</option>
+                                                {/volist}
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <input class="form-control" type="text" name="edition" value="{$carmodel_find.edition}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label"></label>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" type="submit" value="修改车型">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/block}
+    {block name="js"}
+    {__block__}
+    <script src="__ADMIN__/js/hAdmin.js?v=4.1.0"></script>
+    <script src="__ADMIN__/js/plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__/js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="__ADMIN__/js/jquery.cxselect.js" charset="utf-8"></script>
+    <script src="__ADMIN__/js/plugins/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        $("#brand_select").cxSelect({
+            url:"{:url('admin/carmodel/brandJsonGet')}",
+            selects:['brand1','brand2','brand3'],
+            jsonName:'name',
+            jsonValue:'id',
+            jsonSub:'children',
+            required:true,
+        })
+    </script>
+    <script type="text/javascript">
+        $().ready(function(){
+            $("#form1").validate({
+
+                ignore:[],
+                rules:{
+                    carid:{
+                        required:true,
+                    },
+                    edition:{
+                        required:true,
+                        remote:{
+                            url:"{:url('admin/carmodel/checkEditionAjax')}",
+                            cache: false,
+                            data:{
+                                carid:function(){
+                                    return $("select[name='carid']").find("option:selected").val()==undefined?'':$("select[name='carid']").find("option:selected").val();
+                                },
+                                style:function(){
+                                    return $("select[name='style']").find("option:selected").val();
+                                },
+                                id:function(){
+                                    return $("input[type='hidden']").val();
+                                }
+                            },
+                            type:"post"
+                        }
+                    }
+                },
+                messages:{
+                    carid:{
+                        required:"请输入品牌名称",
+                    },
+                    edition:{
+                        required:"请输入版本",
+                        remote:"车型信息不正确或已经存在"
+                    }
+                }
+            });
+        });
+
+        $("select[name='carid']").change(function(){
+            $("input[name='edition']").removeData("previousValue");
+        });
+
+        $("select[name='style']").change(function(){
+            $("input[name='edition']").removeData("previousValue");
+        });
+    </script>
+    {/block}

@@ -1,0 +1,81 @@
+{extend name="member/memberbase"/}
+{block name="title"}会员中心{/block}
+{block name="header"}
+{__block__}
+<link href="__INDEX__/default/css/user.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+    $(function(){
+        $("#checkMobile").click(function(event) {
+            /* Act on the event */
+            var mobile_number = $("input[name='mobile_number']").val();
+            var id = {$Think.cookie.member['id']};
+            $.ajax({
+                url: '{:url("index/login/checkMobileNumberAjax")}',
+                type: 'post',
+                data: {id: id,mobile_number:mobile_number}
+            })
+            .done(function(data) {
+               if(!data){
+                   alert("该手机号不符合要求或已经被使用！");
+               }
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+
+        });
+
+        var $input = $("input[name='mobile_number']");
+        $input.focus(function(event) {
+            /* Act on the event */
+            if($input.val()=={$Think.cookie.member['mobile_number']}){
+                $input.val('');
+            }
+        })
+        .blur(function(event) {
+            /* Act on the event */
+            var prv = {$Think.cookie.member['mobile_number']};
+            if($input.val()==''){
+                $input.val(prv);
+            }
+        });
+    })
+</script>
+{/block}
+<!--主体-->
+{block name="userright"}
+    <div class="userright">
+        <h2 class="usernav">编辑个人信息</h2>
+        <div class="box">
+            <form name="form1" class="carform" method="post" action="index.php?m=user">
+                <table cellspacing="0" cellpadding="0" width="100%"  class="maintable">
+                    <tr>
+                        <th>用户名：</th>
+                        <td colspan="3">{$Think.cookie.member['member_name']}</td>
+                    </tr>
+                    <tr>
+                        <th>手机号码：</th>
+                        <td colspan="3">
+                            <input type="text" name="mobile_number" value="{$Think.cookie.member['mobile_number']}" size="20" class="inp01"/>
+                            <button type="button" id="checkMobile">点击获取验证码</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="5">
+                            <div class="buttons">
+                                <input type="submit" value="提 交" class="submit">
+                                <input type="hidden" name="a" value="upinfo">
+                                <input type="hidden" name="id" value="182">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+{/block}
+        <!--主体结束-->
