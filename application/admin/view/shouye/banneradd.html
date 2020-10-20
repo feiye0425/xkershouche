@@ -1,0 +1,97 @@
+{extend name="base" /}
+{block name="title"}修改新闻分类{/block}
+{block name="css"}
+{__block__}
+{/block}
+    {block name="right"}
+        <div class="row J_mainContent" id="content-main">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>首页banner管理</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <strong>banner管理</strong>
+                        </li>
+                        <li>
+                           添加banner
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+
+                            <form action="{:url('admin/shouye/banneraddhanddle')}"
+                            method="post" class="form-horizontal row"
+                            enctype="multipart/form-data" id="form1">
+
+
+                                <div class="col-md-9">
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">首页banner上传</label>
+               <div class="col-sm-9">
+      
+                  
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>缩略图</th>
+                                     <th>上传图片</th>
+                                     <th>链接地址</th>
+                                    <th>banner说明</th>
+                                    <th>提交</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> </td>
+                                    <td>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="banner_thumb"> </label>
+                                        <div class="col-sm-9">
+                                            <input id="banner_thumb" placeholder="" class="" type="file" name="banner_thumb">
+                                        </div>
+                                    </div></td>                                    
+                                    <td>
+                                        <input type="" name="banner_href" placeholder="要跳转的链接地址">
+                                    </td>
+                                    <td>
+                                    <input type="" name="banner_beizhu">
+                                    </td>
+
+                                    <td>
+                                          <button type="submit" class="btn btn-success status">上传图片</button>
+                                    </td>
+                                    
+                                    </tr>
+                                                                                   
+                                    </tbody>
+
+                        </table>
+             
+            
+            </div>
+                                    </div>
+            
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/block}
+    {block name="js"}
+    {__block__}
+    <script src="__ADMIN__/js/hAdmin.js?v=4.1.0"></script>
+    <script src="__ADMIN__/js/plugins/pace/pace.min.js"></script>
+    <script src="__ADMIN__/js/plugins/validate/jquery.validate.min.js"></script>
+
+ 
+    {/block}
