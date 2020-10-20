@@ -34,8 +34,8 @@ return [
     'taglib_end'   => '}',
     // 模板替换
     'tpl_replace_string'    =>  [
-        '__ADMIN__' =>  '/xkershouche/public/static/admin',
-        '__UPLOADS__' =>  '/xkershouche/uploads',
-        '__INDEX__' =>  '/xkershouche/public/static/index',
+        '__ADMIN__' =>  '/tianbao/public/static/admin',
+        '__UPLOADS__' =>  '/tianbao/uploads',
+        '__INDEX__' =>  '/tianbao/public/static/index',
     ]
 ];

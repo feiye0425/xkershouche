@@ -21,6 +21,10 @@ class News extends Controller
             $this->error("该文章不存在或已删除！",'index/index/index');
         }
 
+
+ 
+
+
            
         $pid = $news_find['pid'];
 

@@ -55,8 +55,21 @@ class Index extends Controller
             }
         }
         $this->assign('news',$array);
+
+        $banner_img =db('banner') ->select();
+        $this->assign('banner_img',$banner_img);
+
+
+        $bannerlist = db('banner')->select();
+        $this->assign('bannerlist',$bannerlist);
+
         // dump($array);
         return view();
+
+
+
     }
+
+
 
 }
