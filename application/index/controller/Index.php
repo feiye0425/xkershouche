@@ -42,13 +42,16 @@ class Index extends Controller
         }
         $this->assign('years',$arr);
 
+
+       //通过分类id获取其下的新闻
         $news_fenlei = db('newsfenlei')->select();
         $array = array();
         foreach ($news_fenlei as $key => $value) {
             if($value['pid']==0){
-                $children = getChildren($news_fenlei,$value['id']);
-                array_unshift($children, $value);
-                $ids = array_column($children, 'id');
+               
+                $children = getChildren($news_fenlei,$value['id']);// 假如是一级分类，获取id主键的所有儿子类，
+                array_unshift($children, $value);//将子类添加到一级类的前面，组成一个新的数组。现在$value前面是子类，后面是自己；
+                $ids = array_column($children, 'id');//重新组成一个id的单列数组
                 $news = db('news')->where('pid','in',$ids)->select();
                 $array[$key] = $children[0];
                 $array[$key]['children'] = $news;
@@ -56,14 +59,22 @@ class Index extends Controller
         }
         $this->assign('news',$array);
 
-        $banner_img =db('banner') ->select();
-        $this->assign('banner_img',$banner_img);
 
 
         $bannerlist = db('banner')->select();
         $this->assign('bannerlist',$bannerlist);
 
-        // dump($array);
+        $all_fenlei = db('newsfenlei')->select();
+        print_r($all_fenlei) ;
+
+        $yiji_fenlei = $all_fenlei['0']['pid'=>0];
+       
+        $this->assign('all_fenlei',$all_fenlei);
+
+
+
+
+         dump($all_fenlei);
         return view();
 
 

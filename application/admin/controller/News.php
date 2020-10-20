@@ -94,7 +94,7 @@ class News extends Common
 
     public function lst()
     {
-        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks';
+        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks,keywords,description';
         $news_select = db('news')
         ->order('updtime desc')
         ->alias('n')

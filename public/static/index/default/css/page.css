@@ -11,14 +11,14 @@ body{ color:#333; font-size:12px;}
 
 body{font-weight:normal;font:13px "微软雅黑",verdana,lucida,helvetica,arial,sans-serif;}
 
-/*新闻列表*/
+/*文章列表*/
 .news_list li{font-size:14px;height:45px;line-height:45px;border-bottom:1px dashed #eee;}
 
-/*新闻详细*/
+/*文章详细*/
 .news_title{height:70px;line-height:60px;font-size:22px;text-align:center;border-bottom:1px solid #eee;}
 .news_info{padding:20px;line-height:25px;font-size:14px;}
 
-/*相关新闻*/
+/*相关文章*/
 .about_news_list li{float:left;width:330px;height:25px;line-height:25px;}
 
 /*卖车*/
