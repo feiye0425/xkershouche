@@ -38,7 +38,7 @@ CREATE TABLE `xk_admin`  (
 INSERT INTO `xk_admin` VALUES (13, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 1602898255, '::1', 2);
 INSERT INTO `xk_admin` VALUES (16, '小红', 'e10adc3949ba59abbe56e057f20f883e', 1530672236, '::1', 1);
 INSERT INTO `xk_admin` VALUES (17, '张三', 'e10adc3949ba59abbe56e057f20f883e', 1602552827, '::1', 1);
-INSERT INTO `xk_admin` VALUES (18, '新闻管理员1', '9dbb481804fb884bbdbc1c2a00b2c0a1', 1602551993, '::1', 1);
+INSERT INTO `xk_admin` VALUES (18, '文章管理员1', '9dbb481804fb884bbdbc1c2a00b2c0a1', 1602551993, '::1', 1);
 INSERT INTO `xk_admin` VALUES (19, '小明', 'e10adc3949ba59abbe56e057f20f883e', 1602553423, '::1', 1);
 INSERT INTO `xk_admin` VALUES (20, '李四', '31fc55c3ffd8f91416b1b6966a9c2103', 1602553903, '::1', 1);
 
@@ -130,7 +130,7 @@ CREATE TABLE `xk_auth_rule`  (
 INSERT INTO `xk_auth_rule` VALUES (5, '内容管理', '内容管理', 1, 1, '', 0);
 INSERT INTO `xk_auth_rule` VALUES (9, '会员管理', '会员管理', 1, 1, '', 0);
 INSERT INTO `xk_auth_rule` VALUES (10, '首页', '首页', 1, 1, '', 0);
-INSERT INTO `xk_auth_rule` VALUES (11, 'admin/cate', '新闻频道管理', 1, 1, '', 5);
+INSERT INTO `xk_auth_rule` VALUES (11, 'admin/cate', '文章频道管理', 1, 1, '', 5);
 INSERT INTO `xk_auth_rule` VALUES (12, 'admin/member', '会员管理', 1, 1, '', 9);
 INSERT INTO `xk_auth_rule` VALUES (13, 'admin/index', '首页管理', 1, 1, '', 10);
 INSERT INTO `xk_auth_rule` VALUES (17, 'admin/news', '文章管理', 1, 1, '', 5);

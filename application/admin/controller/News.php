@@ -94,21 +94,16 @@ class News extends Common
 
     public function lst()
     {
-        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks,keywords,description';
+        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks,keywords,description,content';
         $news_select = db('news')
         ->order('updtime desc')
         ->alias('n')
         ->join('newsfenlei f','n.pid=f.id')
-        
-
         ->field($field)->paginate(15);
         // dump($news_select);
-
-
         $this->assign('news',$news_select);
         return view();
     }
-
     public function add()
     {
         $news_model = model("Newsfenlei");
@@ -117,7 +112,6 @@ class News extends Common
         $this->assign("cate",$cate);
         return view();
     }
-
     public function addhanddle()
     {
         if (!request()->isPost()) {
@@ -128,16 +122,14 @@ class News extends Common
         $data['updtime'] = strtotime('now');
         $news_add_result = db('news')->insert($data);
         if ($news_add_result) {
-            $this->success("新闻添加成功",'admin/news/lst');
+            $this->success("文章添加成功",'admin/news/lst');
         } else {
-            $this->error("新闻添加失败",'admin/news/lst');
+            $this->error("文章添加失败",'admin/news/lst');
         }
-
     }
-
     public function upd($id='')
     {
-        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks,content,n.pid as npid';
+        $field = 'n.id as nid,title,author,addtime,updtime,clicks,keywords,description,content,n.pid as npid';
         $news_find = db('news')->alias('n')
         ->join('newsfenlei f','n.pid=f.id')
         ->field($field)->find($id);
@@ -161,9 +153,9 @@ class News extends Common
         }
         $news_upd_result = db("news")->update(input('post.'));
         if ($news_upd_result!==false) {
-            $this->success("新闻修改成功",'admin/news/lst');
+            $this->success("文章修改成功",'admin/news/lst');
         } else{
-            $this->error("新闻修改失败",'admin/news/lst');
+            $this->error("文章修改失败",'admin/news/lst');
         }
     }
 

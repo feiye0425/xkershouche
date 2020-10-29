@@ -10,7 +10,7 @@
 
 
 
-
+<script src="__INDEX__/bozhong/js/swiper.jquery.js"></script>
 
 
   <div class="bz-body">
@@ -20,223 +20,148 @@
       <div class="nav-li--icon nav-li--icon-1 "><em></em></div>
       <div class="nav-li--mask"></div>
       <div class="nav-li__content">
-        <p class="nav-li__content--title" style="font-weight: bold;">优生备孕</p>
+        <p class="nav-li__content--title" style="font-weight: bold;">天宝备孕</p>
         <div class="nav-li__content__subtitle">
-        <span>好孕社区</span><span>非妈助孕</span><span>排卵自测</span><span>送子灵庙</span>
+        <span>备孕资讯</span><span>备孕百科</span><span>备孕问答</span>
         </div>
       </div>
+
+
+
+
       <div class="sort-tabs sort-tabs__fkzr" data-aside-table="">
                 <div class="sort-tabs__left" style="margin-right: 30px;">
         
-        <div class="sort-tabs__block-tips blineb">
-          <p>社区</p>
-          <a target="_blank" href="https://bbs.bozhong.com/">备孕群组<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="https://bbs.bozhong.com/forum-24-1.html">想要宝宝</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2258-1.html">升级论文</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2301-1.html">非妈助孕8法</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2338-1.html">常常妈妈大讲堂</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2151-1.html">盖楼许愿</a>
-        </div>
-        <div class="sort-tabs__block-tips blineb">
-          <p>疑难专区</p>
-          <a target="_blank" href="https://bbs.bozhong.com/">疑难群组<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2309-1.html">备孕心路</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2249-1.html">中医备孕</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2222-1.html">子宫问题</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1927-1.html">多囊卵巢</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1930-1.html">输卵管</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1933-1.html">月经不调</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1932-1.html">精子质量</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2329-1.html">内异巧囊</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2330-1.html">卵巢问题</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2328-1.html">宫外孕</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1934-1.html">人工授精</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1931-1.html">流产再战</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-1928-1.html">胎停再战</a>
-          <a target="_blank" href="https://bbs.bozhong.com/forum-2331-1.html">内分泌</a>
-        </div>
-        <div class="sort-tabs__block-tips blineb">
-          <p>实用小工具</p>
-          <a target="_blank" href="#/tools-bless.html">百宝箱<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="#/tools-ovulatory.html">排卵期自测</a>
-          <a target="_blank" href="#/tools/songzimiao.htm">送子灵庙</a>
-          <a target="_blank" href="https://bbs.bozhong.com/beiyun/">备孕大攻略</a>
-        </div>
-        <div class="sort-tabs__pinpai">
-          <div class="sort-qrcode">
-            <img class="sort-qrcode--img" src="images/qrcode-fkzr.png" alt="">
-            <p class="sort-qrcode--text">微信扫描二维码</p>
+
+       
+          <div class="sort-tabs__block-tips blineb">
+            <p> 备孕资讯</p>
+            <a target="_blank" href="#"> 资讯频道<span>&gt;</span></a>
           </div>
-          <div class="sort-brand">
-            <img class="sort-logo" src="images/logo-fkzr.png" alt="">
-            <div class="sort-brand__info">
-              <p class="sort-brand__info-name">疯狂造人APP</p>
-              <p class="sort-brand__info-slogan">千万姐妹一起备孕</p>
-            </div>
+
+          <div class="sort-tabs__block-content">
+              {volist name="first_fenlei" id="vo2"}
+            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+             {/volist}
           </div>
+         
+          <div class="sort-tabs__block-tips blineb">
+            <p> 备孕百科</p>
+            <a target="_blank" href="#"> 百科频道<span>&gt;</span></a>
+          </div>
+
+          <div class="sort-tabs__block-content">
+              {volist name="first_fenlei" id="vo2"}
+            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+             {/volist}
+          </div>
+
+
+              <div class="sort-tabs__block-tips blineb">
+            <p> <i id="xx">备孕</i>问答</p>
+            <a target="_blank" href="#"> 问答频道<span>&gt;</span></a>
+          </div>
+
+          <div class="sort-tabs__block-content">
+             {volist name="wenda_fenlei2" id="vo2"}
+            <a target="_blank" href="{:url('wenda/wendadetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+             {/volist}
+          </div>      
+
+
         </div>
-        </div>
-      </div></li>
-            <li class="nav-li nav-li__count-3">
+      </div>
+    </li>
+
+
+
+
+
+
+
+      <li class="nav-li nav-li__count-3">
       <div class="nav-li--icon nav-li--icon-2"><em></em></div>
       <div class="nav-li--mask"></div>
       <div class="nav-li__content">
-        <p class="nav-li__content--title">试管婴儿</p>
+        <p class="nav-li__content--title">天宝试管</p>
         <div class="nav-li__content__subtitle">
-          <span>试管社区</span><span>成功率　</span><span>试管流程</span><span>三甲医院</span>
+         <span>试管资讯</span><span>试管百科</span><span>试管问答</span>
         </div>
       </div>
       <div class="sort-tabs sort-tabs__shiguan">
                 <div class="sort-tabs__left" style="margin-right: 30px;">
-        <div class="sort-tabs__block-tips blineb">
-          <p>社区</p>
-          <a target="_blank" href="#/ivf">试管群组<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="#/ivf">试管检查</a>
-          <a target="_blank" href="#/ivf">试管方案</a>
-          <a target="_blank" href="#/ivf">降调促调</a>
-          <a target="_blank" href="#/ivf">精子问题</a>
-          <a target="_blank" href="#/ivf">卵子问题</a>
-          <a target="_blank" href="#/ivf">子宫问题</a>
-        </div>
-        <div class="sort-tabs__block-tips blineb">
-          <p>医院大全</p>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">全部<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">三级甲等</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">医院直营</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">三方服务</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">港澳台地区</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">高端民营</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/">中外合资</a>
-        </div>
-        <div class="sort-tabs__block-tips blineb">
-          <p>生殖中心人气榜</p>
-          <a href="javascript:void(0);">全部排行榜<span>&gt;</span>
-            <div class="view-all">
-              <img src="images/weapp-shiguanshengzhizhongxin.jpg" alt="">
-              <p>扫描二维码<br>查看全部排行</p>
-            </div>
-          </a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/4218">中信湘雅</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/59">北医三院</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/746">山大辅助生殖</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/988">重庆市妇幼</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/320">郑州大学第一附属</a>
-          <a target="_blank" href="https://bbs.bozhong.com/hospital/4291">美中宜和生殖中心</a>
-        </div>
-        <div class="sort-tabs__block-tips blineb">
-          <p>服务预约</p>
-          <a target="_blank" href="#/ivf/service/">更多服务<span>&gt;</span></a>
-        </div>
-        <div class="sort-tabs__block-content">
-          <a target="_blank" href="#/ivf/service/detail/5edf5993306462004400004b">河南省妇幼</a>
-          <a target="_blank" href="#/ivf/service/detail/5ee082bc306462005f00001a">中山六院</a>
-          <a target="_blank" href="#/ivf/service/detail/5afbd5a9a3c3b121258b4578">成都西囡妇科</a>
-          <a target="_blank" href="#/ivf/service/detail/5c8f327ea3c3b15f298b4570">北京家恩德运</a>
-          <a target="_blank" href="#/ivf/service/detail/5e9e8b3ba3c3b1af6c8b4567">美中宜和生殖中心</a>
-        </div>
-        <div class="sort-tabs__pinpai">
-          <div class="sort-qrcode">
-            <img class="sort-qrcode--img" src="images/qrcode-shiguan.jpg" alt="">
-            <p class="sort-qrcode--text">微信扫描二维码</p>
+
+
+{volist name="cate_list" id="vo1"}
+          <div class="sort-tabs__block-tips blineb">
+            <p> {$vo1.name}</p>
+            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo1.id))}"> {$vo1.name}频道<span>&gt;</span></a>
           </div>
-          <div class="sort-brand">
-            <img class="sort-logo" src="images/logo-shiguan.png" alt="">
-            <div class="sort-brand__info">
-              <p class="sort-brand__info-name sort-brand__info-name--shiguan">试管婴儿APP</p>
-              <p class="sort-brand__info-slogan">90%试管姐妹和医生都在使用</p>
-            </div>
+          <div class="sort-tabs__block-content">
+              {volist name="vo1['children']" id="vo2"}
+
+            <a target="_blank" href="https://bbs.bozhong.com/forum-25-1.html">{$vo2.name}</a>
+             {/volist}
           </div>
-        </div>
+                {/volist}
+
+
+
         </div>
       </div></li>
                   <li class="nav-li nav-li__count-3">
       <div class="nav-li--icon nav-li--icon-4"><em></em></div>
       <div class="nav-li--mask"></div>
       <div class="nav-li__content">
-        <p class="nav-li__content--title">怀孕育儿</p>
+        <p class="nav-li__content--title">天宝怀孕</p>
         <div class="nav-li__content__subtitle">
-          <span>孕育社区</span><span>同预产期</span><span>同城妈妈</span><span>坐月子</span>
+            <span>怀孕资讯</span><span>怀孕百科</span><span>怀孕问答</span>
         </div>
       </div>
       <div class="sort-tabs sort-tabs__yunji">
                 <div class="sort-tabs__left" style="margin-right: 30px;">
+
+
+
+
+{volist name="cate_list" id="vo1"}
           <div class="sort-tabs__block-tips blineb">
-            <p>孕期社区</p>
-            <a target="_blank" href="https://bbs.bozhong.com/">孕期群组<span>&gt;</span></a>
+            <p> {$vo1.name}</p>
+            <a target="_blank" href="https://bbs.bozhong.com/"> {$vo1.name}频道<span>&gt;</span></a>
           </div>
           <div class="sort-tabs__block-content">
-            <a target="_blank" href="https://bbs.bozhong.com/forum-25-1.html">怀上宝宝</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2191-1.html">建卡产检</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2152-1.html">待产包</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2158-1.html">坐月子</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-1971-1.html">胎教</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2150-1.html">生男生女</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2156-1.html">孕酮HCG</a>
+              {volist name="vo1['children']" id="vo2"}
+
+            <a target="_blank" href="https://bbs.bozhong.com/forum-25-1.html">{$vo2.name}</a>
+             {/volist}
           </div>
-          <div class="sort-tabs__block-tips blineb">
-            <p>育儿社区</p>
-            <a target="_blank" href="https://bbs.bozhong.com/">育儿群组<span>&gt;</span></a>
-          </div>
-          <div class="sort-tabs__block-content">
-            <a target="_blank" href="https://bbs.bozhong.com/forum-26-1.html">小宝宝（0-1岁）</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-21-1.html">大宝宝（1-3岁）</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2195-1.html">大宝宝（3-6岁）</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2164-1.html">宝宝喂养</a>
-            <a target="_blank" href="https://bbs.bozhong.com/forum-2165-1.html">宝宝生病</a>
-          </div>
-          <div class="sort-tabs__block-tips blineb">
-            <p>问答攻略</p>
-          </div>
-          <div class="sort-tabs__block-content">
-            <a target="_blank" href="#/food/">孕期饮食</a>
-            <a target="_blank" href="#/qa/">孕育专题</a>
-          </div>
-          <div class="sort-tabs__block-tips blineb">
-            <p>精选服务</p>
-          </div>
-          <div class="sort-tabs__block-content">
-            <a target="_blank" href="#/zuoyuezi/service/#/">坐月子</a>
-          </div>
-          <div class="sort-tabs__pinpai">
-            <div class="sort-qrcode">
-              <img class="sort-qrcode--img" src="images/qrcode-yunji.jpg" alt="">
-              <p class="sort-qrcode--text">微信扫描二维码</p>
-            </div>
-            <div class="sort-brand">
-              <img class="sort-logo" src="images/logo-yunji.png" alt="">
-              <div class="sort-brand__info">
-                <p class="sort-brand__info-name">孕迹暖暖APP</p>
-                <p class="sort-brand__info-slogan">呵护孕育每一天</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div></li>
+                {/volist}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </ul>
     <div class="bz-body__tips__right">
       <div class="bz-body__tips-ad">
 
+<div id="fragment" class="example"  style="height: inherit;"></div>
 
 
-
-
-
-
-{volist name="bannerlist" id="vo1"}
-<img src="{$vo1.banner_thumb}">
-{/volist}
 
 
 
@@ -271,21 +196,8 @@
 
 
     </div>
-    <div class="w-happy-bg"></div>
-    <div class="w-happy-item w-happy-share">
-        <span style="padding-top: 23px;">分享喜事</span>
-      <a class="happy-share-coin"></a>
-      <div class="happy-share-open" style="right: -2px;">
-          <div class="happy-share-tri" style="left: 195px;"></div>
-          <div class="happy-share-btn">
-              <p>你要分享什么喜事呢</p>
-              <a href="https://bbs.bozhong.com/forum.php?mod=post&amp;action=newthread&amp;sortid=3&amp;fid=2258&amp;cedit=yes&amp;extra=" class="happy-share-btn1" target="_blank" data-follow="www首页-首屏疯狂造人推广通栏-我怀孕了">
-              </a>
-              <a href="https://bbs.bozhong.com/forum.php?mod=post&amp;action=newthread&amp;sortid=15&amp;fid=25&amp;cedit=yes&amp;extra=" class="happy-share-btn2" target="_blank" data-follow="www首页-首屏疯狂造人推广通栏-我生娃了">
-              </a>
-          </div>
-      </div>
-    </div>
+
+
   </div>
 </div>      </div>
     </div>
@@ -307,43 +219,22 @@
             <div class="box-header box-header-beiyun">
                 <h2 class="h3_beiyun">备孕</h2>
                 <ul class="box-header-nav div-1180">
-                    <li><a href="https://bbs.bozhong.com/forum-24-1.html" target="_blank" data-follow="www首页-备孕-想要宝宝版块入口">想要宝宝</a>/</li>
-                    <li><a href="https://bbs.bozhong.com/forum-2258-1.html" target="_blank" data-follow="www首页-备孕-升级论文版块入口">升级论文</a>/</li>
-                    <li><a href="https://bbs.bozhong.com/forum-2151-1.html" target="_blank" data-follow="www首页-备孕-盖楼许愿版块入口">盖楼许愿</a></li>
+                    <li><a href="#" target="_blank" data-follow="">资讯</a>/</li>
+                    <li><a href="#" target="_blank" data-follow="">百科</a>/</li>
+                    <li><a href="#" target="_blank" data-follow="">问答</a></li>
                 </ul>
-                <div class="box-header-content">
-                    <form action="#/" class="relative">
-                        <i class="w-icon-date"></i><label for="last-time">上次月经</label><input type="text" data-action="datepicker" id="last-time" placeholder="请选择日期"><label>平均月经周期</label>
-                        <select name="" id="period-select">
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28" selected="">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                            <option value="32">32</option>
-                            <option value="33">33</option>
-                            <option value="34">34</option>
-                            <option value="35">35</option>
-                        </select>
-                        <a class="cal_normal" id="JS_caculate_ovulatory" href="javascript:" data-follow="www首页-备孕-计算排卵期工具栏">计算排卵期</a>
-                    </form>
-                </div>
+
             </div>
             <div class="box-body clearfix">
                 <!-- 推荐帖子 -->
                 <div class="box-content">
                     <div class="box-silder">
                         <ul style="width: 279px;">
-                                                    <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42851285-1-1.html" target="_blank" data-follow="www首页-备孕-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/41b3a046c92d3a29e0bb566f6ae518ed401807.jpg" src="images/41b3a046c92d3a29e0bb566f6ae518ed401807.jpg"></a>
+                                                  <li class="box-s-li">
+            <a href="#" target="_blank" data-follow="#"><img class="lazy loaded" data-original="" src="__INDEX__/bozhong/images/41b3a046c92d3a29e0bb566f6ae518ed401807.jpg"></a>
             <div class="box-s-mask"></div>
             <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42851285-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-备孕-图文" title="10月6号排卵，坐等开奖！！！">10月6号排卵，坐等开奖！！！</a>
+            <a href="#" class="limit" data-limit="55" target="_blank" data-follow="#" title="#">2020年10月14号要抽血开</a>
         </p>
         </li>
                                 </ul>
@@ -352,7 +243,7 @@
                     </div>
                     <div class="topic-items">
                             <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/58/69/53_avatar_middle.jpg?t=1570603842" alt="" src="images/53_avatar_middle.jpg">
+
         <div class="text">
             <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42851748-1-1.html" target="_blank" data-follow="www首页-备孕-头条" title="末次9月21号,排卵日10月6号，有一样的姐妹么，坐等开奖">末次9月21号,排卵日10月6号，有一样的姐妹么，坐等开奖</a></h1>
         <p class="summary summary-em">
@@ -362,249 +253,39 @@
     </div>
                             <div class="change-box">
                             <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/31/65/74_avatar_small.jpg?t=1602547943" alt="" src="images/74_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1584497001670</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853651-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="2020年9月23号左右排卵已测出小牛牛  ！  经历了弱精到精子不液化">2020年9月23号左右排卵已测出小牛牛  ！  经历了弱精到精子不液化</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 逆风的方向，更适合飞翔。</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42846367-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="9.28排卵，今早测了个寂寞...">9.28排卵，今早测了个寂寞...</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 等等盼盼牛宝宝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850047-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="9.17末次的姐妹有测早孕的吗？">9.17末次的姐妹有测早孕的吗？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/91/51/11_avatar_small.jpg?t=1598506716" alt="" src="images/11_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 晨晨吖</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42857999-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="10.1－2号排卵的进！">10.1－2号排卵的进！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/001/28/09/14_avatar_small.jpg" alt="" src="images/14_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播表妹</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42849418-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="【必看小贴士】叶酸不止是防畸，99%的准妈都不知道还有这种功效？">【必看小贴士】叶酸不止是防畸，99%的准妈都不知道还有这种功效？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/96/86/79_avatar_small.jpg?t=1602128508" alt="" src="images/79_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1600018645153</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42846703-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="27排的，等等等10.10更新">27排的，等等等10.10更新</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/86/79/48_avatar_small.jpg?t=1602605389" alt="" src="images/48_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 等我的宝贝呀</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42851285-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="10月6号排卵，坐等开奖！！！">10月6号排卵，坐等开奖！！！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1585026116661</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42848907-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="10.2号排卵。金秀儿有测出的吗，我的白板">10.2号排卵。金秀儿有测出的吗，我的白板</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/036/22/33/27_avatar_small.jpg?t=1572230112" alt="" src="images/27_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> q1504505522146</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42852857-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="请问这是怀了吗">请问这是怀了吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/49/04/00_avatar_small.jpg?t=1599534066" alt="" src="images/00_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 咕叽咕叽叽叽叽</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42841776-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="9.29-9.30排，第七天">9.29-9.30排，第七天</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> Ysdyzy</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42846036-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="有点忐忑……究竟是不是怀上了？">有点忐忑……究竟是不是怀上了？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/10/75/29_avatar_small.jpg?t=1602075468" alt="" src="images/29_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1578241136820</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845834-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="28排，好像测到了…">28排，好像测到了…</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 小树树快长</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836019-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="双胞胎！真是又惊又喜啊！">双胞胎！真是又惊又喜啊！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/034/36/12/24_avatar_small.jpg" alt="" src="images/24_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 劉不二</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833074-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="真的怀了？">真的怀了？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/86/58/84_avatar_small.jpg?t=1601918143" alt="" src="images/84_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 丹丹小宝贝呀</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839559-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="26号排的有动静了吗">26号排的有动静了吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 秀逗猫</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826963-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="89年终于迎来宝宝">89年终于迎来宝宝</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/90/73/21_avatar_small.jpg?t=1602214968" alt="" src="images/21_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1550220096402</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42840033-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="有9月26、27排卵的测出来怀孕的嘛？">有9月26、27排卵的测出来怀孕的嘛？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/001/92/69/40_avatar_small.jpg?t=1524359844" alt="" src="images/40_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> smile天使笑了</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42835179-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="9月18号左右排卵的，大家都去官方了吗">9月18号左右排卵的，大家都去官方了吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/68/84/49_avatar_small.jpg?t=1600499906" alt="" src="images/49_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1593011281532</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42822827-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="今天排卵第十一天，姐妹们帮我看看！">今天排卵第十一天，姐妹们帮我看看！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/97/66/21_avatar_small.jpg?t=1601775581" alt="" src="images/21_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 先开花</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42837573-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="9月23，24排卵，是不是有印">9月23，24排卵，是不是有印</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1567883036303</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826069-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="高龄卵巢早衰备孕成功，顺利产子">高龄卵巢早衰备孕成功，顺利产子</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/035/55/18/55_avatar_small.jpg?t=1587447394" alt="" src="images/55_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 零度冰冻</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824698-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="是白板？">是白板？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1600658118402</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42831048-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="16号左右排卵 遲了1-2天還未來月經">16号左右排卵 遲了1-2天還未來月經</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/99/43/82_avatar_small.jpg?t=1587959686" alt="" src="images/82_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 雅鱼不吃鱼</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42819991-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="跟老公大吵一架之后，竟然等到了你">跟老公大吵一架之后，竟然等到了你</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/97/72/33_avatar_small.jpg?t=1601010964" alt="" src="images/33_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 是花苞呀</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824765-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="这下稳了">这下稳了</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/99/04/41_avatar_small.jpg?t=1601507819" alt="" src="images/41_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> t1600678952788</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42828313-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="20-21号排卵的有测出来的吗？">20-21号排卵的有测出来的吗？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/26/48/36_avatar_small.jpg?t=1543299150" alt="" src="images/36_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 林宥嘉的迷妹</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821841-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="第二次人授，9.17排卵，有一起开奖的姐妹吗？">第二次人授，9.17排卵，有一起开奖的姐妹吗？</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/37/55/34_avatar_small.jpg?t=1541514165" alt="" src="images/34_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 胖小黏</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42819887-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="好孕啦，大龄输卵管堵塞，备孕两年多突然自然怀孕了～">好孕啦，大龄输卵管堵塞，备孕两年多突然自然怀孕了～</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 团团风风子</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42807537-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="疯狂玩尿没怀上，轻松测排一个月竟然好孕了~感谢笑脸棒！">疯狂玩尿没怀上，轻松测排一个月竟然好孕了~感谢笑脸棒！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/97/72/33_avatar_small.jpg?t=1601010964" alt="" src="images/33_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 是花苞呀</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42816527-1-1.html" target="_blank" data-follow="www首页-备孕-帖子列表位置" title="16-17日排卵，怀孕前与姨妈前的区别？">16-17日排卵，怀孕前与姨妈前的区别？</a></p>
-            </div>
-        </li>
+
+
+
+
+
+
+
+
+                               {volist name="first_fenlei" id="vo4"} 
+                                  <li class="topic-item">
+                                     <div class="topic-item-line"></div>
+
+                                      <div class="topic-item-content">
+                                          <p class="sub-content"><span> {$vo4.title}</span></p>
+                                       <a class="topic-item-link" href="{:url('news/newsdetails',array('id'=>$vo4.id))}" target="_blank" data-follow="{$vo4.title}" title="{$vo4.title}">
+
+                                       {$vo4.content}
+
+                                       </a>
+                                     </div>
+                                  </li>
+
+                                  {/volist}
+
+
+
+
+
+
+
                                     </ul>
                         </div>
-                        <span class="box-change div-1180">换一批</span>
+                      
                     </div>
                 </div>
                 <!-- /推荐帖子 -->
@@ -617,17 +298,17 @@
             
       <div class="fuli-box__container">
                 <div class="fuli-box__item">
-                      <a href="https://show.bozhong.com/restful/ad/plus.json?ad=9722&amp;spid=182&amp;t=1602914402" target="_blank" data-track="OOXX/182/9722">
-              <img style="border:0 none" src="images/2ee79a7811510219f115b15cc171562f194642.jpg" alt="锦瑞医疗中心">
+                      <a href="#" target="_blank" data-track="OOXX/182/9722">
+              <img style="border:0 none" src="__INDEX__/bozhong/images/2ee79a7811510219f115b15cc171562f194642.jpg" alt="锦瑞医疗中心">
             </a>
                     </div>
                 <div class="fuli-box__item">
-                      <a href="https://show.bozhong.com/restful/ad/plus.json?ad=9163&amp;spid=182&amp;t=1602914402" target="_blank" data-track="OOXX/182/9163">
-              <img style="border:0 none" src="images/1ef8e6ab5dd382c97017add795fc51fe693419.jpg" alt="西囡全年投放">
+                      <a href="#" target="_blank" data-track="OOXX/182/9163">
+              <img style="border:0 none" src="__INDEX__/bozhong/images/1ef8e6ab5dd382c97017add795fc51fe693419.jpg" alt="西囡全年投放">
             </a>
                     </div>
             </div>
-      <div class="fuli-box__container  prev-count-2">                <div class="fuli-box__item"><a href="https://crazy.bozhong.com/?from=www" target="_blank"><img src="images/ea68c3f2c5ef74513d5f5998acbf7cdf593062.jpg"></a></div>
+      <div class="fuli-box__container  prev-count-2">                <div class="fuli-box__item"><a href="#" target="_blank"><img src="__INDEX__/bozhong/images/ea68c3f2c5ef74513d5f5998acbf7cdf593062.jpg"></a></div>
                         </div>
         </div>
         
@@ -637,31 +318,23 @@
                 
           <div class="box-wrap strategyn-box shiguan-box">
             <div class="box-header box-header-strategyn">
-                <a target="_blank" class="box-header--btn box-header--btn-strategyn" href="https://m.bozhong.com/ivf/app/5" data-follow="www首页-试管婴儿-测算成功率">测算成功率</a>
-                <h2>试管婴儿</h2>
+
+                <h2>试管</h2>
                 <ul class="box-header-nav div-1180">
-                                      <li><a href="http://www.bozhong.com/ivf" target="_blank" data-follow="www首页-试管婴儿-试管社区">试管社区</a>/</li>
-                    <li><a href="https://bbs.bozhong.com/hospital/" target="_blank" data-follow="www首页-试管婴儿-试管机构大全">试管机构大全</a>/</li>
-                    <li><a href="http://www.bozhong.com/ivf/service/" target="_blank" data-follow="www首页-试管婴儿-试管服务">试管服务</a></li>
-                                  </ul>
-            </div>
-            <div class="str-box-nav clearfix">
-                <ul>
-                    <li class="active">试管社区<div class="str-nav-tri"></div></li>
-                    <li>卵巢问题<div class="str-nav-tri"></div></li>
-                    <li>输卵管问题<div class="str-nav-tri"></div></li>
-                    <li>子宫问题<div class="str-nav-tri"></div></li>
-                    <li>精子问题<div class="str-nav-tri"></div></li>
-                    <li>染色体异常<div class="str-nav-tri"></div></li>
-                    <li>不明原因<div class="str-nav-tri"></div></li>
+                    <li><a href="#" target="_blank" data-follow="#">资讯</a>/</li>
+                    <li><a href="#" target="_blank" data-follow="#">百科</a>/</li>
+                    <li><a href="#" target="_blank" data-follow="#">问答</a></li>
                 </ul>
             </div>
+
+
+
             <div class="box-body clearfix">
                 <div class="box-content" style="display: block;">
                     <div class="box-silder">
                         <ul style="width: 279px;">
                                                   <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42860014-1-1.html" target="_blank" data-follow="www首页-试管社区-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/b65fbaddfb8632a2c2af2d5da02393ed749255.jpg" src="images/b65fbaddfb8632a2c2af2d5da02393ed749255.jpg"></a>
+            <a href="#" target="_blank" data-follow="#"><img class="lazy loaded" data-original="" src="__INDEX__/bozhong/images/41b3a046c92d3a29e0bb566f6ae518ed401807.jpg"></a>
             <div class="box-s-mask"></div>
             <p class="box-s-p">
             <a href="https://bbs.bozhong.com/thread-42860014-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-试管社区-图文" title="2020年10月14号要抽血开">2020年10月14号要抽血开</a>
@@ -682,1607 +355,14 @@
     </div>
     </div>
                             <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 静妮妮妮</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42856067-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="3年备孕之路，终于破茧成蝶">3年备孕之路，终于破茧成蝶</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/08/22/61_avatar_small.jpg?t=1598842139" alt="" src="images/61_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人8m87js</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42860984-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="第一次移植没成功，昨天第二次移">第一次移植没成功，昨天第二次移</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/29/25_avatar_small.jpg?t=1588058108" alt="" src="images/25_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 送客人</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853663-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="十月十日晴已经五天了看老婆的模">十月十日晴已经五天了看老婆的模</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/38/94/81_avatar_small.jpg?t=1586707938" alt="" src="images/81_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人cc5tgj</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42848292-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="机缘巧合下我遇见了现在的先生，">机缘巧合下我遇见了现在的先生，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/74/75/77_avatar_small.jpg?t=1600868730" alt="" src="images/77_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> Kora_</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42857119-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="昨晚还测了大白板，今天早上六点">昨晚还测了大白板，今天早上六点</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/86/29/47_avatar_small.jpg?t=1600572019" alt="" src="images/47_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 三生暖</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855975-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="10月1日移植两枚鲜胚，今天第">10月1日移植两枚鲜胚，今天第</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1589611557289</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850509-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="移植第31天，面临一个巨大抉择">移植第31天，面临一个巨大抉择</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1589611557289</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850509-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="移植第31天，面临一个巨大抉择">移植第31天，面临一个巨大抉择</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/12/38/88_avatar_small.jpg" alt="" src="images/88_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 菩萨保佑宝宝平安降生</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845282-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="昨天在湘雅附一紧急环扎。双胎2">昨天在湘雅附一紧急环扎。双胎2</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/12/38/88_avatar_small.jpg" alt="" src="images/88_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 菩萨保佑宝宝平安降生</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845282-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="昨天在湘雅附一紧急环扎。双胎2">昨天在湘雅附一紧急环扎。双胎2</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/16/18/96_avatar_small.jpg?t=1581390284" alt="" src="images/96_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> （∩▽∩）</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839594-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="喜得棉袄夹克各一  (-^〇^-)">喜得棉袄夹克各一  (-^〇^-)</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/44/59/06_avatar_small.jpg?t=1598501608" alt="" src="images/06_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 给我一点不怕痛的勇气</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845625-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="上次胎心胎芽都很正常，今天去检">上次胎心胎芽都很正常，今天去检</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/78/53/74_avatar_small.jpg?t=1593340558" alt="" src="images/74_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 爱你三千遍w</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844081-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="9月27号移植2枚鲜宝，移植的">9月27号移植2枚鲜宝，移植的</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/038/79/09/19_avatar_small.jpg?t=1601970855" alt="" src="images/19_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 20年10月2移植小丽</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42842943-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="各位姐妹给看看。10月2上午1">各位姐妹给看看。10月2上午1</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/62/82/83_avatar_small.jpg" alt="" src="images/83_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我的小月饼</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845349-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="我是九月28号移植的冻囊胚，也">我是九月28号移植的冻囊胚，也</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/80/67/19_avatar_small.jpg" alt="" src="images/19_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人3fns1p</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42842823-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="移植37天，有胎心胎芽，昨晚大">移植37天，有胎心胎芽，昨晚大</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/50/55/10_avatar_small.jpg?t=1595993375" alt="" src="images/10_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hlieww</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836299-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="移植囊胚第13天，血值1974">移植囊胚第13天，血值1974</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1600949479159</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833244-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="原来你是咋胡啊！给了我希望又让">原来你是咋胡啊！给了我希望又让</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1600949479159</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833244-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="原来你是咋胡啊！给了我希望又让">原来你是咋胡啊！给了我希望又让</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/038/34/72/44_avatar_small.jpg" alt="" src="images/44_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 好孕来小糯米</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827998-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="婆婆永远是婆婆，过来煮了几天饭">婆婆永远是婆婆，过来煮了几天饭</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/038/34/72/44_avatar_small.jpg" alt="" src="images/44_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 好孕来小糯米</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827998-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="婆婆永远是婆婆，过来煮了几天饭">婆婆永远是婆婆，过来煮了几天饭</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/033/08/35/33_avatar_small.jpg" alt="" src="images/33_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 糖糖猪宝宝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836804-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="今天➕移植第十四天。第一次测到">今天➕移植第十四天。第一次测到</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/32/53/85_avatar_small.jpg?t=1558251997" alt="" src="images/85_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1558251991847</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827002-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="移植鲜胚第十天（包括移植日），">移植鲜胚第十天（包括移植日），</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人rlzm4r</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827199-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="7周都有有脉动，8周了告知胎停">7周都有有脉动，8周了告知胎停</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人rlzm4r</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827199-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="7周都有有脉动，8周了告知胎停">7周都有有脉动，8周了告知胎停</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我的二郎神牛牛子快来吧</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826838-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="今天早上醒来的时候鼓起十万分勇">今天早上醒来的时候鼓起十万分勇</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我的二郎神牛牛子快来吧</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826838-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="今天早上醒来的时候鼓起十万分勇">今天早上醒来的时候鼓起十万分勇</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/68/69/44_avatar_small.jpg?t=1595132782" alt="" src="images/44_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人9vxbuf</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42822988-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="分享本人着床成功后身体的表现，">分享本人着床成功后身体的表现，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/90/64/54_avatar_small.jpg" alt="" src="images/54_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝别走。妈妈爱你</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824491-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="宫外孕。当我知道这个消息实在忍">宫外孕。当我知道这个消息实在忍</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/90/64/54_avatar_small.jpg" alt="" src="images/54_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝别走。妈妈爱你</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824491-1-1.html" target="_blank" data-follow="www首页-试管社区-帖子列表位置" title="宫外孕。当我知道这个消息实在忍">宫外孕。当我知道这个消息实在忍</a></p>
-            </div>
-        </li>
-                                    </ul>
+
                         </div>
-                        <span class="box-change div-1180">换一批</span>
+                       
                     </div>
                 </div>
-                <div class="box-content">
-                    <div class="box-silder">
-                        <ul style="width: 279px;">
-                                                  <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42850009-1-1.html" target="_blank" data-follow="www首页-卵巢问题-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/931a4519eeb800c5502f42f5ae23bbfd497386.jpg" src="images/931a4519eeb800c5502f42f5ae23bbfd497386.jpg"></a>
-            <div class="box-s-mask"></div>
-            <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42850009-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-卵巢问题-图文" title="今天是移植的第十四天，hcg不">今天是移植的第十四天，hcg不</a>
-        </p>
-        </li>
-                                </ul>
-                        <div class="box-s-dot">
-                        </div>
-                    </div>
-                    <div class="topic-items">
-                            <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/29/25_avatar_middle.jpg?t=1588058108" alt="" src="images/25_avatar_middle.jpg">
-        <div class="text">
-            <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853663-1-1.html" target="_blank" data-follow="www首页-卵巢问题-头条" title="十月十日晴已经五天了看老婆的模">十月十日晴已经五天了看老婆的模</a></h1>
-        <p class="summary summary-em">
-            <a href="javascript:void(0);" class="limit" data-limit="120" data-limit-short="76" data-follow="www首页-卵巢问题-头条" data-alt="十月十日晴已经五天了看老婆的模样和心境希望渺茫，算了准备借卵自孕吧，如果这也不行就认命了，也许今生就是无后之命，能够有傻...">十月十日晴已经五天了看老婆的模样和心境希望渺茫，算了准备借卵自孕吧，如果这也不行就认命了，也许今生就是无后之命，能够有傻...</a>
-        </p>
-    </div>
-    </div>
-                            <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/39/87/71_avatar_small.jpg?t=1602579683" alt="" src="images/71_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我和你爸已经准备好</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853063-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="我31岁卵巢早衰，AMH是0.">我31岁卵巢早衰，AMH是0.</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/93/78/25_avatar_small.jpg" alt="" src="images/25_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人902ak0</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42849202-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="昨天第一次取卵，取了4颗，都是">昨天第一次取卵，取了4颗，都是</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/042/03/53/17_avatar_small.jpg?t=1602165854" alt="" src="images/17_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 东篱篱</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850009-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="今天是移植的第十四天，hcg不">今天是移植的第十四天，hcg不</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/29/25_avatar_small.jpg?t=1588058108" alt="" src="images/25_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 送客人</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42851172-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="十月九日晴一天平平淡淡，为她准">十月九日晴一天平平淡淡，为她准</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1507860738642</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850964-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="今天10月9号移植第21天，移">今天10月9号移植第21天，移</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/73/90/29_avatar_small.jpg" alt="" src="images/29_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 言西早魏</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42849201-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="试管这条路真的太难走了，10月">试管这条路真的太难走了，10月</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/81/46/63_avatar_small.jpg?t=1600564006" alt="" src="images/63_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1595860262748</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839140-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="宝贝，今天带你去抽血了，你是不">宝贝，今天带你去抽血了，你是不</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/64/76/80_avatar_small.jpg?t=1602655860" alt="" src="images/80_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人98zo4l</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845776-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="移植囊胚第二天，一点感觉都没有">移植囊胚第二天，一点感觉都没有</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/29/25_avatar_small.jpg?t=1588058108" alt="" src="images/25_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 送客人</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853663-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="十月十日晴已经五天了看老婆的模">十月十日晴已经五天了看老婆的模</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/036/58/43/95_avatar_small.jpg?t=1589152045" alt="" src="images/95_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 凌空妙语</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844663-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="真的不知道上辈子造了什么孽，好">真的不知道上辈子造了什么孽，好</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/50/55/10_avatar_small.jpg?t=1595993375" alt="" src="images/10_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hlieww</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42840411-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="接高血值！移植15天hcg54">接高血值！移植15天hcg54</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/41/19/56_avatar_small.jpg" alt="" src="images/56_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人c56z72</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836140-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="有没有9月23号移植冻胚的，大">有没有9月23号移植冻胚的，大</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/74/51/12_avatar_small.jpg?t=1601083756" alt="" src="images/12_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 12356.</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42828126-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="今天移植第六天，早上迫不及待去">今天移植第六天，早上迫不及待去</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/30/85/91_avatar_small.jpg?t=1601771117" alt="" src="images/91_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 131419清清</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836651-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="今天，移植后的第十二天，血值1">今天，移植后的第十二天，血值1</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/38/67/68_avatar_small.jpg?t=1601651953" alt="" src="images/68_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 萌萌丹丹丹</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42835909-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="移植第九天失败心情难以接受!哭">移植第九天失败心情难以接受!哭</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/34/16/53_avatar_small.jpg?t=1585200870" alt="" src="images/53_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1585142177165</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833591-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="姐妹们，你们移植后都天天躺了吗">姐妹们，你们移植后都天天躺了吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1578019895981</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826596-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="9.18移植冻胚5bc，今天去">9.18移植冻胚5bc，今天去</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人9hr5ee</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42825229-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="打促排到取卵白花了两万块钱，一">打促排到取卵白花了两万块钱，一</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/77/47/41_avatar_small.jpg?t=1596943257" alt="" src="images/41_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人a33uhl</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836277-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="四年的形式婚姻，她结果第三天就">四年的形式婚姻，她结果第三天就</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/77/31/72_avatar_small.jpg?t=1602881079" alt="" src="images/72_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人oh51q2</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42830379-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="母乳喂养好辛苦。半夜三更起来吸">母乳喂养好辛苦。半夜三更起来吸</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/98/21/66_avatar_small.jpg?t=1600747115" alt="" src="images/66_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 清风徐来777</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832190-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="不同医院的HCG可以比较翻倍吗">不同医院的HCG可以比较翻倍吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1593831724964</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827550-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="等10月7号一超胎心胎芽，每天">等10月7号一超胎心胎芽，每天</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/037/17/96/08_avatar_small.jpg?t=1600927438" alt="" src="images/08_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 惟愿有你</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821762-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="2020.9.27今天促排D7">2020.9.27今天促排D7</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/80/23/06_avatar_small.jpg?t=1600142808" alt="" src="images/06_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 芳芳和我</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827579-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="该开心还是该担忧一直说我血值高">该开心还是该担忧一直说我血值高</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/74/51/12_avatar_small.jpg?t=1601083756" alt="" src="images/12_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 12356.</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821408-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="今天移植第三天，早上起来上个厕">今天移植第三天，早上起来上个厕</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/35/95/75_avatar_small.jpg?t=1599381108" alt="" src="images/75_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 这是个菜菜哇</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826645-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="9月1日移植两枚鲜胚，有胎心胎">9月1日移植两枚鲜胚，有胎心胎</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/59/75/69_avatar_small.jpg" alt="" src="images/69_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hzwjmm</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42820909-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="自从9月1日失去我的宝宝，我就">自从9月1日失去我的宝宝，我就</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/63/96/55_avatar_small.jpg?t=1600946699" alt="" src="images/55_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人q7i2la</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42814375-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="冻胚移植的第九天，这是真的怀孕">冻胚移植的第九天，这是真的怀孕</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/75/53/55_avatar_small.jpg?t=1600156513" alt="" src="images/55_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> cc017519</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42813734-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="移植第32天了，血值翻倍还是不">移植第32天了，血值翻倍还是不</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/32/29/70_avatar_small.jpg" alt="" src="images/70_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人iu1xep</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42817150-1-1.html" target="_blank" data-follow="www首页-卵巢问题-帖子列表位置" title="双绒双胎36+5剖宫产，9.3">双绒双胎36+5剖宫产，9.3</a></p>
-            </div>
-        </li>
-                                    </ul>
-                        </div>
-                        <span class="box-change div-1180">换一批</span>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div class="box-silder">
-                        <ul style="width: 279px;">
-                                                  <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42858119-1-1.html" target="_blank" data-follow="www首页-输卵管问题-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/06/18/4f975ec3fd9db524ea5be83830e4331f518180.jpg" src="images/4f975ec3fd9db524ea5be83830e4331f518180.jpg"></a>
-            <div class="box-s-mask"></div>
-            <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42858119-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-输卵管问题-图文" title="10.7号移植鲜囊胚，今天第六">10.7号移植鲜囊胚，今天第六</a>
-        </p>
-        </li>
-                                </ul>
-                        <div class="box-s-dot">
-                        </div>
-                    </div>
-                    <div class="topic-items">
-                            <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/45/87/72_avatar_middle.jpg?t=1601450616" alt="" src="images/72_avatar_middle.jpg">
-        <div class="text">
-            <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42854048-1-1.html" target="_blank" data-follow="www首页-输卵管问题-头条" title="10号满血复活跑去医院抽血看翻">10号满血复活跑去医院抽血看翻</a></h1>
-        <p class="summary summary-em">
-            <a href="javascript:void(0);" class="limit" data-limit="120" data-limit-short="76" data-follow="www首页-输卵管问题-头条" data-alt="10号满血复活跑去医院抽血看翻倍，结果是2980.一切翻倍很正常，然后医生让我下午去做彩超看宫内公外，我一直以为这次老天爷一定会...">10号满血复活跑去医院抽血看翻倍，结果是2980.一切翻倍很正常，然后医生让我下午去做彩超看宫内公外，我一直以为这次老天爷一定会...</a>
-        </p>
-    </div>
-    </div>
-                            <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/29/25_avatar_small.jpg?t=1588058108" alt="" src="images/25_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 送客人</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42861573-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="十月十三日晴一早去做核酸检测，">十月十三日晴一早去做核酸检测，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/92/42/38_avatar_small.jpg?t=1602644219" alt="" src="images/38_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人aoegmj</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42858565-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="宫腔镜检查经历2020.10.">宫腔镜检查经历2020.10.</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/75/75/52_avatar_small.jpg" alt="" src="images/52_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人p33spk</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855325-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="移植十九天了，担心宫外，这样血">移植十九天了，担心宫外，这样血</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 憨宝贝加油</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42852828-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="10.4号移植两枚冻囊胚，一大">10.4号移植两枚冻囊胚，一大</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人o1tosl</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42851144-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="10.4早上厦门妇幼移植，今天">10.4早上厦门妇幼移植，今天</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/45/87/72_avatar_small.jpg?t=1601450616" alt="" src="images/72_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人ig5gpd</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42854048-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="10号满血复活跑去医院抽血看翻">10号满血复活跑去医院抽血看翻</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 天蓝明晴</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42842425-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="又哭了一个中午，第一次移植失败">又哭了一个中午，第一次移植失败</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 期待小牛牛到来</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42846001-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="奇葩今天才知道每次移植宫腔积液">奇葩今天才知道每次移植宫腔积液</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝加油鸭</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847563-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="2018.7.26第一次移植，">2018.7.26第一次移植，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/45/67/87_avatar_small.jpg?t=1588154454" alt="" src="images/87_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人ngzafe</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42843393-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="移植后27天，今天一超，宫内双">移植后27天，今天一超，宫内双</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/59/42/69_avatar_small.jpg?t=1601899547" alt="" src="images/69_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 苹果蕉</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42840464-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="明明白白，一点疑问都没有，30">明明白白，一点疑问都没有，30</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/037/91/63/42_avatar_small.jpg?t=1601365665" alt="" src="images/42_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 守望小天使</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42841971-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="9月28移植的囊胚今天第八天了">9月28移植的囊胚今天第八天了</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/93/91/03_avatar_small.jpg" alt="" src="images/03_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人phypst</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833965-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="今天是最开心的一天，9月4号移">今天是最开心的一天，9月4号移</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1573872925951</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832184-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="移植第三天，用了一个排卵试纸，">移植第三天，用了一个排卵试纸，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 筱膤</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42843187-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="2020.10.6促排第十天，">2020.10.6促排第十天，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/36/81/98_avatar_small.jpg?t=1601470716" alt="" src="images/98_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我的宝宝们请早点来陪我</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838972-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="心太崩了，9月25日中信做的清">心太崩了，9月25日中信做的清</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/64/71/21_avatar_small.jpg?t=1592299032" alt="" src="images/21_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1592177107261</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839034-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="试管也失败了，婚也离了，，太难">试管也失败了，婚也离了，，太难</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/65/64/87_avatar_small.jpg?t=1597490473" alt="" src="images/87_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝贝的宝贝要宝贝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838482-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="这两天看帖子，发现好多胎停的现">这两天看帖子，发现好多胎停的现</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/73/98/02_avatar_small.jpg?t=1600957780" alt="" src="images/02_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人kmpjcz</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838454-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="囊胚移植十一天血值太低了，宝宝">囊胚移植十一天血值太低了，宝宝</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/84/40/86_avatar_small.jpg?t=1601821894" alt="" src="images/86_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1596578917194</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838682-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="9.27号移植，7天了，身体上">9.27号移植，7天了，身体上</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/74/51/12_avatar_small.jpg?t=1601083756" alt="" src="images/12_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 12356.</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42828126-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="今天移植第六天，早上迫不及待去">今天移植第六天，早上迫不及待去</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/68/14/20_avatar_small.jpg?t=1592881830" alt="" src="images/20_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 庸人丶自扰</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42829880-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="囊胚移植第九天，集美们这个血值">囊胚移植第九天，集美们这个血值</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/50/46/31_avatar_small.jpg" alt="" src="images/31_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人i340sh</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824276-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="移植第七天囊胚，(不含移植日)">移植第七天囊胚，(不含移植日)</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/89/51/22_avatar_small.jpg" alt="" src="images/22_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人ye1hry</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42825998-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="今天移植冻囊胚第十四天，正式官">今天移植冻囊胚第十四天，正式官</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/74/51/12_avatar_small.jpg?t=1601083756" alt="" src="images/12_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 12356.</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821408-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="今天移植第三天，早上起来上个厕">今天移植第三天，早上起来上个厕</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/039/36/02/71_avatar_small.jpg?t=1596025229" alt="" src="images/71_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 幸运快快降临</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42816421-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="今天移植完医生没有叫躺，出去就">今天移植完医生没有叫躺，出去就</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/59/12/91_avatar_small.jpg" alt="" src="images/91_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人gt3clg</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811646-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="因为输卵管积水问题要二胎要不了">因为输卵管积水问题要二胎要不了</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/37/24/87_avatar_small.jpg?t=1600998903" alt="" src="images/87_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 猪儿小小</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824383-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="集美们来接高血值了9/19号下">集美们来接高血值了9/19号下</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/90/64/54_avatar_small.jpg" alt="" src="images/54_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝别走。妈妈爱你</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824491-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="宫外孕。当我知道这个消息实在忍">宫外孕。当我知道这个消息实在忍</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/039/27/53/63_avatar_small.jpg" alt="" src="images/63_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人85o54j</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811049-1-1.html" target="_blank" data-follow="www首页-输卵管问题-帖子列表位置" title="2取2移,最后自然怀孕了!今年">2取2移,最后自然怀孕了!今年</a></p>
-            </div>
-        </li>
-                                    </ul>
-                        </div>
-                        <span class="box-change div-1180">换一批</span>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div class="box-silder">
-                        <ul style="width: 279px;">
-                                                  <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42849603-1-1.html" target="_blank" data-follow="www首页-子宫问题-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/fb70297a6e1516b3b4fe9bb8316a39cd456162.jpg" src="images/fb70297a6e1516b3b4fe9bb8316a39cd456162.jpg"></a>
-            <div class="box-s-mask"></div>
-            <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42849603-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-子宫问题-图文" title="移植冻胚14天的血值有保的价值">移植冻胚14天的血值有保的价值</a>
-        </p>
-        </li>
-                                </ul>
-                        <div class="box-s-dot">
-                        </div>
-                    </div>
-                    <div class="topic-items">
-                            <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/91/49/63_avatar_middle.jpg?t=1582815859" alt="" src="images/63_avatar_middle.jpg">
-        <div class="text">
-            <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42858106-1-1.html" target="_blank" data-follow="www首页-子宫问题-头条" title="鲜胚移植第14天，血值27，1">鲜胚移植第14天，血值27，1</a></h1>
-        <p class="summary summary-em">
-            <a href="javascript:void(0);" class="limit" data-limit="120" data-limit-short="76" data-follow="www首页-子宫问题-头条" data-alt="鲜胚移植第14天，血值27，16天75。生殖医院医生说可以停药放弃保胎了！从来我都是信任医生，并且特别听话的照做。这一次，我不信...">鲜胚移植第14天，血值27，16天75。生殖医院医生说可以停药放弃保胎了！从来我都是信任医生，并且特别听话的照做。这一次，我不信...</a>
-        </p>
-    </div>
-    </div>
-                            <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/91/49/63_avatar_small.jpg?t=1582815859" alt="" src="images/63_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w奕淋</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42860684-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="开奖日血值才27，隔天翻倍到7">开奖日血值才27，隔天翻倍到7</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/91/49/63_avatar_small.jpg?t=1582815859" alt="" src="images/63_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w奕淋</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42859252-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="感谢我生殖中心每一位为我服务过">感谢我生殖中心每一位为我服务过</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1591312661664</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42858119-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="10.7号移植鲜囊胚，今天第六">10.7号移植鲜囊胚，今天第六</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/02/24/70_avatar_small.jpg" alt="" src="images/70_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人ldzx05</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855823-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="姐妹们，双胞胎，移植80天出血">姐妹们，双胞胎，移植80天出血</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/44/30/55_avatar_small.jpg" alt="" src="images/55_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 潘达君好孕来</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42858058-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="一超双胞胎打算减胎，啥时候减胎合适啊？">一超双胞胎打算减胎，啥时候减胎合适啊？</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/042/03/80/99_avatar_small.jpg?t=1602245817" alt="" src="images/99_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 忖芯</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850944-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="移植30天了，B超显示0.7c">移植30天了，B超显示0.7c</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人6pwg2s</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42841105-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="29号移植的，今天下午测了，眼">29号移植的，今天下午测了，眼</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/76/49/56_avatar_small.jpg" alt="" src="images/56_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人tm1plu</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847762-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="移植后第23天，我又来了，超高">移植后第23天，我又来了，超高</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/034/87/73/17_avatar_small.jpg?t=1586518579" alt="" src="images/17_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 轩妈驾到</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42853788-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="10.3移植两个普通囊胚，今晚">10.3移植两个普通囊胚，今晚</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/035/21/85/20_avatar_small.jpg?t=1596586335" alt="" src="images/20_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 古城墨</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42849065-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="十一移植的囊胚，今天第九天了。">十一移植的囊胚，今天第九天了。</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1593256321121</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844746-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="我现在看什么都是两个杠，移植第">我现在看什么都是两个杠，移植第</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/36/81/98_avatar_small.jpg?t=1601470716" alt="" src="images/98_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我的宝宝们请早点来陪我</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838972-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="心太崩了，9月25日中信做的清">心太崩了，9月25日中信做的清</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人aw3jqi</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42843221-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="试管婴儿试管移植后成活双胎，七">试管婴儿试管移植后成活双胎，七</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/20/78/72_avatar_small.jpg" alt="" src="images/72_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人k2vu25</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833929-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="有同样的姐妹吗，试管双胎，今天">有同样的姐妹吗，试管双胎，今天</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/85/63/83_avatar_small.jpg?t=1596886982" alt="" src="images/83_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人fqwcw6</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832879-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="怀孕九周胎停，已经药流了，举国">怀孕九周胎停，已经药流了，举国</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/79/00/98_avatar_small.jpg" alt="" src="images/98_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人wfdrbw</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838654-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="9月2号移植的一枚囊胚，9月2">9月2号移植的一枚囊胚，9月2</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/33/38/83_avatar_small.jpg?t=1587633637" alt="" src="images/83_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我宝爸妈期待你的到来</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832951-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="烦的老人都说怀孕前三个月尽量少">烦的老人都说怀孕前三个月尽量少</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/38/69/12_avatar_small.jpg?t=1599778626" alt="" src="images/12_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 屈小燕</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826524-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="今天去一超了，运气太好了吧，冻">今天去一超了，运气太好了吧，冻</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/49/10/78_avatar_small.jpg?t=1599559935" alt="" src="images/78_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1589000960976</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42833507-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="移植29天了，还没胎心胎芽，芽">移植29天了，还没胎心胎芽，芽</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/54/32/64_avatar_small.jpg" alt="" src="images/64_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 幸运7月</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42831720-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="有没有移植的姐妹做家务的，我做">有没有移植的姐妹做家务的，我做</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/76/49/56_avatar_small.jpg" alt="" src="images/56_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人tm1plu</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826278-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="打卡移植后的第十四天，今天官宣">打卡移植后的第十四天，今天官宣</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 小燕子加油</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42816683-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="有没有22号移植的小姐妹，过来">有没有22号移植的小姐妹，过来</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人s0dw0s</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42817582-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="快十一点了，移植囊胚第七天，下">快十一点了，移植囊胚第七天，下</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/038/34/72/44_avatar_small.jpg" alt="" src="images/44_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 好孕来小糯米</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827998-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="婆婆永远是婆婆，过来煮了几天饭">婆婆永远是婆婆，过来煮了几天饭</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/39/64/16_avatar_small.jpg" alt="" src="images/16_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝们要坚强妈妈爱你们</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42822290-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="亲爱的宝宝们，妈妈好难过，主治">亲爱的宝宝们，妈妈好难过，主治</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/41/35/12_avatar_small.jpg?t=1597763874" alt="" src="images/12_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 平凡人生1</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42817473-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="移植45天了今天早上突然出血了">移植45天了今天早上突然出血了</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/67/11/76_avatar_small.jpg?t=1600865176" alt="" src="images/76_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人wgpg3n</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811694-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="19号移植五天了没感觉，有相同">19号移植五天了没感觉，有相同</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人o0p7pl</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42817115-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="今天是移植的第二天，早上起来肚">今天是移植的第二天，早上起来肚</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/46/69/55_avatar_small.jpg" alt="" src="images/55_avatar_small(4).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人9gpyr9</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42813675-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="从昨晚到现在哭的我头疼，真的是">从昨晚到现在哭的我头疼，真的是</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/29/92/41_avatar_small.jpg?t=1600956685" alt="" src="images/41_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝贝和妈妈一起回家</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42813430-1-1.html" target="_blank" data-follow="www首页-子宫问题-帖子列表位置" title="晴天霹雳，7+4无胎心胎芽只有">晴天霹雳，7+4无胎心胎芽只有</a></p>
-            </div>
-        </li>
-                                    </ul>
-                        </div>
-                        <span class="box-change div-1180">换一批</span>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div class="box-silder">
-                        <ul style="width: 279px;">
-                                                  <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42854683-1-1.html" target="_blank" data-follow="www首页-精子问题-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/6cef7aa47309589b9a538427fea6db47207224.jpg" src="images/6cef7aa47309589b9a538427fea6db47207224.jpg"></a>
-            <div class="box-s-mask"></div>
-            <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42854683-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-精子问题-图文" title="三超毕业了呵呵，二超是圆的孕囊">三超毕业了呵呵，二超是圆的孕囊</a>
-        </p>
-        </li>
-                                </ul>
-                        <div class="box-s-dot">
-                        </div>
-                    </div>
-                    <div class="topic-items">
-                            <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/38/81/93_avatar_middle.jpg" alt="" src="images/93_avatar_middle.jpg">
-        <div class="text">
-            <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850118-1-1.html" target="_blank" data-follow="www首页-精子问题-头条" title="试管双胎现已13周，nt已过，">试管双胎现已13周，nt已过，</a></h1>
-        <p class="summary summary-em">
-            <a href="javascript:void(0);" class="limit" data-limit="120" data-limit-short="76" data-follow="www首页-精子问题-头条" data-alt="试管双胎现已13周，nt已过，医生让16周直接做无创DNA，姐妹们有必要非要做无创吗？">试管双胎现已13周，nt已过，医生让16周直接做无创DNA，姐妹们有必要非要做无创吗？</a>
-        </p>
-    </div>
-    </div>
-                            <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1601133175525</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42864279-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="今天移植的第13天，胸涨，你们">今天移植的第13天，胸涨，你们</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/039/11/50/64_avatar_small.jpg" alt="" src="images/64_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人dk1asg</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850499-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="移植D5天，有红印，希望能成！">移植D5天，有红印，希望能成！</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 谭夫人备孕</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42858989-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="心情好难受。想哭不敢在老公面前">心情好难受。想哭不敢在老公面前</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1572844648426</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42854683-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="三超毕业了呵呵，二超是圆的孕囊">三超毕业了呵呵，二超是圆的孕囊</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/038/22/41/41_avatar_small.jpg?t=1600703153" alt="" src="images/41_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 音音@</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855869-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="13号就一超了，今天还见红了，">13号就一超了，今天还见红了，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/70/11/67_avatar_small.jpg" alt="" src="images/67_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hv4v13</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42856229-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="通过试管婴儿生出的孩子男孩多还">通过试管婴儿生出的孩子男孩多还</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/26/02/08_avatar_small.jpg" alt="" src="images/08_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 安康幸福美满</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844864-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="如果生了个女儿，我决定离婚，生">如果生了个女儿，我决定离婚，生</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/50/55/10_avatar_small.jpg?t=1595993375" alt="" src="images/10_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hlieww</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847288-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="移植18天，hcg翻倍好，但是">移植18天，hcg翻倍好，但是</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人odquu6</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847803-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="有没有试管双胎毕业之后回当地产">有没有试管双胎毕业之后回当地产</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/38/81/93_avatar_small.jpg" alt="" src="images/93_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人c1emso</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850118-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="试管双胎现已13周，nt已过，">试管双胎现已13周，nt已过，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/037/78/60/01_avatar_small.jpg?t=1527505025" alt="" src="images/01_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> @天使宝宝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42843029-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="又是一个让我难过的日子，囊胚移">又是一个让我难过的日子，囊胚移</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1601777857631</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845455-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="准备移植，说说目前我的心理历程">准备移植，说说目前我的心理历程</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/94/22/50_avatar_small.jpg?t=1587533853" alt="" src="images/50_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 王燕艳</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42843751-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="不知不觉七个多月了，身体除了腰">不知不觉七个多月了，身体除了腰</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1535486663111</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42842270-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="什么都是不准的，孕早期孕囊椭圆">什么都是不准的，孕早期孕囊椭圆</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 期星盼月</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839751-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="反复移植5次了，一直没有着床，">反复移植5次了，一直没有着床，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/82/91/82_avatar_small.jpg?t=1598706005" alt="" src="images/82_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人57r2vr</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42829777-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="移植鲜胚第七天，抽血化验结果，">移植鲜胚第七天，抽血化验结果，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/92/01/88_avatar_small.jpg?t=1598911070" alt="" src="images/88_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1598649625271</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836296-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="今天45天Ｂ超、上次B超有点偏">今天45天Ｂ超、上次B超有点偏</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hs1jhl</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42834004-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="鲜胚14天血值245，为什么护">鲜胚14天血值245，为什么护</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1591682212749</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836426-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="医生没看到下面说胎停的时候，还">医生没看到下面说胎停的时候，还</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人vnv8bn</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42831491-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="今天三超啦！宝宝都快成型啦！医">今天三超啦！宝宝都快成型啦！医</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/30/11/41_avatar_small.jpg?t=1587096158" alt="" src="images/41_avatar_small(4).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1584021659871</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42828555-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="秀儿炸糊了9.23号移植囊胚一">秀儿炸糊了9.23号移植囊胚一</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人z756l7</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42819926-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="18号移的，加今天第九天抽的血">18号移的，加今天第九天抽的血</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/29/58/89_avatar_small.jpg" alt="" src="images/89_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 摩羯座十安</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42819257-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="今天移植第28天，去医院一超，">今天移植第28天，去医院一超，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/28/22/86_avatar_small.jpg" alt="" src="images/86_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人mkg0je</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827288-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="三次移植不着床，宫腔环境、胚胎">三次移植不着床，宫腔环境、胚胎</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/16/25/17_avatar_small.jpg" alt="" src="images/17_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人pmihuh</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42823648-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="本人41周岁，用了ppos方案">本人41周岁，用了ppos方案</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人n00q6v</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811621-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="宝宝真的很需要你，但最后还是离">宝宝真的很需要你，但最后还是离</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1558664941252</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811030-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="不知道这个质量怎么样。冷冻费用">不知道这个质量怎么样。冷冻费用</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/65/61/43_avatar_small.jpg" alt="" src="images/43_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hcmi68</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42812938-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="紧张了一上午的心终于放下了点…">紧张了一上午的心终于放下了点…</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人hs1jhl</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42822037-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="鲜胚14天结果出来了，有哪位大">鲜胚14天结果出来了，有哪位大</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/87/86/06_avatar_small.jpg?t=1584404758" alt="" src="images/06_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 等待小团子～～</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42814082-1-1.html" target="_blank" data-follow="www首页-精子问题-帖子列表位置" title="急！急！急！今天到医院拿到结果">急！急！急！今天到医院拿到结果</a></p>
-            </div>
-        </li>
-                                    </ul>
-                        </div>
-                        <span class="box-change div-1180">换一批</span>
-                    </div>
-                </div>
-                <div class="box-content">
-                    <div class="box-silder">
-                        <ul style="width: 279px;">
-                                                  <li class="box-s-li">
-            <a href="https://bbs.bozhong.com/thread-42852481-1-1.html" target="_blank" data-follow="www首页-染色体异常-图文"><img class="lazy loaded" data-original="https://image.seedit.com/sys/2020/08/26/e07f73f7b2f2247687970c75dbacd75e598558.jpg" src="images/e07f73f7b2f2247687970c75dbacd75e598558.jpg"></a>
-            <div class="box-s-mask"></div>
-            <p class="box-s-p">
-            <a href="https://bbs.bozhong.com/thread-42852481-1-1.html" class="limit" data-limit="55" target="_blank" data-follow="www首页-染色体异常-图文" title="移植后，有没有用过黄体酮栓的姐">移植后，有没有用过黄体酮栓的姐</a>
-        </p>
-        </li>
-                                </ul>
-                        <div class="box-s-dot">
-                        </div>
-                    </div>
-                    <div class="topic-items">
-                            <div class="topic-item topic-item-top div-1180">
-        <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/042/04/31/98_avatar_middle.jpg?t=1602398143" alt="" src="images/98_avatar_middle.jpg">
-        <div class="text">
-            <h1><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855341-1-1.html" target="_blank" data-follow="www首页-染色体异常-头条" title="9.30号移植冻胚两枚，移植第">9.30号移植冻胚两枚，移植第</a></h1>
-        <p class="summary summary-em">
-            <a href="javascript:void(0);" class="limit" data-limit="120" data-limit-short="76" data-follow="www首页-染色体异常-头条" data-alt="9.30号移植冻胚两枚，移植第十天的时候去偷偷查了个hcg结果为0。都想要放弃了，问了问我的主治医生，他说我测的早了要我再打三天...">9.30号移植冻胚两枚，移植第十天的时候去偷偷查了个hcg结果为0。都想要放弃了，问了问我的主治医生，他说我测的早了要我再打三天...</a>
-        </p>
-    </div>
-    </div>
-                            <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/039/94/53/93_avatar_small.jpg" alt="" src="images/93_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人fvgu4u</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42851018-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="今天18周了大前天晚上因为老公">今天18周了大前天晚上因为老公</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1581604637513</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42861224-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="有姐妹们是怀双胎的嘛，双胎4个">有姐妹们是怀双胎的嘛，双胎4个</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> Aanny</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42852194-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="移植D33天B超见到胎心了但是">移植D33天B超见到胎心了但是</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/43/78/21_avatar_small.jpg" alt="" src="images/21_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人t3d03z</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42863868-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="10月8号移植的两枚4bc">10月8号移植的两枚4bc</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/76/45/12_avatar_small.jpg" alt="" src="images/12_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人nq2uzz</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844176-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="我不知道什么时候才能走出这片阴">我不知道什么时候才能走出这片阴</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/11/79/45_avatar_small.jpg" alt="" src="images/45_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人nfffkf</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850572-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="亲们！有人做过羊水穿刺吗？费用">亲们！有人做过羊水穿刺吗？费用</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> Apollo妈妈</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42846119-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="满心欢喜的我，17个卵这次肯定">满心欢喜的我，17个卵这次肯定</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/46/60/85_avatar_small.jpg" alt="" src="images/85_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人8zu3rp</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847065-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="12周，自己在家听胎心，感觉生">12周，自己在家听胎心，感觉生</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/99/24/82_avatar_small.jpg?t=1601436734" alt="" src="images/82_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1600746738600</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844761-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="姐妹们看看是不是两个刚，我有些">姐妹们看看是不是两个刚，我有些</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/042/04/31/98_avatar_small.jpg?t=1602398143" alt="" src="images/98_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人pfpaoj</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855341-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="9.30号移植冻胚两枚，移植第">9.30号移植冻胚两枚，移植第</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/14/57/81_avatar_small.jpg" alt="" src="images/81_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人zyenzz</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42852481-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="移植后，有没有用过黄体酮栓的姐">移植后，有没有用过黄体酮栓的姐</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1465545020104</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42845731-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="十月二号移植的4AA囊胚，移植">十月二号移植的4AA囊胚，移植</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/49/73/10_avatar_small.jpg?t=1589336552" alt="" src="images/10_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人8kci34</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42840344-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="这血值正常吗">这血值正常吗</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/66/57/00_avatar_small.jpg" alt="" src="images/00_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人mmejc7</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42835412-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="有没有因为不能自然怀孕被分手或">有没有因为不能自然怀孕被分手或</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1566216356581</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42837921-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="照了Ｂ超，我说中间那个是不是手">照了Ｂ超，我说中间那个是不是手</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 有你的未来可期</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826539-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="D12妈妈放弃你也是不得已下次">D12妈妈放弃你也是不得已下次</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/99/14/78_avatar_small.jpg?t=1600702220" alt="" src="images/78_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人0crwcp</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42834814-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="移植20天老天对我太不公平">移植20天老天对我太不公平</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1591682212749</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42836426-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="医生没看到下面说胎停的时候，还">医生没看到下面说胎停的时候，还</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/85/63/83_avatar_small.jpg?t=1596886982" alt="" src="images/83_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人fqwcw6</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832879-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="怀孕九周胎停，已经药流了，举国">怀孕九周胎停，已经药流了，举国</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我得牛儿宝宝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42829985-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="姐妹们。怀孕了什么原因会导致胎">姐妹们。怀孕了什么原因会导致胎</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人18x1j7</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821605-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="移植后29天一超好好的，官宣血">移植后29天一超好好的，官宣血</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/16/25/17_avatar_small.jpg" alt="" src="images/17_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人pmihuh</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42823648-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="本人41周岁，用了ppos方案">本人41周岁，用了ppos方案</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/95/33/70_avatar_small.jpg" alt="" src="images/70_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 甜了</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42822264-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="2020.3月8日移植，一超无">2020.3月8日移植，一超无</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人rlzm4r</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827199-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="7周都有有脉动，8周了告知胎停">7周都有有脉动，8周了告知胎停</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/40/34/57_avatar_small.jpg" alt="" src="images/57_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人zwt0se</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42816283-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="从2018年5月到2020年9">从2018年5月到2020年9</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人z756l7</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42819926-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="18号移的，加今天第九天抽的血">18号移的，加今天第九天抽的血</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/46/20/36_avatar_small.jpg" alt="" src="images/36_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人51rmzn</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42825055-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="我做试管本来就受了很多的苦了，">我做试管本来就受了很多的苦了，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人18x1j7</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821605-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="46天一超好好的，55天二超胚">46天一超好好的，55天二超胚</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/77/75/60_avatar_small.jpg?t=1596555053" alt="" src="images/60_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 皮皮_程</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42811928-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="【移植后第25天】垃圾食品，以">【移植后第25天】垃圾食品，以</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/07/64/85_avatar_small.jpg" alt="" src="images/85_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 2020迎接我的鼠宝</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42806589-1-1.html" target="_blank" data-follow="www首页-染色体异常-帖子列表位置" title="我的宝宝不在了，愿你们在天堂一">我的宝宝不在了，愿你们在天堂一</a></p>
-            </div>
-        </li>
-                                    </ul>
-                        </div>
-                        <span class="box-change div-1180">换一批</span>
-                    </div>
-                </div>
+
+         
+       
                 <div class="box-content">
                     <div class="box-silder">
                         <ul style="width: 279px;">
@@ -2308,250 +388,9 @@
     </div>
     </div>
                             <div class="change-box">
-                            <ul class="topic-items-list clearfix">
-                                            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1601366994542</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42848943-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="28号移植的冻胚，今天早晨测白">28号移植的冻胚，今天早晨测白</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 雪妞妞儿</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42863399-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="好心累啊，第二次移植第6天，半">好心累啊，第二次移植第6天，半</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/91/49/63_avatar_small.jpg?t=1582815859" alt="" src="images/63_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w奕淋</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42859252-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="感谢我生殖中心每一位为我服务过">感谢我生殖中心每一位为我服务过</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/39/36/74_avatar_small.jpg?t=1586581312" alt="" src="images/74_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 团宝儿可可</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42850073-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="囊胚移植第八天今天肚子一直不舒">囊胚移植第八天今天肚子一直不舒</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 双胎宝宝好孕来</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847216-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="十月三号的冻胚一个，希望明天继">十月三号的冻胚一个，希望明天继</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/036/49/19/45_avatar_small.jpg?t=1602195219" alt="" src="images/45_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人db2fsg</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42849603-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="移植冻胚14天的血值有保的价值">移植冻胚14天的血值有保的价值</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/39/36/74_avatar_small.jpg?t=1586581312" alt="" src="images/74_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 团宝儿可可</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42855818-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="这个大卫试纸能把人吓死，今天移">这个大卫试纸能把人吓死，今天移</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1567939809483</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847055-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天11周+4，来当地的妇幼保">今天11周+4，来当地的妇幼保</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/036/58/43/95_avatar_small.jpg?t=1589152045" alt="" src="images/95_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 凌空妙语</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844663-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="真的不知道上辈子造了什么孽，好">真的不知道上辈子造了什么孽，好</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/033/70/27/84_avatar_small.jpg?t=1573997608" alt="" src="images/84_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 蛋白麻麻呀</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42844246-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="其实医生已经基本宣告失败了，但">其实医生已经基本宣告失败了，但</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/88/79/70_avatar_small.jpg?t=1597752320" alt="" src="images/70_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 双胎宝妈！</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847340-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天10周＋5做了个B超，，检">今天10周＋5做了个B超，，检</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 期星盼月</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42839751-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="反复移植5次了，一直没有着床，">反复移植5次了，一直没有着床，</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1590248763256</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42847127-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="10月2号上午移植一枚4AA囊">10月2号上午移植一枚4AA囊</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/41/37/06_avatar_small.jpg?t=1597808500" alt="" src="images/06_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 等待奇迹000</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42834593-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="试管日记52020.10.2晚">试管日记52020.10.2晚</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/039/11/25/45_avatar_small.jpg?t=1600614450" alt="" src="images/45_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 肉肉兒</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42842189-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="一超双胞胎宝宝新鲜出炉，哈哈，">一超双胞胎宝宝新鲜出炉，哈哈，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/85/35/94_avatar_small.jpg" alt="" src="images/94_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人ocb7kk</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838724-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="真他妈的做试管失败了全世界的人">真他妈的做试管失败了全世界的人</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1564824990983</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832666-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天是引产吃药的第二天了，我现">今天是引产吃药的第二天了，我现</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/041/73/98/02_avatar_small.jpg?t=1600957780" alt="" src="images/02_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人kmpjcz</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42838454-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="囊胚移植十一天血值太低了，宝宝">囊胚移植十一天血值太低了，宝宝</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/035/21/85/20_avatar_small.jpg?t=1596586335" alt="" src="images/20_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 古城墨</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42835401-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="养囊成功，一不小心成了大户人家">养囊成功，一不小心成了大户人家</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/039/52/80/54_avatar_small.jpg" alt="" src="images/54_avatar_small(1).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 小轩轩的娘亲</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832398-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="宝宝两个多月了，退圈了，祝愿姐">宝宝两个多月了，退圈了，祝愿姐</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://scdn.bozhong.com/source/resource/img/noavatar_small.gif" alt="" src="images/noavatar_small.gif">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> w1596168600181</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42831158-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="移植后正好20天。每天上厕所擦">移植后正好20天。每天上厕所擦</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/038/34/72/44_avatar_small.jpg" alt="" src="images/44_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 好孕来小糯米</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827998-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="婆婆永远是婆婆，过来煮了几天饭">婆婆永远是婆婆，过来煮了几天饭</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/037/97/80/41_avatar_small.jpg?t=1599738980" alt="" src="images/41_avatar_small(5).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝快点抓住妈妈的手</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827869-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="为什么安慰得了别人，却安慰不了">为什么安慰得了别人，却安慰不了</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar loaded" data-original="https://uc.bozhong.com/data/avatar/040/33/38/83_avatar_small.jpg?t=1587633637" alt="" src="images/83_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 我宝爸妈期待你的到来</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42832951-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="烦的老人都说怀孕前三个月尽量少">烦的老人都说怀孕前三个月尽量少</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/86/36/29_avatar_small.jpg?t=1600597555" alt="" src="images/29_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 周周跑</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42827883-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天移植第11天，看来我不是幸">今天移植第11天，看来我不是幸</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/14/47/61_avatar_small.jpg?t=1579151150" alt="" src="images/61_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> Mimibbb</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42826935-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="遇到你是我上辈子修来的福气，你">遇到你是我上辈子修来的福气，你</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/038/33/58/17_avatar_small.jpg" alt="" src="images/17_avatar_small(3).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 播星人0h1o07</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42814513-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天去产科准备第一次检查建档，">今天去产科准备第一次检查建档，</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/39/64/16_avatar_small.jpg" alt="" src="images/16_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝们要坚强妈妈爱你们</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42821543-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="今天是移植的第七周，满怀期待的">今天是移植的第七周，满怀期待的</a></p>
-            </div>
-        </li>
-            <li class="topic-item">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/041/45/00/96_avatar_small.jpg" alt="" src="images/96_avatar_small(2).jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 王宝贝❤</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42816928-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="14号移植测也看到两杠今天忍不">14号移植测也看到两杠今天忍不</a></p>
-            </div>
-        </li>
-            <li class="topic-item topic-item-left">
-            <div class="topic-item-line"></div>
-            <img class="lazy topic-item-avatar" data-original="https://uc.bozhong.com/data/avatar/040/90/64/54_avatar_small.jpg" alt="" src="images/54_avatar_small.jpg">
-            <div class="topic-item-content">
-                <p class="sub-content"><span> 宝宝别走。妈妈爱你</span></p>
-                <p><a class="topic-item-link" href="https://bbs.bozhong.com/thread-42824491-1-1.html" target="_blank" data-follow="www首页-不明原因-帖子列表位置" title="宫外孕。当我知道这个消息实在忍">宫外孕。当我知道这个消息实在忍</a></p>
-            </div>
-        </li>
-                                    </ul>
+
                         </div>
-                        <span class="box-change div-1180">换一批</span>
+                      
                     </div>
                 </div>
             </div>
@@ -2560,7 +399,7 @@
         <!-- 生殖中心大全 -->
         <div class="box-wrap hospital-box">
             <div class="box-header box-header-hospital">
-                <h3 class="h3_like">生殖中心大全</h3>
+                <h3 class="h3_like">百科大全</h3>
                 <div class="box-header-more box-header-more--hospital">
                   <a href="https://bbs.bozhong.com/hospital/" target="_blank" rel="nofollow">
                     全部</a>
@@ -2568,10 +407,21 @@
             </div>
             <div class="box-body like-box-body">
                 <div class="box-position">
-                  <p><em></em><span id="js-bzslider-hospital-city">长沙</span></p>
+              
                 </div>
                 <!-- 推荐帖子 -->
-                <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 305px;"><div class="box-content" id="js-bzslider-hospital" style="width: 415%; position: relative; transition-duration: 0.5s; transform: translate3d(-882px, 0px, 0px);"><ul class="topic-items bx-clone" style="float: left; list-style: none; position: relative; width: 294px;"><li><a href="https://bbs.bozhong.com/hospital/4218" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中信湘雅生殖与遗传专科医院</a></li></ul><ul class="topic-items" style="float: left; list-style: none; position: relative; width: 294px;"><li><a href="https://bbs.bozhong.com/hospital/950" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">长沙市妇幼保健院</a></li><li><a href="https://bbs.bozhong.com/hospital/2111" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中南大学湘雅医院</a></li><li><a href="https://bbs.bozhong.com/hospital/954" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">湖南省妇幼保健院</a></li><li><a href="https://bbs.bozhong.com/hospital/702" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中南大学湘雅二医院</a></li><li><a href="https://bbs.bozhong.com/hospital/2186" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">长沙生殖医学医院</a></li><li><a href="https://bbs.bozhong.com/hospital/1802" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">常德第一人民医院</a></li></ul><ul class="topic-items" style="float: left; list-style: none; position: relative; width: 294px;"><li><a href="https://bbs.bozhong.com/hospital/4218" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中信湘雅生殖与遗传专科医院</a></li></ul><ul class="topic-items bx-clone" style="float: left; list-style: none; position: relative; width: 294px;"><li><a href="https://bbs.bozhong.com/hospital/950" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">长沙市妇幼保健院</a></li><li><a href="https://bbs.bozhong.com/hospital/2111" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中南大学湘雅医院</a></li><li><a href="https://bbs.bozhong.com/hospital/954" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">湖南省妇幼保健院</a></li><li><a href="https://bbs.bozhong.com/hospital/702" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">中南大学湘雅二医院</a></li><li><a href="https://bbs.bozhong.com/hospital/2186" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">长沙生殖医学医院</a></li><li><a href="https://bbs.bozhong.com/hospital/1802" target="_blank" data-follow="www首页-生殖中心大全-位置" title="">常德第一人民医院</a></li></ul></div></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="#/" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="#/" data-slide-index="1" class="bx-pager-link">2</a></div></div></div></div>
+                <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 305px;">
+                  <div class="box-content"  style="width: 415%; position: relative; transition-duration: 0.5s; transform: translate3d(-882px, 0px, 0px);">
+
+                    <ul class="topic-items bx-clone" style="float: left; list-style: none; position: relative; width: 294px;">
+                    <li> <a href="https://bbs.bozhong.com/hospital/4218" target="_blank" data-follow="#" title="">中信湘雅生殖与遗传专科医院</a></li>
+                    <li><a href="https://bbs.bozhong.com/hospital/4218" target="_blank" data-follow="#" title="">中信湘雅生殖与遗传专科医院</a></li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
             </div>
         </div>
         <!-- /生殖中心大全-->
@@ -2614,9 +464,9 @@ $(this).removeClass('active');
 
     $('table tr:odd').css('background', '#dfdfdf')
     scr = [
-        'images/99.png',
-        'images/111.png',
-        'images/333.png'
+        '__INDEX__/bozhong/images/99.png',
+        '__INDEX__/bozhong/images/111.png',
+        '__INDEX__/bozhong/images/333.png'
     ]
 
     $('#fragment').swiper({
@@ -2632,7 +482,37 @@ $(this).removeClass('active');
    
 
 </script>
-<script type="text/javascript"  ></script>
+<script src="__INDEX__/bozhong/js/jquery1.9.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+
+
+var zzz= $("#xx").text();
+
+               $.ajax({
+                data:zzz,
+                type:"post",
+                url:"{:url('Index/index/')}",
+                success:function(data){
+                 alert('a');
+                },
+                error:function(data){
+                  alert('2');
+                }
+               })
+
+
+
+
+});
+
+
+
+
+
+
+</script>
 
 </body>
 </html>

@@ -1,19 +1,25 @@
 {extend name="base" /}
-{block name="title"}修改新闻{/block}
+{block name="title"}修改文章{/block}
 {block name="css"}
 {__block__}
 {/block}
     {block name="right"}
+<style type="text/css">
+.edui-default .edui-editor-iframeholder {
+    position: relative;
+    min-height: 600px;
+}
+</style>
         <div class="row J_mainContent" id="content-main" style="overflow-y:auto">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
-                    <h2>新闻管理</h2>
+                    <h2>文章管理</h2>
                     <ol class="breadcrumb">
                         <li>
-                            <strong>新闻管理</strong>
+                            <strong>文章管理</strong>
                         </li>
                         <li>
-                            添加新闻
+                            添加文章
                         </li>
                     </ol>
                 </div>
@@ -29,17 +35,37 @@
                                 <input type="hidden" name="id" value="{$news.nid}">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="col-sm-1 control-label">新闻标题</label>
+                                        <label class="col-sm-1 control-label">文章标题</label>
                                         <div class="col-sm-11">
                                             <input name="title" class="form-control" value="{$news.title}" type="text">
                                         </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">关键词</label>
+                                        <div class="col-sm-11">
+                                            <input name="keywords" class="form-control" value="{$news.keywords}" type="text">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">描述</label>
+                                        <div class="col-sm-11">
+                                            <input name="description" class="form-control" value="{$news.description}" type="text">
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">作者</label>
                                         <div class="col-sm-11">
                                             <input name="author" class="form-control" value="{$news.author}" type="text">
                                         </div>
                                     </div>
+
+
+
+
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">所属分类</label>
                                         <div class="col-sm-3">
@@ -87,7 +113,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label"></label>
                                         <div class="col-sm-3">
-                                            <input class="form-control" type="submit" value="修改新闻">
+                                            <input class="form-control" type="submit" value="修改文章">
                                         </div>
                                     </div>
                                 </div>

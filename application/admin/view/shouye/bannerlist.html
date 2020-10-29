@@ -1,5 +1,5 @@
 {extend name="base" /}
-{block name="title"}修改新闻分类{/block}
+{block name="title"}修改文章分类{/block}
 {block name="css"}
 {__block__}
 {/block}
@@ -23,55 +23,96 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-content">
 
-                            <form action="{:url('admin/shouye/banneradd')}"
-                            method="post" class="form-horizontal row" enctype="multipart/form-data" id="form1">
+                            <form action="{:url('admin/shouye/banneraddhanddle')}"
+                            method="post" class="form-horizontal row"
+                            enctype="multipart/form-data" id="form1">
 
 
                                 <div class="col-md-9">
+
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">首页banner上传</label>
                <div class="col-sm-9">
-      
+               {volist name="bannerlist" id="vo"}
+                         <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>缩略图</th>
+                                     <th>上传图片</th>
+                                     <th>链接地址</th>
+                                    <th>banner说明</th>
+                                    <th>提交</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> </td>
+                                    <td>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="banner_thumb"> 
+                                            <img src="{$vo.banner_thumb}">
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input id="banner_thumb" placeholder="" class="" type="file" name="banner_thumb">
+                                        </div>
+                                    </div></td>                                    
+                                    <td>
+                                        <input type="" name="banner_href" placeholder="   {$vo.href}">
+                                    </td>
+                                    <td>
+                                    <input type="" name="banner_beizhu">
+                                    </td>
+
+                                    <td>
+                                       <a href="{:url('admin/shouye/bannerupd',array('id'=>$vo.id))}">修改</a>
+                                    </td>
+
+                                 </tr>
+                                    </tbody>
+                        </table>
+
+{/volist}
+
+
+
+
+
+
+
                   
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>图片id</th>
-                                    
                                     <th>缩略图</th>
-                                    <th>链接地址</th>
-                                    <th>修改</th>
-
+                                     <th>上传图片</th>
+                                     <th>链接地址</th>
+                                    <th>banner说明</th>
+                                    <th>提交</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td> </td>
+                                    <td>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="banner_thumb"> </label>
+                                        <div class="col-sm-9">
+                                            <input id="banner_thumb" placeholder="" class="" type="file" name="banner_thumb">
+                                        </div>
+                                    </div></td>                                    
+                                    <td>
+                                        <input type="" name="banner_href" placeholder="要跳转的链接地址">
+                                    </td>
+                                    <td>
+                                    <input type="" name="banner_beizhu">
+                                    </td>
 
-                                            <tbody role="alert" aria-live="polite" aria-relevant="all">
-                                                    {volist name="bannerlist" id="vo"}
-                                                    <tr class="odd">
-                                                        <td class=" ">
-                                                            {$vo.url_id}
-                                                        </td>
-                                                        <td class=" "><img src="{$vo.teacher_thumb}" width="80" height="80"></td>
-                                                        <td class=" ">{$vo.href}</td>
-                                                        
+                                    <td>
+                                          <button type="submit" class="btn btn-success status">上传图片</button>
+                                    </td>
 
-                                                        <td class=" ">
-                                                            <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-                                                                <a class="green" href="javascript:if(confirm('确认修改{$vo.teacher_name}？')) location='{:url('teacher/teacherupd',array('teacher_id'=>$vo.teacher_id))}'">
-                                                                    <i class="icon-edit bigger-130"></i>
-                                                                </a>
-                                                                <a class="red" href="javascript:if(confirm('确认删除{$vo.teacher_name}教师？')) location='{:url('teacher/teacherdel',array('teacher_id'=>$vo.teacher_id))}'">
-                                                                    <i class="icon-trash bigger-130"></i>
-                                                                </a>
-                                                                
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    {/volist}
-                                                </tbody>
-                                            </table>
-
+                                 </tr>
+                                    </tbody>
                         </table>
              
             
@@ -79,14 +120,8 @@
                                     </div>
             
 
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label"></label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" type="submit" value="修改分类">
-                                        </div>
-                                    </div>
-                                </div>
 
+                                </div>
 
                             </form>
                         </div>
@@ -101,108 +136,5 @@
     <script src="__ADMIN__/js/plugins/pace/pace.min.js"></script>
     <script src="__ADMIN__/js/plugins/validate/jquery.validate.min.js"></script>
 
-
-
-    <script type="text/javascript">
-        $().ready(function(){
-
-
-            $("#form1").validate({
-                rules:{
-                    name:{
-                        required:true,
-                        rangelength:[1,10],
-                        remote:{
-                            data:{
-                                id:function(){
-                                    return $("input[name='id']").val();
-                                }
-                            },
-                            url:"{:url('admin/news/checkNameCateAjax')}",
-                            type:"post"
-                        }
-                    },
-                },
-                messages:{
-                    name:{
-                        required:"请输入级别名称",
-                        rangelength:"名称长度在1-10之间",
-                        remote:"该分类已经存在"
-                    },
-                }
-            });
-        })
-    </script>
-
-    <script type="text/javascript">
-            $(function() {
-                        $("#banner_thumb").fileupload({
-                        url: '{:url("shouye/banneradd/uploadthumb")}',  
-                        sequentialUploads: true  
-                    }).bind('fileuploadprogress', function (e, data) {  
-                        var progress = parseInt(data.loaded / data.total * 100, 10);  
-                        $("#thumb_progress").css('width',progress + '%');  
-                        $("#thumb_progress").html(progress + '%');  
-                    }).bind('fileuploaddone', function (e, data) {console.log(data);
-                        $("#img").attr("src",data.result);  
-                        $("#thumb_upload").css({display:"none"});
-                        $("#thumb_cancle").css({display:""}); 
-                    });  
-                         
-                });
-    </script> 
-            <script type="text/javascript">
-                $(function(){
-                    $('#thumb_cancle').click(function(){
-                        $.ajax({
-                            url:'{:url("admin/teacher/canclethumb")}',
-                            type:'post',
-                            success:function(data){
-                                $("#thumb_upload").css({display:""}); 
-                                $("#thumb_cancle").css({display:"none"});
-                                $("#thumb_progress").css('width',0);
-                                $("#thumb_progress").html('');
-                                $("#img").attr("src","__PUBLIC__/assets/images/upload.png");  
-                            }
-                        });
-                    });
-                });
-            </script>
-            <!-- 教师细节图 -->
-            <script type="text/javascript">
-            $(function(){
-                $('#teacher_img').fileupload({
-                    url:'{:url("admin/teacher/imgupload")}',
-                    dataType: "json",   
-                    multipart:true,
-                    sequentialUploads: true,
-                    done:function(e,data){
-                        $(".preview").append("<div style='margin-top:10px;'><img src="+data.result+" width='100'>");
-                        $(".preview").append("<a class='img_cancle btn btn-warning' role='button' style=''>删除</a></div>");
-                    },
-                    progressall:function(e,data){
-                        var progress = parseInt(data.loaded / data.total * 100, 10);  
-                        $("#img_progress").css("width", progress + "%");  
-                        $("#img_progress").html("上传总进度："+progress+"%"); 
-                    }
-                })
-            })
-            </script>
-            <script type="text/javascript">
-                $(function(){
-                    $(".preview").on("click",".img_cancle",function(){
-                         var index = $(".preview a").index(this);
-                         var me = this;
-                         $.ajax({
-                            data:{'index':index},
-                            type:"post",
-                            url:"{:url('admin/teacher/imgcancle')}",
-                            success:function(data){
-                                $(me).prev('div').css({display:"none"});
-                                $(me).css({display:"none"});
-                            }
-                         })
-                    })
-                })
-            </script>
+ 
     {/block}

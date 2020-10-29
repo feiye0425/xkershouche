@@ -2,7 +2,7 @@
 namespace app\index\controller;
 use \think\Controller;
 /**
- * 前台新闻控制器
+ * 前台文章控制器
  */
 class News extends Controller
 {
@@ -38,6 +38,10 @@ class News extends Controller
 /*  $kk=['id','title','content','author','addtime','updtime','pid','clicks','status','r_id'];
     $cc=array_combine($kk, $b);
     dump ($cc);*/
+/*
+获取数组单列*/
+array_column($a, 'last_name');
+
 
 
 $b=$news_tb;

@@ -1,5 +1,5 @@
 {extend name="base" /}
-{block name="title"}修改新闻分类{/block}
+{block name="title"}修改文章分类{/block}
 {block name="css"}
 {__block__}
 {/block}
@@ -20,21 +20,68 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
+
+
                     <div class="ibox float-e-margins">
                         <div class="ibox-content">
-
-                            <form action="{:url('admin/shouye/banneraddhanddle')}"
-                            method="post" class="form-horizontal row"
-                            enctype="multipart/form-data" id="form1">
-
-
+                         
                                 <div class="col-md-9">
 
                                     <div class="form-group">
+                                        <label class="col-sm-3 control-label"></label>
+                              <div class="col-sm-9">
+                                  {volist name="bannerlist" id="vo2"}
+                        <table class="table table-bordered">
+
+                            <tbody>
+                                <tr>
+                                    <td> </td>
+                                    <td>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="banner_thumb">
+                                
+                                           
+                                         </label>
+                                        <div class="col-sm-9">
+                                            <img src="{$vo2.banner_thumb}" width="80" height="80">
+                                        </div>
+                                    </div>
+                                </td>                                    
+                                    <td>
+                                     
+                                    </td>
+                                    <td>
+                                    <input type="" name="banner_beizhu">
+                                    </td>
+
+                                    <td>
+                                          <button type="submit" class="btn btn-success status">修改</button>
+                                    </td>
+
+                                 </tr>
+                                    </tbody>
+                        </table>
+                        {/volist}
+                                            </div>
+                    </div>
+                          </div>
+                          </div>
+                     
+
+                    </div>
+    </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form action="{:url('admin/shouye/banneraddhanddle')}"
+                            method="post" class="form-horizontal row"
+                            enctype="multipart/form-data" id="form1">
+                                <div class="col-md-9">
+                                    <div class="form-group">
                                         <label class="col-sm-3 control-label">首页banner上传</label>
-               <div class="col-sm-9">
-      
-                  
+                              <div class="col-sm-9">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -65,19 +112,14 @@
                                     <td>
                                           <button type="submit" class="btn btn-success status">上传图片</button>
                                     </td>
-                                    
-                                    </tr>
-                                                                                   
-                                    </tbody>
 
+                                 </tr>
+                                    </tbody>
                         </table>
              
             
-            </div>
+                    </div>
                                     </div>
-            
-
-
                                 </div>
 
                             </form>

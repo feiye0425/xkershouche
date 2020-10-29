@@ -2,7 +2,7 @@
 namespace app\admin\validate;
 use \think\Validate;
 /**
- * 新闻分类验证器
+ * 文章分类验证器
  */
 class NewsCate extends Validate
 {
