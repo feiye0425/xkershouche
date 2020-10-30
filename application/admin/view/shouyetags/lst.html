@@ -1,0 +1,111 @@
+{extend name="base" /}
+{block name="title"}首页tags推送管理{/block}
+{block name="css"}
+{__block__}
+
+
+
+
+{/block}
+    {block name="right"}
+
+
+    </style>
+        <div class="row J_mainContent" id="content-main" style="overflow-y:scroll">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>首页tags推送管理</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <strong>首页tags推送管理</strong>
+                        </li>
+                        <li>
+                           首页tags推送列表
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row ibox-content">
+                <div class="col-sm-2">
+                    <button class="btn btn-success" type="button" id="addBrand">
+                        <i class="fa fa-plus-square"></i>&nbsp;&nbsp;
+                        <span class="bold">添加首页tags推送</span>
+                    </button>
+                </div>
+                <div class="col-sm-10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                       
+                                        <th>ID</th>
+                                        <th>tags名称</th>
+                                        <th>是否推送到首页</th>
+ <th>修改</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {volist name="tags_lst" id="vo"}
+                                    <tr>
+                                        <td>{$vo.id}</td>
+                                        <td>{$vo.tags_name}</td>
+                                        <td>
+                                            {if condition="$vo.zhiding eq 1"}是
+                                            {else if/}否{/if} 
+                                    </td>
+
+
+                                     <td>
+                                            <div class="btn-group open">
+                                                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="true">操作 <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="{:url('admin/shouyetags/upd',array('id'=>$vo.id))}">修改</a>
+                                                    </li>
+                                                    <li><a href="javascript:if(confirm('确认删除么？')) location='{:url('admin/shouyetags/del',array('id'=>$vo.id))}'">删除</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+
+
+
+
+                                    </tr>
+                                 {/volist}
+                                </tbody>
+                            </table>
+                           
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {/block}
+    {block name="js"}
+    {__block__}
+    <script src="__ADMIN__/js/hAdmin.js?v=4.1.0"></script>
+    <script src="__ADMIN__/js/plugins/pace/pace.min.js"></script>
+    <script type="text/javascript">
+        $("#addBrand").click(function(event) {
+            /* Act on the event */
+            window.location.href = "{:url('admin/shouyetags/add')}";
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+    {/block}

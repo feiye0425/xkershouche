@@ -1,0 +1,51 @@
+/*
+* @Author: ycsjx
+* @Date:   2020-03-29 08:21:26
+* @Last Modified by:   ycsjx
+* @Last Modified time: 2020-04-01 10:56:08
+*/
+@charset "utf-8";
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0;border:0;}
+body{font-family:'Microsoft YaHei','PingFang SC',Arial;font-size:14px;background:#f8f8f8;overflow-x:hidden;min-width:1200px;}
+body,html{height:100%,letter-spacing;overflow-x:hidden;overflow-y:auto;}
+ol,ul li{list-style-type:none;}
+cite,em,i{font-style:normal;}
+fieldset,img{vertical-align:middle;border:none;}
+a,a:hover{text-decoration:none;}
+a,body{color:#181818;}
+input[type=text],input[type=password],textarea{outline-style:none;-webkit-appearance:none;}
+input,select,textarea{resize:none;vertical-align:middle;outline:0;}
+::-ms-clear{display:none;}
+:-moz-placeholder{color:#7a848d;}
+::-moz-placeholder{color:#7a848d;}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#7a848d;}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#7a848d;}
+button,input,select,textarea{font-size:100%;}
+dd:before{margin:0;content:'';}
+dd{display:block;}
+.clear{clear:both;}
+html{overflow-y:scroll;}
+.clearfix:after{font-size:0;}
+* html .clearfix{height:1%;}
+.flex{display:box;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;justify-content:space-between;}
+.w1200{width:1200px;margin:0 auto;}
+.w1200:after{display:block;clear:both;overflow:hidden;height:0;content:'\20';}
+.fl{float:left;}
+.fr{float:right;}
+.none{display:none;}
+.background_item{background:#fff;}
+.ad_small{font-size:16px;line-height:33px;-webkit-box-sizing:border-box;box-sizing:border-box;height:33px;text-align:center;border:1px solid #ff2020;border-radius:2px;}
+.ad_small a{color:#f00;}
+.w340{width:340px;}
+.w500{width:500px;}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt25{margin-top:25px;}
+.mt30{margin-top:30px;}
+.mr20{margin-right:20px;}
+.mr30{margin-right:30px;}
+.btn{display:block;cursor:pointer;border-radius:3px;text-align:center;line-height:2.4;outline:none;border:none;}
+.btn-orange-border{background:#ebf7f5;border:1px solid #18b89c;color:#18b89c;}

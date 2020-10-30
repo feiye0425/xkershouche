@@ -1,0 +1,49 @@
+{extend name="base"/}
+{block name="title"}{$wenda.title}{/block}
+{block name="keywords"}
+<meta name="keywords" content="{$wenda.keywords}"/>
+<meta name="description" content="{$wenda.description}"/>
+{/block}
+{block name="header"}
+{__block__}
+<link href="__INDEX__/default/css/page.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="__INDEX__/static/js/jquery.inputtext.js"></script>
+<style type="text/css">
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    max-width: 180px ! important;
+}
+</style>
+{/block}
+{block name="main"}
+<div class="nav">您当前的位置：
+    <a href="/">首页</a>
+    {volist name="newsparents" id="vo"}
+    <span>></span>
+    {$vo.name}
+    {/volist}
+</div>
+<div class="main mt10 clearfix">
+    <div class="main_left">
+        <div class="commonbox02">
+            <h3>
+                {volist name="newsparents" id="vo" offset='-1' length='1'}
+                {$vo.name}
+                {/volist}
+            </h3>
+            <div class="box">
+                <h2 class="news_title">{$wenda.title}</h2>
+                <p class="tc mt20">发表时间：{$wenda.addtime|date="Y-m-d h:i:s"} &nbsp;&nbsp;&nbsp;点击：<span class="hits orange01">{$wenda.clicks}</span></p>
+                <div class="news_info">{$wenda.content|raw}</div>
+            </div>
+        </div>
+    </div>
+    <div class="main_right">
+        <div class="commonbox02">
+            <h3>更多内容</h3>
+            <div class="box">
+                <div id="hotcar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
