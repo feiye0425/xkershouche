@@ -98,7 +98,7 @@ $qqq= array();
 
 foreach ($wenda as $keykk => $valuekk) {
 
-$aa = $valuekk['keywords'];
+$aa = $valuekk['keywords_w'];
 
 $keywordstt = '备孕';
 
@@ -165,10 +165,9 @@ foreach ($first_fenlei as $key1 => $value1) {
 
         $post = request()->post();
 
+$c=array($post);
 
-
-        dump($post);
-
+      
 
 
             return view();

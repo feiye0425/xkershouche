@@ -64,7 +64,7 @@
 
           <div class="sort-tabs__block-content">
              {volist name="wenda_fenlei2" id="vo2"}
-            <a target="_blank" href="{:url('wenda/wendadetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+            <a target="_blank" href="{:url('wenda/wendadetails',array('id'=>$vo2.id))}">{$vo2.keywords_w}</a>
              {/volist}
           </div>      
 
@@ -482,37 +482,23 @@ $(this).removeClass('active');
    
 
 </script>
-<script src="__INDEX__/bozhong/js/jquery1.9.0.min.js"></script>
+<!--  <script src="__INDEX__/bozhong/js/jquery1.9.0.min.js"></script>
 <script>
   $(document).ready(function(){
-
-
-
-var zzz= $("#xx").text();
-
+          var zzz= $("#xx").text();
                $.ajax({
                 data:zzz,
                 type:"post",
-                url:"{:url('Index/index/')}",
+                url:"{:url('Index/index/index')}",
                 success:function(data){
-                 alert('a');
+                
                 },
                 error:function(data){
                   alert('2');
                 }
                })
-
-
-
-
 });
-
-
-
-
-
-
-</script>
+</script>  -->
 
 </body>
 </html>
