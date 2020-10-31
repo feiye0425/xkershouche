@@ -35,11 +35,9 @@ class Index extends Controller
 
 
                 $ids = array_column($children, 'id');//额外组成一个id的单列数组ids
-
-                $news = db('news')->where('pid','in',$ids)->select();//获取所有父类是在ids组中的数组
-
-
-      
+           
+                $news = db('news')->where('pid','in',$ids)->select();//获取一个向下分叉的数组
+    
                 $wenda = db('wenda')->where('pid','in',$ids)->select();
 
 
@@ -50,12 +48,12 @@ class Index extends Controller
                 $array_wenda[$key]['children'] = $wenda;
 
 
-
-/*$new_detail = db('news')->where('id','in',$news)->select();//获取所有父类是在ids组中的数组*/
+                /*$new_detail = db('news')->where('id','in',$news)->select();//获取所有父类是在ids组中的数组*/
 
 
             }
         }
+
 
       /*  dump($array[0]['children']['2']['content']);*/
 
@@ -128,6 +126,10 @@ foreach ($first_fenlei as $key1 => $value1) {
 
 
         $n_tags_select = db('news')->select();
+         $xin_arr=array_values($array);
+       $zixun_arr=$xin_arr['0']['children'];
+       $baike_arr=$xin_arr['1']['children'];
+       $wenda_arr=$xin_arr['2']['children'];
 
 
         $tags_select = db('shouyetags')->where('zhiding','=',1)->select();
@@ -136,40 +138,52 @@ foreach ($first_fenlei as $key1 => $value1) {
 
         $ztags= array();
       
-        foreach ($tags_select as $key_tgg => $value_tgg) {
-  
-            foreach ($n_tags_select as $ntags_key => $ntags_value) {
-                $bb = $ntags_value['keywords'];
-                $keywords_tag = $value_tgg['tags_name'];
-                //判断找到关键字
-                  if(strstr($bb, $keywords_tag) !== false   ){
-                         array_push($ztags, $ntags_value);
-                    }
-            }
-    }
-     
+
 
 
 $z1=$tags_select['0']['tags_name'];
+$z2=$tags_select['1']['tags_name'];
+$z3=$tags_select['2']['tags_name'];
 
-$first_qk =array();
 
-foreach ($ztags as $key1 => $value1) {
+$zixun_arrlist =array();
+$baike_arrlist =array();
+$wenda_arrlist =array();
 
-$keywords_tag2 = $value1['keywords'];
-                //判断找到关键字
-                  if(strstr($z1, $keywords_tag2) !== false ){
-                         array_push($first_qk, $value1);
-                    }
+foreach ($zixun_arr as $key1 => $value1) {
+$keywords_tag2 = $value1['tags'];
+if(strstr($keywords_tag2,$z1) !== false ){
+array_push($zixun_arrlist, $value1);
+}
 }
 
-dump($first_qk);
-       
+foreach ($baike_arr as $key2 => $value2) {
+$keywords_tag2 = $value2['tags'];
+if(strstr($keywords_tag2,$z1) !== false ){
+array_push($baike_arrlist, $value2);
+}
+}
+
+
+foreach ($wenda_arr as $key3 => $value3) {
+$keywords_tag3 = $value3['tags'];
+if(strstr($keywords_tag3,$z1) !== false ){
+array_push($wenda_arrlist, $value3);
+}
+}
+
+
+
+  dump($wenda_arrlist);
+
+
   $this->assign('tags_select',$tags_select);
 
     $this->assign('ztags',$ztags);
 
-    $this->assign('first_qk',$first_qk);
+    $this->assign('zixun_arrlist',$zixun_arrlist);
+    $this->assign('baike_arrlist',$baike_arrlist);
+    $this->assign('wenda_arrlist',$wenda_arrlist);
         return view();
 
 

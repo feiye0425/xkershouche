@@ -47,12 +47,33 @@
           </div>
 
           <div class="sort-tabs__block-content">
-              {volist name="first_qk" id="vo2"}
-            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+              {volist name="zixun_arrlist" id="vo1"}
+            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo1.id))}">{$vo1.keywords}</a>
              {/volist}
           </div>
          
+          <div class="sort-tabs__block-tips blineb">
+            <p> {$vo.tags_name}百科</p>
+            <a target="_blank" href="#"> 百科频道<span>&gt;</span></a>
+          </div>
 
+          <div class="sort-tabs__block-content">
+              {volist name="baike_arrlist" id="vo2"}
+            <a target="_blank" href="{:url('baike/baikedetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
+             {/volist}
+          </div>
+
+
+          <div class="sort-tabs__block-tips blineb">
+            <p> {$vo.tags_name}问答</p>
+            <a target="_blank" href="#"> 问答频道<span>&gt;</span></a>
+          </div>
+
+          <div class="sort-tabs__block-content">
+              {volist name="wenda_arrlist" id="vo3"}
+            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo3.id))}">{$vo3.keywords}</a>
+             {/volist}
+          </div>
 
 
 
