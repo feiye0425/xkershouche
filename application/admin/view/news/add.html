@@ -11,6 +11,16 @@
     position: relative;
     min-height: 600px;
 }
+    .span_in{
+    display: inline-flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+
+    }
+    .w100{
+        width:100px;
+    }
 </style>
         <div class="row J_mainContent" id="content-main" style="overflow-y:auto">
             <div class="row wrapper border-bottom white-bg page-heading">
@@ -60,7 +70,21 @@
                                     </div>
 
 
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">标签tags</label>
+                                        <div class="col-sm-8">
+                                          <span class="span_in">
+                                         <input class="form-control w100 tgs" placeholder="请输入标签tags"  name=tags[] type="text"></span>
+                                          <span class="span_in">
+                                                  <button class="btn btn-success" type="button" id="btn_add">
+                                                <span class="bold">继续添加</span></button></span>
+                                             <span class="span_in">
+                                                  <button class="btn btn-danger" type="button" id="btn_del">
+                                             <span class="bold">删除</span></button></span>
 
+
+                                        </div>
+                                    </div>
 
 
                                     <div class="form-group">
@@ -76,12 +100,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-1 control-label">作者</label>
-                                        <div class="col-sm-8">
-                                            <input name="author" class="form-control" placeholder="请输入作者" type="text">
-                                        </div>
-                                    </div>
+
+
+
+
                                     <div class="form-group">
                                         <label class="col-sm-1 control-label">文章内容</label>
                                         <div class="col-sm-8">
@@ -107,7 +129,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label"></label>
                                         <div class="col-sm-3">
-                                            <input class="form-control" type="submit" value="添加文章">
+                                            <input class="form-control" type="submit"  id="tijiao"value="添加文章">
                                         </div>
                                     </div>
                                 </div>
@@ -125,6 +147,35 @@
     <script src="__ADMIN__/js/plugins/validate/jquery.validate.min.js"></script>
     <script type="text/javascript">
         $().ready(function(){
+/*var tags= new Array();
+
+var all_tgs_value = $('.tgs').val;
+*/
+
+  $("#btn_add").click(function(){
+
+    $(this).parent().before().before("<span class='span_in'><input class='form-control w100 tgs' name=tags[] placeholder='请输入标签tags' type='text'></span>");
+/*  var l_tag= $(this).parent().prev().children(".tgs").val();
+
+
+   alert(l_tag);
+
+   tags.push(l_tag);
+*/
+
+  });
+
+  $("#btn_del").click(function(){
+    $("#btn_add").parent().prev().remove();
+  });
+
+
+   $("#tijiao").click(function(){
+
+  
+
+  });          
+    
             $("#form1").validate({
                 rules:{
                     name:{
@@ -145,5 +196,8 @@
                 }
             });
         })
+
+
+
     </script>
     {/block}

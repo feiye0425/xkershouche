@@ -12,150 +12,72 @@
 
 <script src="__INDEX__/bozhong/js/swiper.jquery.js"></script>
 
+     
 
+    
+    
   <div class="bz-body">
     <div class="bz-body__tips">
+
+
     <ul class="bz-body__aside" data-action="aside-tabs">
+ {volist name="tags_select" id="vo"}
       <li class="nav-li nav-li__count-3">
+
       <div class="nav-li--icon nav-li--icon-1 "><em></em></div>
       <div class="nav-li--mask"></div>
-      <div class="nav-li__content">
-        <p class="nav-li__content--title" style="font-weight: bold;">天宝备孕</p>
-        <div class="nav-li__content__subtitle">
-        <span>备孕资讯</span><span>备孕百科</span><span>备孕问答</span>
-        </div>
-      </div>
 
 
+          <div class="nav-li__content">
+           <p class="nav-li__content--title" style="font-weight: bold;">添宝{$vo.tags_name}</p>
+           <div class="nav-li__content__subtitle">
+            <span>{$vo.tags_name}资讯</span><span>{$vo.tags_name}百科</span><span>{$vo.tags_name}问答</span>
+           </div>
+           </div>
 
 
-      <div class="sort-tabs sort-tabs__fkzr" data-aside-table="">
+ <div class="sort-tabs sort-tabs__fkzr" data-aside-table="">
                 <div class="sort-tabs__left" style="margin-right: 30px;">
         
 
        
           <div class="sort-tabs__block-tips blineb">
-            <p> 备孕资讯</p>
+            <p> {$vo.tags_name}资讯</p>
             <a target="_blank" href="#"> 资讯频道<span>&gt;</span></a>
           </div>
 
           <div class="sort-tabs__block-content">
-              {volist name="first_fenlei" id="vo2"}
+              {volist name="first_qk" id="vo2"}
             <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
              {/volist}
           </div>
          
-          <div class="sort-tabs__block-tips blineb">
-            <p> 备孕百科</p>
-            <a target="_blank" href="#"> 百科频道<span>&gt;</span></a>
-          </div>
-
-          <div class="sort-tabs__block-content">
-              {volist name="first_fenlei" id="vo2"}
-            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo2.id))}">{$vo2.keywords}</a>
-             {/volist}
-          </div>
-
-
-              <div class="sort-tabs__block-tips blineb">
-            <p> <i id="xx">备孕</i>问答</p>
-            <a target="_blank" href="#"> 问答频道<span>&gt;</span></a>
-          </div>
-
-          <div class="sort-tabs__block-content">
-             {volist name="wenda_fenlei2" id="vo2"}
-            <a target="_blank" href="{:url('wenda/wendadetails',array('id'=>$vo2.id))}">{$vo2.keywords_w}</a>
-             {/volist}
-          </div>      
-
-
-        </div>
-      </div>
-    </li>
 
 
 
 
 
+      </li>
+      
 
-
-      <li class="nav-li nav-li__count-3">
-      <div class="nav-li--icon nav-li--icon-2"><em></em></div>
-      <div class="nav-li--mask"></div>
-      <div class="nav-li__content">
-        <p class="nav-li__content--title">天宝试管</p>
-        <div class="nav-li__content__subtitle">
-         <span>试管资讯</span><span>试管百科</span><span>试管问答</span>
-        </div>
-      </div>
-      <div class="sort-tabs sort-tabs__shiguan">
-                <div class="sort-tabs__left" style="margin-right: 30px;">
-
-
-{volist name="cate_list" id="vo1"}
-          <div class="sort-tabs__block-tips blineb">
-            <p> {$vo1.name}</p>
-            <a target="_blank" href="{:url('news/newsdetails',array('id'=>$vo1.id))}"> {$vo1.name}频道<span>&gt;</span></a>
-          </div>
-          <div class="sort-tabs__block-content">
-              {volist name="vo1['children']" id="vo2"}
-
-            <a target="_blank" href="https://bbs.bozhong.com/forum-25-1.html">{$vo2.name}</a>
-             {/volist}
-          </div>
-                {/volist}
-
-
-
-        </div>
-      </div></li>
-                  <li class="nav-li nav-li__count-3">
-      <div class="nav-li--icon nav-li--icon-4"><em></em></div>
-      <div class="nav-li--mask"></div>
-      <div class="nav-li__content">
-        <p class="nav-li__content--title">天宝怀孕</p>
-        <div class="nav-li__content__subtitle">
-            <span>怀孕资讯</span><span>怀孕百科</span><span>怀孕问答</span>
-        </div>
-      </div>
-      <div class="sort-tabs sort-tabs__yunji">
-                <div class="sort-tabs__left" style="margin-right: 30px;">
-
-
-
-
-{volist name="cate_list" id="vo1"}
-          <div class="sort-tabs__block-tips blineb">
-            <p> {$vo1.name}</p>
-            <a target="_blank" href="https://bbs.bozhong.com/"> {$vo1.name}频道<span>&gt;</span></a>
-          </div>
-          <div class="sort-tabs__block-content">
-              {volist name="vo1['children']" id="vo2"}
-
-            <a target="_blank" href="https://bbs.bozhong.com/forum-25-1.html">{$vo2.name}</a>
-             {/volist}
-          </div>
-                {/volist}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   {/volist}
 
     </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="bz-body__tips__right">
       <div class="bz-body__tips-ad">
 

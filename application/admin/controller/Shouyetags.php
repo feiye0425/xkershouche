@@ -20,9 +20,9 @@ class Shouyetags extends Common
 
         $tags_add_result = db('shouyetags')->insert($data);
         if ($tags_add_result) {
-            $this->success("文章添加成功",'admin/shouyetags/lst');
+            $this->success("添加成功",'admin/shouyetags/lst');
         } else {
-            $this->error("文章添加失败",'admin/shouyetags/lst');
+            $this->error("添加失败",'admin/shouyetags/lst');
         }
     }
   
@@ -75,9 +75,9 @@ class Shouyetags extends Common
 
             
             if ($shouyetags) {
-                $this->success('文章删除成功');
+                $this->success('删除成功');
             } else {
-                $this->error('文章删除失败');
+                $this->error('删除失败');
             }
         } else {
             $this->redirect("admin/shouyetags/lst");

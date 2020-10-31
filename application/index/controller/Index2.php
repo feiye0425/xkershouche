@@ -1,11 +1,46 @@
 <?php
 namespace app\index\controller;
 use \think\Controller;
-class Index extends Controller
+class Index2 extends Controller
 {
     public function index()
     {
+        $brand_select = db('brand')->where('pid',0)->order('order desc')->select();
 
+        $cars_model = model('\app\admin\model\Cars');
+        foreach ($brand_select as $key => $value) {
+            $cars_select = $cars_model->where('brand_level1',$value['id'])->select();
+            foreach ($cars_select as $key1 => $value1) {
+                $value1->carsimg;
+            }
+            $cars_select = $cars_select->toArray();
+            $brand_select[$key]['children'] = $cars_select;
+
+        }
+
+        $this->assign('brand_select',$brand_select);
+        // dump($brand_select);
+        $list = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
+        'P','Q','R','S','T','U','V','W','X','Y','Z'];
+        $arr = array();
+        foreach ($list as $key => $value) {
+            foreach ($brand_select as $key1 => $value1) {
+                if($value1['initial']==$value){
+                    $arr[$value][] = $value1;
+                }
+            }
+        }
+        $this->assign('brand_list',$arr);
+
+        $level_select = db('level')->select();
+        $this->assign('level',$level_select);
+
+        $current_year = date('Y',time());
+        $arr = array();
+        for ($i=0; $i < 10; $i++) {
+            $arr[$i] = $current_year-$i;
+        }
+        $this->assign('years',$arr);
 
 
        //通过分类id获取其下的新闻列表
@@ -74,6 +109,10 @@ $keywordstt = '备孕';
 
     }
 
+       
+
+        
+
 }
 
 
@@ -116,7 +155,7 @@ foreach ($first_fenlei as $key1 => $value1) {
          $this->assign('first_fenlei',$first_fenlei);
          $this->assign('wenda_fenlei',$wenda_fenlei);
 
-        $this->assign('wenda_fenlei2',$wenda_fenlei2);
+   $this->assign('wenda_fenlei2',$wenda_fenlei2);
 
         $cate_select = db('newsfenlei')->order('id')->select();
         $cate_model = model('cate');
@@ -124,53 +163,19 @@ foreach ($first_fenlei as $key1 => $value1) {
 
         $this->assign('cate_list',$cate_list);
 
+        $post = request()->post();
 
+$c=array($post);
 
-
-        $n_tags_select = db('news')->select();
-
-
-        $tags_select = db('shouyetags')->where('zhiding','=',1)->select();
-   
-  
-
-        $ztags= array();
       
-        foreach ($tags_select as $key_tgg => $value_tgg) {
-  
-            foreach ($n_tags_select as $ntags_key => $ntags_value) {
-                $bb = $ntags_value['keywords'];
-                $keywords_tag = $value_tgg['tags_name'];
-                //判断找到关键字
-                  if(strstr($bb, $keywords_tag) !== false   ){
-                         array_push($ztags, $ntags_value);
-                    }
-            }
-    }
-     
 
 
-$z1=$tags_select['0']['tags_name'];
+            return view();
 
-$first_qk =array();
 
-foreach ($ztags as $key1 => $value1) {
 
-$keywords_tag2 = $value1['keywords'];
-                //判断找到关键字
-                  if(strstr($z1, $keywords_tag2) !== false ){
-                         array_push($first_qk, $value1);
-                    }
-}
 
-dump($first_qk);
-       
-  $this->assign('tags_select',$tags_select);
 
-    $this->assign('ztags',$ztags);
-
-    $this->assign('first_qk',$first_qk);
-        return view();
 
 
 

@@ -94,7 +94,7 @@ class News extends Common
 
     public function lst()
     {
-        $field = 'n.id as nid,title,author,name,addtime,updtime,clicks,keywords,description,content';
+        $field = 'n.id as nid,title,tags,name,addtime,updtime,clicks,keywords,description,content';
         $news_select = db('news')
         ->order('updtime desc')
         ->alias('n')
@@ -120,6 +120,10 @@ class News extends Common
         $data = input('post.');
         $data['addtime'] = strtotime('now');
         $data['updtime'] = strtotime('now');
+         $tags = $data['tags'];
+        $tag_str = implode(',',$tags);
+        $data['tags']=$tag_str;
+        
         $news_add_result = db('news')->insert($data);
         if ($news_add_result) {
             $this->success("文章添加成功",'admin/news/lst');
@@ -129,7 +133,7 @@ class News extends Common
     }
     public function upd($id='')
     {
-        $field = 'n.id as nid,title,author,addtime,updtime,clicks,keywords,description,content,n.pid as npid';
+        $field = 'n.id as nid,title,tags,addtime,updtime,clicks,keywords,description,content,n.pid as npid';
         $news_find = db('news')->alias('n')
         ->join('newsfenlei f','n.pid=f.id')
         ->field($field)->find($id);
